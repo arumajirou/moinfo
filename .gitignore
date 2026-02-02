@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# VSCode local history
+.history/
+
+# Large model artifacts
+*.safetensors
+*.pt
+
+# Local model dirs（丸ごと外すなら）
+timesfm_hf_local/
+timesfm_v2.5_local/
+
+# Generated outputs（必要なら外す）
+libs/timesfm/04_outputs/
