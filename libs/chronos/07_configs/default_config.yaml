@@ -1,0 +1,3 @@
+# Default configuration for Chronos Pipeline
+model_id: 'amazon/chronos-t5-small'
+device: 'cpu'

@@ -1,0 +1,30 @@
+Category,Function/Class,Argument,Required,Type Hint,Default,✅ Verified Specs / Constraints,Description
+2. Loading,from_pretrained,pretrained_model_name_or_path,✅,"Union[str, pathlib.Path]",**Required**,," - Either the `model_id` (string) of a model hosted on the Hub, e.g. `bigscience/bloom`. - Or a path..."
+2. Loading,from_pretrained,force_download,,bool,False,," Whether to force (re-)downloading the model weights and configuration files from the Hub, overridin..."
+2. Loading,from_pretrained,resume_download,,Optional[bool],None,,
+2. Loading,from_pretrained,proxies,,Optional[Dict],None,," A dictionary of proxy servers to use by protocol or endpoint, e.g., `{'http': 'foo.bar:3128', 'http..."
+2. Loading,from_pretrained,token,,"Union[bool, str, NoneType]",None,," The token to use as HTTP bearer authorization for remote files. By default, it will use the token c..."
+2. Loading,from_pretrained,cache_dir,,"Union[str, pathlib.Path, NoneType]",None,, Path to the folder where cached files are stored.
+2. Loading,from_pretrained,local_files_only,,bool,False,," If `True`, avoid downloading the file and return the path to the local cached file if it exists."
+2. Loading,from_pretrained,revision,,Optional[str],None,," Revision of the model on the Hub. Can be a branch name, a git tag or any commit id. Defaults to the..."
+2. Loading,from_pretrained,model_kwargs,✅,Any,**Required**,, Additional kwargs to pass to the model during initialization.
+2. Loading,load_checkpoint,path,✅,str,**Required**,,
+3. Config,ForecastConfig (__init__),max_context,,int,0,32 ~ 512 (推奨: 512),
+3. Config,ForecastConfig (__init__),max_horizon,,int,0,1 ~ 512+ (推奨: 128),
+3. Config,ForecastConfig (__init__),normalize_inputs,,bool,False,,
+3. Config,ForecastConfig (__init__),window_size,,int,0,,
+3. Config,ForecastConfig (__init__),per_core_batch_size,,int,1,,
+3. Config,ForecastConfig (__init__),use_continuous_quantile_head,,bool,False,,
+3. Config,ForecastConfig (__init__),force_flip_invariance,,bool,True,,
+3. Config,ForecastConfig (__init__),infer_is_positive,,bool,True,,
+3. Config,ForecastConfig (__init__),fix_quantile_crossing,,bool,False,,
+3. Config,ForecastConfig (__init__),return_backcast,,bool,False,,
+4. Execution,compile,forecast_config,✅,timesfm.configs.ForecastConfig,**Required**,ForecastConfigオブジェクト,Configuration for forecasting flags. **kwargs: Additional keyword arguments to pass to model.compile...
+4. Execution,forecast,horizon,✅,int,**Required**,int (max_horizon以下),
+4. Execution,forecast,inputs,✅,list[numpy.ndarray],**Required**,"List[float] 形状: (Batch, Length)",
+5. Saving,save_pretrained,save_directory,✅,"Union[str, pathlib.Path]",**Required**,, Path to directory in which the model weights and configuration will be saved.
+5. Saving,save_pretrained,config,,"Union[dict, huggingface_hub.hub_mixin.DataclassInstance, NoneType]",None,, Model configuration specified as a key/value dictionary or a dataclass instance.
+5. Saving,save_pretrained,repo_id,,Optional[str],None,, ID of your repository on the Hub. Used only if `push_to_hub=True`. Will default to the folder name ...
+5. Saving,save_pretrained,push_to_hub,,bool,False,, Whether or not to push your model to the Huggingface Hub after saving it.
+5. Saving,save_pretrained,model_card_kwargs,,"Optional[Dict[str, Any]]",None,, Additional arguments passed to the model card template to customize the model card.
+5. Saving,save_pretrained,push_to_hub_kwargs,✅,Any,**Required**,, Additional key word arguments passed along to the [`~ModelHubMixin.push_to_hub`] method.
