@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "moinfo-timesfm-ext"
+version = "0.1.0"
+description = "TimesFM utilities for moinfo (finetune + helpers)"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "torch>=2.1",
+  "transformers>=4.40",
+  "safetensors>=0.4",
+  "pandas>=2.0"
+]
+
+[tool.setuptools]
+package-dir = {"" = "."}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["moinfo_timesfm_ext*"]
