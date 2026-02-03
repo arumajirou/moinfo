@@ -1,0 +1,16 @@
+{
+  "experiment": {
+    "name": "smoke_logging",
+    "seed": 123,
+    "fingerprint": "28f52ca5"
+  },
+  "paths": {
+    "root": "C:/moinfo",
+    "output_root": "C:/moinfo/_artifacts/runs",
+    "run_mode": "deterministic",
+    "allow_overwrite": true
+  },
+  "data": {
+    "train_path": "C:/moinfo/data/train.csv"
+  }
+}

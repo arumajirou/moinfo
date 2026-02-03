@@ -1,0 +1,13 @@
+{
+  "experiment": {
+    "name": "smoke",
+    "seed": 123,
+    "fingerprint": "90c06148"
+  },
+  "paths": {
+    "root": "C:/moinfo",
+    "output_root": "C:/moinfo/_artifacts/runs",
+    "run_mode": "deterministic",
+    "allow_overwrite": true
+  }
+}

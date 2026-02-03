@@ -1,0 +1,11 @@
+{
+  "timestamp_utc": "2026-02-03T07:16:33+00:00",
+  "run_id": "smoke_logging-28f52ca5",
+  "experiment_name": "smoke_logging",
+  "fingerprint": "28f52ca5",
+  "cwd": "c:\\moinfo",
+  "python": "3.11.13 | packaged by Anaconda, Inc. | (main, Jun  5 2025, 13:03:15) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "conda_env": "kaiseki",
+  "user": "hashimoto.ryohei"
+}

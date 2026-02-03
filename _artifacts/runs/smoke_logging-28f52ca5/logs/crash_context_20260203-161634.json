@@ -1,0 +1,23 @@
+{
+  "timestamp_local": "2026-02-03T16:16:34",
+  "run_id": "smoke_logging-28f52ca5",
+  "run_dir": "C:\\moinfo\\_artifacts\\runs\\smoke_logging-28f52ca5",
+  "logs_dir": "C:\\moinfo\\_artifacts\\runs\\smoke_logging-28f52ca5\\logs",
+  "effective_config_path": "C:\\moinfo\\_artifacts\\runs\\smoke_logging-28f52ca5\\config\\effective_config.json",
+  "data_path": "C:/moinfo/data/train.csv",
+  "step": "smoke_fail",
+  "exception": {
+    "type": "RuntimeError",
+    "message": "intentional error for logging verification"
+  },
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\hashimoto.ryohei\\AppData\\Local\\Temp\\ipykernel_20536\\517559258.py\", line 50, in <module>\n    raise RuntimeError(\"intentional error for logging verification\")\nRuntimeError: intentional error for logging verification\n",
+  "env": {
+    "cwd": "c:\\moinfo",
+    "python": "3.11.13 | packaged by Anaconda, Inc. | (main, Jun  5 2025, 13:03:15) [MSC v.1929 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "conda_env": "kaiseki"
+  },
+  "extra": {
+    "note": "intentional failure test"
+  }
+}
