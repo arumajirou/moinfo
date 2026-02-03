@@ -1,0 +1,250 @@
+SubCategory,Type,Name,Docstring,File,Args
+1. Dataset Construction,Class,ConcatDatasetBuilder,Concatenates DatasetBuilders such that they can be loaded together.,src\uni2ts\data\builder\_base.py,
+1. Dataset Construction,Method,ConcatDatasetBuilder.__init__,:param builders: DatasetBuilders to be concatenated together.,src\uni2ts\data\builder\_base.py,
+1. Dataset Construction,Method,ConcatDatasetBuilder.build_dataset,,src\uni2ts\data\builder\_base.py,
+1. Dataset Construction,Method,ConcatDatasetBuilder.load_dataset,Loads all builders with ConcatDataset.,src\uni2ts\data\builder\_base.py,transform_map
+1. Dataset Construction,Class,DatasetBuilder,Base class for DatasetBuilders.,src\uni2ts\data\builder\_base.py,
+1. Dataset Construction,Method,DatasetBuilder.build_dataset,Builds the dataset into the required file format.,src\uni2ts\data\builder\_base.py,
+1. Dataset Construction,Method,DatasetBuilder.load_dataset,Load the dataset.,src\uni2ts\data\builder\_base.py,transform_map
+1. Dataset Construction,Class,LOTSADatasetBuilder,Base class for LOTSA dataset builders.,src\uni2ts\data\builder\lotsa_v1\_base.py,
+1. Dataset Construction,Method,LOTSADatasetBuilder.__init__,:param datasets: list of datasets to load,src\uni2ts\data\builder\lotsa_v1\_base.py,"datasets, weight_map, sample_time_series, storage_path"
+1. Dataset Construction,Method,LOTSADatasetBuilder.load_dataset,Loads all datasets in dataset_list,src\uni2ts\data\builder\lotsa_v1\_base.py,transform_map
+1. Dataset Construction,Class,Buildings900KDatasetBuilder,,src\uni2ts\data\builder\lotsa_v1\buildings_bench.py,
+1. Dataset Construction,Method,Buildings900KDatasetBuilder.build_dataset,,src\uni2ts\data\builder\lotsa_v1\buildings_bench.py,"dataset, num_proc"
+1. Dataset Construction,Class,BuildingsBenchDatasetBuilder,,src\uni2ts\data\builder\lotsa_v1\buildings_bench.py,
+1. Dataset Construction,Method,BuildingsBenchDatasetBuilder.build_dataset,,src\uni2ts\data\builder\lotsa_v1\buildings_bench.py,dataset
+1. Dataset Construction,Class,CloudOpsTSFDatasetBuilder,,src\uni2ts\data\builder\lotsa_v1\cloudops_tsf.py,
+1. Dataset Construction,Method,CloudOpsTSFDatasetBuilder.build_dataset,,src\uni2ts\data\builder\lotsa_v1\cloudops_tsf.py,"dataset, num_proc"
+1. Dataset Construction,Class,CMIP6DatasetBuilder,,src\uni2ts\data\builder\lotsa_v1\cmip6.py,
+1. Dataset Construction,Method,CMIP6DatasetBuilder.build_dataset,,src\uni2ts\data\builder\lotsa_v1\cmip6.py,"dataset, num_proc"
+1. Dataset Construction,Class,ERA5DatasetBuilder,,src\uni2ts\data\builder\lotsa_v1\era5.py,
+1. Dataset Construction,Method,ERA5DatasetBuilder.build_dataset,,src\uni2ts\data\builder\lotsa_v1\era5.py,"dataset, num_proc"
+1. Dataset Construction,Class,GluonTSDatasetBuilder,,src\uni2ts\data\builder\lotsa_v1\gluonts.py,
+1. Dataset Construction,Method,GluonTSDatasetBuilder.build_dataset,,src\uni2ts\data\builder\lotsa_v1\gluonts.py,dataset
+1. Dataset Construction,Function,default_prediction_length_from_frequency,,src\uni2ts\data\builder\lotsa_v1\gluonts.py,freq
+1. Dataset Construction,Function,generate_forecasting_dataset,,src\uni2ts\data\builder\lotsa_v1\gluonts.py,"dataset_path, dataset_name, dataset_writer, prediction_length"
+1. Dataset Construction,Class,LargeSTDatasetBuilder,,src\uni2ts\data\builder\lotsa_v1\largest.py,
+1. Dataset Construction,Method,LargeSTDatasetBuilder.build_dataset,,src\uni2ts\data\builder\lotsa_v1\largest.py,"dataset, num_proc"
+1. Dataset Construction,Class,LibCityDatasetBuilder,,src\uni2ts\data\builder\lotsa_v1\lib_city.py,
+1. Dataset Construction,Method,LibCityDatasetBuilder.build_dataset,,src\uni2ts\data\builder\lotsa_v1\lib_city.py,"dataset, num_proc"
+1. Dataset Construction,Class,OthersLOTSADatasetBuilder,,src\uni2ts\data\builder\lotsa_v1\others.py,
+1. Dataset Construction,Method,OthersLOTSADatasetBuilder.build_dataset,,src\uni2ts\data\builder\lotsa_v1\others.py,dataset
+1. Dataset Construction,Function,_get_beijing_air_quality_gen_func,,src\uni2ts\data\builder\lotsa_v1\others.py,data_path
+1. Dataset Construction,Function,_get_china_air_quality_gen_func,,src\uni2ts\data\builder\lotsa_v1\others.py,data_path
+1. Dataset Construction,Function,_get_favorita_sales_gen_func,,src\uni2ts\data\builder\lotsa_v1\others.py,"data_path, length_threshold, missing_threshold"
+1. Dataset Construction,Function,_get_favorita_transactions_gen_func,,src\uni2ts\data\builder\lotsa_v1\others.py,data_path
+1. Dataset Construction,Function,_get_hierarchical_sales_gen_func,,src\uni2ts\data\builder\lotsa_v1\others.py,data_path
+1. Dataset Construction,Function,_get_kdd_2022_gen_func,,src\uni2ts\data\builder\lotsa_v1\others.py,data_path
+1. Dataset Construction,Function,_get_project_tycho_gen_func,,src\uni2ts\data\builder\lotsa_v1\others.py,"data_path, length_threshold, missing_threshold"
+1. Dataset Construction,Function,_get_residential_load_power_gen_func,,src\uni2ts\data\builder\lotsa_v1\others.py,data_path
+1. Dataset Construction,Function,_get_residential_pv_power_gen_func,,src\uni2ts\data\builder\lotsa_v1\others.py,data_path
+1. Dataset Construction,Function,_get_restaurant_gen_func,,src\uni2ts\data\builder\lotsa_v1\others.py,"data_path, missing_threshold"
+1. Dataset Construction,Class,ProEnFoDatasetBuilder,,src\uni2ts\data\builder\lotsa_v1\proenfo.py,
+1. Dataset Construction,Method,ProEnFoDatasetBuilder.build_dataset,,src\uni2ts\data\builder\lotsa_v1\proenfo.py,dataset
+1. Dataset Construction,Function,_get_bull_gen_func,,src\uni2ts\data\builder\lotsa_v1\proenfo.py,proenfo_path
+1. Dataset Construction,Function,_get_cockatoo_gen_func,,src\uni2ts\data\builder\lotsa_v1\proenfo.py,proenfo_path
+1. Dataset Construction,Function,_get_covid19_energy_gen_func,,src\uni2ts\data\builder\lotsa_v1\proenfo.py,proenfo_path
+1. Dataset Construction,Function,_get_elf_gen_func,,src\uni2ts\data\builder\lotsa_v1\proenfo.py,proenfo_path
+1. Dataset Construction,Function,_get_gfc12_load_gen_func,,src\uni2ts\data\builder\lotsa_v1\proenfo.py,proenfo_path
+1. Dataset Construction,Function,_get_gfc14_load_gen_func,,src\uni2ts\data\builder\lotsa_v1\proenfo.py,proenfo_path
+1. Dataset Construction,Function,_get_gfc17_load_gen_func,,src\uni2ts\data\builder\lotsa_v1\proenfo.py,proenfo_path
+1. Dataset Construction,Function,_get_hog_gen_func,,src\uni2ts\data\builder\lotsa_v1\proenfo.py,proenfo_path
+1. Dataset Construction,Function,_get_pdb_gen_func,,src\uni2ts\data\builder\lotsa_v1\proenfo.py,proenfo_path
+1. Dataset Construction,Function,_get_spain_gen_func,,src\uni2ts\data\builder\lotsa_v1\proenfo.py,proenfo_path
+1. Dataset Construction,Class,SubseasonalDatasetBuilder,,src\uni2ts\data\builder\lotsa_v1\subseasonal.py,
+1. Dataset Construction,Method,SubseasonalDatasetBuilder.build_dataset,,src\uni2ts\data\builder\lotsa_v1\subseasonal.py,dataset
+1. Dataset Construction,Function,_get_subseasonal_gen_func,,src\uni2ts\data\builder\lotsa_v1\subseasonal.py,
+1. Dataset Construction,Function,_get_subseasonal_precip_gen_func,,src\uni2ts\data\builder\lotsa_v1\subseasonal.py,
+1. Dataset Construction,Class,SimpleDatasetBuilder,,src\uni2ts\data\builder\simple.py,
+1. Dataset Construction,Method,SimpleDatasetBuilder.build_dataset,,src\uni2ts\data\builder\simple.py,"file, dataset_type, offset, date_offset, freq"
+1. Dataset Construction,Method,SimpleDatasetBuilder.load_dataset,,src\uni2ts\data\builder\simple.py,transform_map
+1. Dataset Construction,Class,SimpleEvalDatasetBuilder,,src\uni2ts\data\builder\simple.py,
+1. Dataset Construction,Method,SimpleEvalDatasetBuilder.build_dataset,,src\uni2ts\data\builder\simple.py,"file, dataset_type, freq, mean, std"
+1. Dataset Construction,Method,SimpleEvalDatasetBuilder.load_dataset,,src\uni2ts\data\builder\simple.py,transform_map
+1. Dataset Construction,Class,SimpleFinetuneDatasetBuilder,,src\uni2ts\data\builder\simple.py,
+1. Dataset Construction,Method,SimpleFinetuneDatasetBuilder.build_dataset,,src\uni2ts\data\builder\simple.py,"file, dataset_type, offset, date_offset, freq, normalize"
+1. Dataset Construction,Method,SimpleFinetuneDatasetBuilder.load_dataset,,src\uni2ts\data\builder\simple.py,transform_map
+1. Dataset Construction,Method,SimpleFinetuneDatasetBuilder.scale,,src\uni2ts\data\builder\simple.py,"data, start, end"
+1. Dataset Construction,Function,_from_long_dataframe,,src\uni2ts\data\builder\simple.py,"df, offset, date_offset, freq"
+1. Dataset Construction,Function,_from_wide_dataframe,,src\uni2ts\data\builder\simple.py,"df, offset, date_offset, freq"
+1. Dataset Construction,Function,_from_wide_dataframe_multivariate,,src\uni2ts\data\builder\simple.py,"df, offset, date_offset, freq"
+1. Dataset Construction,Function,generate_eval_builder,"By default, 'distance' is set to prediction length for rolling evaluation.",src\uni2ts\data\builder\simple.py,"dataset, offset, eval_length, prediction_length, context_length, patch_size, mode, storage_path, distance"
+1. Dataset Construction,Function,generate_eval_builders,,src\uni2ts\data\builder\simple.py,"dataset, offset, eval_length, prediction_lengths, context_lengths, patch_sizes, storage_path"
+1. Dataset Construction,Function,generate_finetune_builder,"By default, 'distance' is set to 1 for sliding window. A larger value can be used to reduce computational cost.",src\uni2ts\data\builder\simple.py,"dataset, train_length, prediction_length, context_length, patch_size, mode, storage_path, distance"
+1. Dataset Construction,Function,test_dataset_builder,,test\data\builder\test_base.py,airpassengers_dataset_builder
+1. Dataset Construction,Function,test_simple_dataset_builder_long,,test\data\builder\test_simple.py,"tmp_path_factory, get_long_df, offset, date_offset"
+1. Dataset Construction,Function,test_simple_dataset_builder_wide,,test\data\builder\test_simple.py,"tmp_path_factory, get_wide_df, multivariate, offset, date_offset"
+2. Patching & Batching,Function,_get_cdc_fluview_ilinet_gen_func,,src\uni2ts\data\builder\lotsa_v1\others.py,data_path
+2. Patching & Batching,Function,_get_cdc_fluview_who_nrevss_gen_func,,src\uni2ts\data\builder\lotsa_v1\others.py,data_path
+2. Patching & Batching,Class,Collate,A Callable abstract class for PyTorch DataLoader's collate_fn argument.,src\uni2ts\data\loader.py,
+2. Patching & Batching,Class,PackCollate,Packs uneven sequences with the first fit decreasing bin packing strategy.,src\uni2ts\data\loader.py,
+2. Patching & Batching,Method,PackCollate.first_fit_decreasing_bin_packing,Implements the first fit decreasing bin packing strategy.,src\uni2ts\data\loader.py,batch
+2. Patching & Batching,Method,PackCollate.get_sample_id,Create an array of integers representing the sample id in a sequence.,src\uni2ts\data\loader.py,"batch, bin_spaces"
+2. Patching & Batching,Method,PackCollate.merge_batch,Combines packed samples into BatchedSample format.,src\uni2ts\data\loader.py,"batch, bin_spaces"
+2. Patching & Batching,Class,PadCollate,Pads uneven sequences with padding function defined by pad_func_map.,src\uni2ts\data\loader.py,
+2. Patching & Batching,Method,PadCollate.get_sample_id,,src\uni2ts\data\loader.py,batch
+2. Patching & Batching,Method,PadCollate.pad_samples,,src\uni2ts\data\loader.py,batch
+2. Patching & Batching,Class,EvalPad,,src\uni2ts\transform\pad.py,
+2. Patching & Batching,Method,EvalPad.map,,src\uni2ts\transform\pad.py,"data_entry, field"
+2. Patching & Batching,Class,Pad,,src\uni2ts\transform\pad.py,
+2. Patching & Batching,Method,Pad.map,,src\uni2ts\transform\pad.py,"data_entry, field"
+2. Patching & Batching,Class,PadFreq,,src\uni2ts\transform\pad.py,
+2. Patching & Batching,Method,PadFreq.map,,src\uni2ts\transform\pad.py,"data_entry, field"
+2. Patching & Batching,Class,DefaultPatchSizeConstraints,,src\uni2ts\transform\patch.py,
+2. Patching & Batching,Class,FixedPatchSizeConstraints,,src\uni2ts\transform\patch.py,
+2. Patching & Batching,Class,GetPatchSize,,src\uni2ts\transform\patch.py,
+2. Patching & Batching,Class,PatchSizeConstraints,,src\uni2ts\transform\patch.py,
+2. Patching & Batching,Class,Patchify,,src\uni2ts\transform\patch.py,
+2. Patching & Batching,Class,FlatPackCollection,,src\uni2ts\transform\reshape.py,
+2. Patching & Batching,Class,FlatPackFields,,src\uni2ts\transform\reshape.py,
+2. Patching & Batching,Method,FlatPackFields.pop_field,,src\uni2ts\transform\reshape.py,"data_entry, field"
+2. Patching & Batching,Class,PackCollection,,src\uni2ts\transform\reshape.py,
+2. Patching & Batching,Class,PackFields,,src\uni2ts\transform\reshape.py,
+2. Patching & Batching,Method,PackFields.pop_field,,src\uni2ts\transform\reshape.py,"data_entry, field"
+2. Patching & Batching,Class,SequencifyField,,src\uni2ts\transform\reshape.py,
+2. Patching & Batching,Class,Transpose,,src\uni2ts\transform\reshape.py,
+2. Patching & Batching,Method,Transpose.transpose,,src\uni2ts\transform\reshape.py,"data_entry, field"
+2. Patching & Batching,Function,test_packing_multi_dim,,test\data\test_loader.py,"create_example, target_dim, past_feat_dynamic_real_dim"
+2. Patching & Batching,Function,test_packing_single_dim,,test\data\test_loader.py,"create_example, batch_size, batch_size_factor"
+2. Patching & Batching,Function,test_pad,,test\transform\test_pad.py,"min_length, target_length, dim"
+2. Patching & Batching,Function,test_pad_freq,,test\transform\test_pad.py,"min_length, target_length, dim"
+2. Patching & Batching,Function,test_patch_eval_pad,,test\transform\test_pad.py,"prediction_length, context_length, patch_size, dim"
+2. Patching & Batching,Function,fixed_patch_size_constraints,,test\transform\test_patch.py,"start, stop"
+2. Patching & Batching,Function,test_default_patch_size_constraints,,test\transform\test_patch.py,freq
+2. Patching & Batching,Function,test_get_patch_size,,test\transform\test_patch.py,"create_data_entry, freq, patch_sizes, patch_size_constraints, expectation"
+2. Patching & Batching,Function,test_patchify,,test\transform\test_patch.py,"create_data_entry, target_dim"
+2. Patching & Batching,Function,test_flat_pack_collection,,test\transform\test_reshape.py,"lengths, dims, patch_size"
+2. Patching & Batching,Function,test_flat_pack_fields,,test\transform\test_reshape.py,"length, output_field, field_dim_mapping, optional_field_dim_mapping, patch_size"
+2. Patching & Batching,Function,test_pack_collection,,test\transform\test_reshape.py,"length, dims, patch_size"
+2. Patching & Batching,Function,test_pack_fields,,test\transform\test_reshape.py,"length, output_field, field_dim_mapping, optional_field_dim_mapping, patch_size"
+2. Patching & Batching,Function,test_patch_size_sequence,,test\transform\test_reshape.py,"create_data_entry, length, target_dim"
+3. Cropping & Windowing,Class,SliceableBatchedSample,A BatchedSample that can be sliced.,src\uni2ts\data\loader.py,
+3. Cropping & Windowing,Class,EvalCrop,,src\uni2ts\transform\crop.py,
+3. Cropping & Windowing,Class,FinetunePatchCrop,"Similar to EvalCrop, crop training samples based on specific context_length and prediction_length",src\uni2ts\transform\crop.py,
+3. Cropping & Windowing,Class,PatchCrop,Crop fields in a data_entry in the temporal dimension based on a patch_size.,src\uni2ts\transform\crop.py,
+3. Cropping & Windowing,Function,test_hf_dataset_indexer_slice,,test\data\test_indexer.py,hf_dataset_path
+3. Cropping & Windowing,Function,array_in,,test\transform\test_crop.py,"arr, test_arr"
+3. Cropping & Windowing,Function,test_eval_crop,,test\transform\test_crop.py,"create_data_entry, length, dim, prediction_length, context_length, windows, distance, offset, expectation"
+3. Cropping & Windowing,Function,test_min_max,,test\transform\test_crop.py,
+3. Cropping & Windowing,Function,test_not_in_array,,test\transform\test_crop.py,"arr, test_arr"
+3. Cropping & Windowing,Function,test_patch_crop,,test\transform\test_crop.py,"create_data_entry, min_time_patches, max_patches, flatten, offset, length, dim, patch_size, expectation, seed"
+3. Cropping & Windowing,Function,test_patch_crop_transform_pipeline,,test\transform\test_crop.py,"create_data_entry, length, freq, target_dim, past_feat_dynamic_real_dim, flatten, seed"
+4. Transformations (General),Class,Chain,Chain multiple transformations together.,src\uni2ts\transform\_base.py,
+4. Transformations (General),Class,Identity,,src\uni2ts\transform\_base.py,
+4. Transformations (General),Class,Transformation,,src\uni2ts\transform\_base.py,
+4. Transformations (General),Method,Transformation.chain,,src\uni2ts\transform\_base.py,other
+4. Transformations (General),Class,ApplyFuncMixin,,src\uni2ts\transform\_mixin.py,
+4. Transformations (General),Method,ApplyFuncMixin.apply_func,,src\uni2ts\transform\_mixin.py,"func, data_entry, fields, optional_fields"
+4. Transformations (General),Class,CheckArrNDimMixin,,src\uni2ts\transform\_mixin.py,
+4. Transformations (General),Method,CheckArrNDimMixin.check_ndim,,src\uni2ts\transform\_mixin.py,"name, arr, expected_ndim"
+4. Transformations (General),Class,CollectFuncMixin,,src\uni2ts\transform\_mixin.py,
+4. Transformations (General),Method,CollectFuncMixin.collect_func,,src\uni2ts\transform\_mixin.py,"func, data_entry, fields, optional_fields"
+4. Transformations (General),Method,CollectFuncMixin.collect_func_dict,,src\uni2ts\transform\_mixin.py,"func, data_entry, fields, optional_fields"
+4. Transformations (General),Method,CollectFuncMixin.collect_func_list,,src\uni2ts\transform\_mixin.py,"func, data_entry, fields, optional_fields"
+4. Transformations (General),Class,LambdaSetFieldIfNotPresent,,src\uni2ts\transform\field.py,
+4. Transformations (General),Method,LambdaSetFieldIfNotPresent.set_field,,src\uni2ts\transform\field.py,"data_entry, field, value"
+4. Transformations (General),Class,SelectFields,,src\uni2ts\transform\field.py,
+4. Transformations (General),Class,SetValue,,src\uni2ts\transform\field.py,
+4. Transformations (General),Class,CausalMeanImputation,This class replaces each missing value with the average of all the values,src\uni2ts\transform\imputation.py,
+4. Transformations (General),Class,DummyValueImputation,,src\uni2ts\transform\imputation.py,
+4. Transformations (General),Class,ImputationMethod,,src\uni2ts\transform\imputation.py,
+4. Transformations (General),Class,ImputeTimeSeries,,src\uni2ts\transform\imputation.py,
+4. Transformations (General),Class,LastValueImputation,,src\uni2ts\transform\imputation.py,
+4. Transformations (General),Class,Downsample,,src\uni2ts\transform\resample.py,
+4. Transformations (General),Class,SampleDimension,,src\uni2ts\transform\resample.py,
+4. Transformations (General),Class,Subsample,,src\uni2ts\transform\resample.py,
+4. Transformations (General),Class,Upsample,,src\uni2ts\transform\resample.py,
+4. Transformations (General),Class,EvalMaskedPrediction,,src\uni2ts\transform\task.py,
+4. Transformations (General),Class,ExtendMask,,src\uni2ts\transform\task.py,
+4. Transformations (General),Class,MaskedPrediction,,src\uni2ts\transform\task.py,
+4. Transformations (General),Function,test_dummy_value_imputation,,test\transform\test_imputation.py,"x, y, value, fields"
+4. Transformations (General),Function,test_last_value_imputation,,test\transform\test_imputation.py,"x, y, value, fields"
+4. Transformations (General),Function,test_sample_dimension_shape,,test\transform\test_resample.py,"create_data_entry, target_dim, past_feat_dynamic_real_dim, seed"
+4. Transformations (General),Function,test_eval_masked_prediction,,test\transform\test_task.py,"length, target_dim, mask_length, truncate_map, optional_truncate_map, patch_size, truncate_list"
+4. Transformations (General),Function,test_extend_mask,,test\transform\test_task.py,"field_map, optional_map, patch_size, target_mask_shape"
+4. Transformations (General),Function,test_masked_prediction,,test\transform\test_task.py,"length, target_dim, min_mask_ratio, max_mask_ratio, truncate_map, optional_truncate_map, patch_size, truncate_list"
+4. Transformations (Map/Filter),Class,MapFuncMixin,,src\uni2ts\transform\_mixin.py,
+4. Transformations (Map/Filter),Method,MapFuncMixin.map_func,,src\uni2ts\transform\_mixin.py,"func, data_entry, fields, optional_fields"
+4. Transformations (Map/Filter),Class,GaussianFilterSubsample,,src\uni2ts\transform\resample.py,
+5. Dataset Core,Class,EvalDataset,Dataset class for validation.,src\uni2ts\data\dataset.py,
+5. Dataset Core,Method,EvalDataset.__init__,:param windows: number of windows to perform evaluation on,src\uni2ts\data\dataset.py,"windows, indexer, transform"
+5. Dataset Core,Class,FinetuneDataset,This class is identical to EvalDataset. It is created solely to avoid confusion due to naming.,src\uni2ts\data\dataset.py,
+5. Dataset Core,Method,FinetuneDataset.__init__,:param windows: number of windows to perform evaluation on,src\uni2ts\data\dataset.py,"windows, indexer, transform"
+5. Dataset Core,Class,MultiSampleTimeSeriesDataset,Samples multiple time series and stacks them into a single time series.,src\uni2ts\data\dataset.py,
+5. Dataset Core,Method,MultiSampleTimeSeriesDataset.__init__,:param indexer: Underlying Indexer object,src\uni2ts\data\dataset.py,"indexer, transform, max_ts, combine_fields, sample_time_series, dataset_weight, sampler"
+5. Dataset Core,Class,SampleTimeSeriesType,How to sample from the dataset.,src\uni2ts\data\dataset.py,
+5. Dataset Core,Class,TimeSeriesDataset,,src\uni2ts\data\dataset.py,
+5. Dataset Core,Method,TimeSeriesDataset.__init__,:param indexer: Underlying Indexer object,src\uni2ts\data\dataset.py,"indexer, transform, sample_time_series, dataset_weight"
+5. Dataset Core,Method,TimeSeriesDataset.num_ts,Get the number of time series in the dataset,src\uni2ts\data\dataset.py,
+5. Dataset Core,Class,HuggingFaceDatasetIndexer,Indexer for Hugging Face Datasets,src\uni2ts\data\indexer\hf_dataset_indexer.py,
+5. Dataset Core,Method,HuggingFaceDatasetIndexer.__init__,:param dataset: underlying Hugging Face Dataset,src\uni2ts\data\indexer\hf_dataset_indexer.py,"dataset, uniform"
+5. Dataset Core,Method,HuggingFaceDatasetIndexer.get_proportional_probabilities,Obtain proportion of each time series based on number of time steps.,src\uni2ts\data\indexer\hf_dataset_indexer.py,field
+5. Dataset Core,Class,HFDataset,,src\uni2ts\eval_util\_hf_dataset.py,
+5. Dataset Core,Method,HFDataset.__init__,,src\uni2ts\eval_util\_hf_dataset.py,"dataset_name, storage_path"
+5. Dataset Core,Class,LSFDataset,,src\uni2ts\eval_util\_lsf_dataset.py,
+5. Dataset Core,Method,LSFDataset.__init__,,src\uni2ts\eval_util\_lsf_dataset.py,"dataset_name, mode, split"
+5. Dataset Core,Method,LSFDataset.scale,,src\uni2ts\eval_util\_lsf_dataset.py,"data, start, end"
+5. Dataset Core,Function,_load_etth,,src\uni2ts\eval_util\_pf_dataset.py,"dataset_name, prediction_length"
+5. Dataset Core,Function,_load_ettm,,src\uni2ts\eval_util\_pf_dataset.py,"dataset_name, prediction_length"
+5. Dataset Core,Function,_load_istanbul_traffic,,src\uni2ts\eval_util\_pf_dataset.py,"dataset_name, prediction_length"
+5. Dataset Core,Function,_load_jena_weather,,src\uni2ts\eval_util\_pf_dataset.py,"dataset_name, prediction_length"
+5. Dataset Core,Function,_load_metr_la,,src\uni2ts\eval_util\_pf_dataset.py,"dataset_name, prediction_length"
+5. Dataset Core,Function,_load_turkey_power,,src\uni2ts\eval_util\_pf_dataset.py,"dataset_name, prediction_length"
+5. Dataset Core,Function,_load_walmart,,src\uni2ts\eval_util\_pf_dataset.py,"dataset_name, prediction_length"
+5. Dataset Core,Function,generate_pf_dataset,,src\uni2ts\eval_util\_pf_dataset.py,"dataset_path, dataset_name, dataset_writer, prediction_length"
+5. Dataset Core,Function,test_eval_dataset,,test\data\test_dataset.py,"hf_dataset_path, windows"
+5. Dataset Core,Function,test_global_dataset,,test\data\test_dataset.py,hf_dataset_path
+5. Dataset Core,Function,test_multi_dataset,,test\data\test_dataset.py,hf_dataset_path
+5. Dataset Core,Function,test_weighted_dataset,,test\data\test_dataset.py,"hf_dataset_path, weight, sample_time_series, seed"
+6. Feature Engineering,Function,_get_godaddy_gen_func,,src\uni2ts\data\builder\lotsa_v1\others.py,data_path
+6. Feature Engineering,Class,AddObservedMask,,src\uni2ts\transform\feature.py,
+6. Feature Engineering,Class,AddSampleIndex,Add sample_id when sequence packing is not used. Follow the implementation in MoiraiForecast.,src\uni2ts\transform\feature.py,
+6. Feature Engineering,Class,AddTimeIndex,Add time_id to data_entry,src\uni2ts\transform\feature.py,
+6. Feature Engineering,Class,AddVariateIndex,Add variate_id to data_entry,src\uni2ts\transform\feature.py,
+6. Feature Engineering,Class,RemoveFields,,src\uni2ts\transform\field.py,
+6. Feature Engineering,Function,test_add_observed_mask,,test\transform\test_feature.py,"field_map, optional_map, collection_type"
+6. Feature Engineering,Function,test_add_time_index,,test\transform\test_feature.py,"field_map, optional_map, patch_size, collection_type"
+6. Feature Engineering,Function,test_add_variate_index,,test\transform\test_feature.py,"field_map, optional_map, max_dim, patch_size, randomize, collection_type"
+7. Loading & IO,Function,get_data,,project\vn1_competition\prepare_data.py,"file_path1, file_path2"
+7. Loading & IO,Function,train_example_gen_func,,project\vn1_competition\prepare_data.py,
+7. Loading & IO,Function,val_example_gen_func,,project\vn1_competition\prepare_data.py,
+7. Loading & IO,Class,BatchedSampleQueue,Queue data structure storing batched samples.,src\uni2ts\data\loader.py,
+7. Loading & IO,Method,BatchedSampleQueue.append,Appends a batch to the end of the queue.,src\uni2ts\data\loader.py,batch
+7. Loading & IO,Method,BatchedSampleQueue.appendleft,Appends a batch to the start of the queue.,src\uni2ts\data\loader.py,batch
+7. Loading & IO,Method,BatchedSampleQueue.as_batched_data,Returns the queue as a BatchedSample,src\uni2ts\data\loader.py,
+7. Loading & IO,Method,BatchedSampleQueue.popleft,Pops a batch from the start of the queue.,src\uni2ts\data\loader.py,size
+7. Loading & IO,Class,DataLoader,Wrapper on PyTorch's DataLoader class implementing:,src\uni2ts\data\loader.py,
+7. Loading & IO,Method,DataLoader.__init__,Only wrapper specific arguments are documented below.,src\uni2ts\data\loader.py,"dataset, batch_size, batch_size_factor, cycle, num_batches_per_epoch, shuffle, sampler, num_workers, collate_fn, pin_memory, drop_last, fill_last, worker_init_fn, prefetch_factor, persistent_workers"
+7. Loading & IO,Method,DataLoader.worker_init_fn,Getter for worker_init_fn,src\uni2ts\data\loader.py,
+7. Loading & IO,Method,DataLoader.worker_init_fn,Setter for worker_init_fn,src\uni2ts\data\loader.py,worker_init_fn
+7. Loading & IO,Class,Metadata,,src\uni2ts\data\loader.py,
+7. Loading & IO,Class,_BatchedSampleIterator,Iterator returning batched samples with a fixed batch size.,src\uni2ts\data\loader.py,
+7. Loading & IO,Method,_BatchedSampleIterator.has_next,Check if iterator still has next.,src\uni2ts\data\loader.py,
+7. Loading & IO,Class,SimpleDataset,,test\data\test_loader.py,
+7. Loading & IO,Class,SimpleDataset2,,test\data\test_loader.py,
+7. Loading & IO,Class,TSDataset,,test\data\test_loader.py,
+7. Loading & IO,Function,test_basic,,test\data\test_loader.py,"dataset_size, batch_size, batch_size_factor, drop_last, fill_last"
+7. Loading & IO,Function,test_cycle_loop,,test\data\test_loader.py,"dataset_size, batch_size, batch_size_factor"
+7. Loading & IO,Function,test_dtype,,test\data\test_loader.py,dtype
+7. Loading & IO,Function,test_input_longer_than_max_length,,test\data\test_loader.py,
+7. Loading & IO,Function,test_loop,,test\data\test_loader.py,"dataset_size, batch_size, num_epochs"
+7. Loading & IO,Function,test_multiple_fields,,test\data\test_loader.py,
+7. Loading & IO,Function,test_non_ts_input,,test\data\test_loader.py,create_example
+7. Loading & IO,Function,test_num_batches_per_epoch,,test\data\test_loader.py,"dataset_size, batch_size, num_batches_per_epoch, num_epochs"
+7. Loading & IO,Function,test_shuffle,,test\data\test_loader.py,
+9. General Data Utils,Class,Indexer,Base class for all Indexers.,src\uni2ts\data\indexer\_base.py,
+9. General Data Utils,Method,Indexer.__init__,:param uniform: whether the underlying data has uniform length,src\uni2ts\data\indexer\_base.py,uniform
+9. General Data Utils,Method,Indexer.check_index,Check the validity of a given index.,src\uni2ts\data\indexer\_base.py,idx
+9. General Data Utils,Method,Indexer.get_proportional_probabilities,Obtain proportion of each time series based on number of time steps.,src\uni2ts\data\indexer\_base.py,field
+9. General Data Utils,Method,Indexer.get_uniform_probabilities,Obtains uniform probability distribution over all time series.,src\uni2ts\data\indexer\_base.py,
+9. General Data Utils,Class,MetaData,,src\uni2ts\eval_util\data.py,
+9. General Data Utils,Function,get_custom_eval_dataset,,src\uni2ts\eval_util\data.py,"dataset_name, offset, windows, distance, prediction_length, mode"
+9. General Data Utils,Function,get_gluonts_test_dataset,,src\uni2ts\eval_util\data.py,"dataset_name, prediction_length, mode, regenerate"
+9. General Data Utils,Function,get_gluonts_val_dataset,,src\uni2ts\eval_util\data.py,"dataset_name, prediction_length, mode, regenerate"
+9. General Data Utils,Function,get_lsf_test_dataset,,src\uni2ts\eval_util\data.py,"dataset_name, prediction_length, mode"
+9. General Data Utils,Function,get_lsf_val_dataset,,src\uni2ts\eval_util\data.py,"dataset_name, prediction_length, mode"
+9. General Data Utils,Function,_test_batch,,test\data\test_indexer.py,"batch, target_dim, past_feat_dynamic_real_dim, ts_lengths"
+9. General Data Utils,Function,_test_item,,test\data\test_indexer.py,"item, target_dim, past_feat_dynamic_real_dim, ts_lengths"
+9. General Data Utils,Function,test_hf_dataset_indexer_index_error,,test\data\test_indexer.py,"hf_dataset_path, idx"
+9. General Data Utils,Function,test_hf_dataset_indexer_int,,test\data\test_indexer.py,hf_dataset_path
+9. General Data Utils,Function,test_hf_dataset_indexer_list,,test\data\test_indexer.py,hf_dataset_path

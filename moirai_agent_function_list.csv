@@ -1,0 +1,748 @@
+File,Type,Name,Args,Docstring,Line
+cli\eval.py,Function,main,cfg,,30
+cli\train.py,Class,DataModule,N/A,,31
+cli\train.py,Method,DataModule.__init__,"cfg, train_dataset, val_dataset",,32
+cli\train.py,Method,DataModule.get_dataloader,"dataset, dataloader_func, shuffle, world_size, batch_size, num_batches_per_epoch",,47
+cli\train.py,Method,DataModule.train_dataloader,,,75
+cli\train.py,Method,DataModule.train_batch_size,,,99
+cli\train.py,Method,DataModule.val_batch_size,,,105
+cli\train.py,Method,DataModule.train_num_batches_per_epoch,,,111
+cli\train.py,Function,main,cfg,,123
+project\benchmarks\run_chronos.py,Function,evaluate,"pipeline, dataset, save_path, num_samples, batch_size, test_setting, pred_length",,33
+project\benchmarks\run_timesfm.py,Function,_mse,"y_pred, y_true",mse loss.,20
+project\benchmarks\run_timesfm.py,Function,_mae,"y_pred, y_true",mae loss.,25
+project\benchmarks\run_timesfm.py,Function,_smape,"y_pred, y_true",_smape loss.,30
+project\benchmarks\run_timesfm.py,Function,evaluate,"model, dataset, save_path, context_len, checkpoint_path, batch_size, test_setting, pred_length",,39
+project\benchmarks\run_visionts.py,Function,imputation_nan,array,Impute missing value using Naive forecasting.,24
+project\benchmarks\run_visionts.py,Function,norm_freq_str,freq_str,,53
+project\benchmarks\run_visionts.py,Function,get_seasonality_list,freq,,60
+project\benchmarks\run_visionts.py,Function,forcast_batch,"batch, device, context_len, align_const, model",,72
+project\benchmarks\run_visionts.py,Function,convert_context_len,"context_len, no_periodicity_context_len, periodicity",,101
+project\benchmarks\run_visionts.py,Function,evaluate,"model, dataset, save_path, context_len, no_periodicity_context_len, device, checkpoint_dir, mae_arch, batch_size, test_setting, prediction_length, periodicity, norm_const, align_const",,109
+project\moirai-agent\ctx_forecast\gen_image.py,Function,main,"in_file, out_file, img_root",,10
+project\moirai-agent\ctx_forecast\src\ctx_forecast\mcp_client.py,Class,MCPClient,N/A,,13
+project\moirai-agent\ctx_forecast\src\ctx_forecast\mcp_client.py,Method,MCPClient.__init__,config,,14
+project\moirai-agent\ctx_forecast\src\ctx_forecast\mcp_client.py,Method,MCPClient.stop_criteria,"reply_content, count",Stop criteria for the LLM interactions.,101
+project\moirai-agent\ctx_forecast\src\ctx_forecast\metrics_gather.py,Function,stats_between_percentile,"all_values, p_low, p_high",,14
+project\moirai-agent\ctx_forecast\src\ctx_forecast\metrics_gather.py,Function,calculate_metrics,"historical, future, prediction, id, roi_args",,30
+project\moirai-agent\ctx_forecast\src\ctx_forecast\utils.py,Function,set_random_seeds,seed,,24
+project\moirai-agent\ctx_forecast\src\ctx_forecast\utils.py,Function,encode_image,image_path,,30
+project\moirai-agent\ctx_forecast\src\ctx_forecast\utils.py,Function,parse_values_from_string,"content, start_tag, end_tag, entry_sep",,35
+project\moirai-agent\ctx_forecast\src\ctx_forecast\utils.py,Function,plot_ts_and_save,"x, y, xlabel, xaxis_format, ylabel, title, figsize, grid, img_path, x_rotation",Args:,62
+project\moirai-agent\ctx_forecast\src\ctx_forecast\utils.py,Function,plot_historical_and_save,"historical, img_path, y_pixels, dpi",,122
+project\moirai-agent\ctx_forecast\src\ctx_forecast\utils.py,Function,plot_predictions_and_save,"df_history, df_preds, df_crossval_preds, img_path, grid, x_rotation",,148
+project\moirai-agent\ctx_forecast\src\tools\tsf_models.py,Function,set_random_seeds,seed,,7
+project\moirai-agent\ctx_forecast\src\tools\tsf_models.py,Function,pad_to_left,"series_list, value",,16
+project\moirai-agent\ctx_forecast\src\tools\tsf_models.py,Function,get_chronos_forecast_fn,device,,30
+project\moirai-agent\ctx_forecast\src\tools\tsf_models.py,Function,get_timesfm_forecast_fn,device,,81
+project\moirai-agent\ctx_forecast\src\tools\tsf_models.py,Function,get_tirex_forecast_fn,device,,135
+project\moirai-agent\ctx_forecast\src\tools\tsf_models.py,Function,get_moirai_forecast_fn,device,,174
+project\moirai-agent\ctx_forecast\src\tools\tsf_services.py,Function,main,,usage example:,22
+project\moirai-agent\ctx_forecast\src\tools\utils.py,Function,pad_to_left,"series_list, value",,10
+project\moirai-agent\ctx_forecast\src\tools\utils.py,Function,plot_a_time_series,"history_values, forecast_values, future_values, save_dir, save_name",Plot the given time-series sequences and return the path of the saved figure.,25
+project\moirai-agent\ctx_forecast\src\tools\utils.py,Function,mean_absolute_error,"ground_truth, prediction","Given ground truth and prediction, calculate the mean absolute error.",110
+project\moirai-agent\ctx_forecast\src\tools\utils.py,Function,time_series_pattern_analysis,time_series,"Given a time series, analyze the pattern of the time series and return the results.",132
+project\moirai-agent\ctx_forecast\src\tools\python_sandbox\server.py,Function,_run_subprocess_sync,"code_file, temp_dir, timeout",Synchronous helper function to run subprocess.,32
+project\moirai-agent\ctx_forecast\src\tools\python_sandbox\server.py,Function,create_app,,Create the aiohttp application,214
+project\moirai-agent\ctx_forecast\src\tools\python_sandbox\test_api.py,Function,test_health,url,Test the health endpoint,16
+project\moirai-agent\ctx_forecast\src\tools\python_sandbox\test_api.py,Function,test_matrix_multiplication,url,Test matrix multiplication via API,34
+project\moirai-agent\ctx_forecast\src\tools\python_sandbox\test_api.py,Function,main,,Main function,169
+project\moirai-agent\ctx_forecast\src\utils\formatting.py,Function,format_time_series_forecasting_json,"history_values, history_start, history_end, history_frequency, context_info, pred_length, instruct_prompt, future_values, future_start, future_end, value_format, special_tags",Format the time series prompt.,31
+project\moirai-agent\ctx_forecast\src\utils\formatting.py,Function,format_time_series_prompt,"history_values, history_start, history_end, history_frequency, context_info, functionality, pred_length, instruct_prompt, thinking_process, future_values, future_start, future_end, value_format, special_tags",Format the time series prompt.,138
+project\moirai-agent\ctx_forecast\src\utils\formatting.py,Function,preprocess_values,"value_str, value_format, missing_value",Preprocess the values.,267
+project\moirai-agent\ctx_forecast\src\utils\formatting.py,Function,parse_values_from_ts_prompt,"ts_str, ts_type, special_tags",Parse values from the time series prompt.,343
+project\moirai-agent\ctx_forecast\src\utils\image.py,Function,encode_image,image_path,,12
+project\moirai-agent\ctx_forecast\src\utils\image.py,Function,plot_ts_and_save,"x, y, xlabel, xaxis_format, ylabel, title, figsize, grid, img_path, x_rotation",Args:,17
+project\moirai-agent\ctx_forecast\src\utils\image.py,Function,plot_historical_and_save,"historical, img_path, y_pixels, dpi",,77
+project\moirai-agent\ctx_forecast\src\utils\import_utils.py,Function,import_config,"config_path, attr_name",,4
+project\moirai-agent\ctx_forecast\src\utils\misc.py,Function,get_logger,"save_path, log_file",,5
+project\moirai-agent\ctx_forecast\src\utils\misc.py,Function,compute_nrmae,"prediction, future_values, history_values",,26
+project\moirai-agent\ctx_forecast\src\utils\ts_gen.py,Function,generate_ts,"length, spike_time, spike_value, trend_rate",,9
+project\moirai-agent\ctx_forecast\src\utils\ts_gen.py,Function,generate_ts,"length, jump_time, jump_value",,36
+project\moirai-agent\gift_eval\agent.py,Class,TimeSeriesForecasters,N/A,,49
+project\moirai-agent\gift_eval\agent.py,Method,TimeSeriesForecasters.__init__,model_names,,50
+project\moirai-agent\gift_eval\agent.py,Method,TimeSeriesForecasters.get_forecasts,"history_values, pred_length",,57
+project\moirai-agent\gift_eval\agent.py,Method,TimeSeriesForecasters.get_best_pred,"best_model, candidate_preds, model_names",,91
+project\moirai-agent\gift_eval\agent.py,Class,TimeSeriesProcessor,N/A,,103
+project\moirai-agent\gift_eval\agent.py,Method,TimeSeriesProcessor.__init__,"max_future_length, max_history_future_ratio",,104
+project\moirai-agent\gift_eval\agent.py,Method,TimeSeriesProcessor.parse_answer,"answer, model_names",,350
+project\moirai-agent\gift_eval\agent.py,Method,TimeSeriesProcessor.check_preds_diversity,"all_preds, diversity_threshold, max_forecast_length, history_values",,360
+project\moirai-agent\gift_eval\agent.py,Class,MoiraiAgentTimeSeriesForecast,N/A,,387
+project\moirai-agent\gift_eval\agent.py,Method,MoiraiAgentTimeSeriesForecast.__init__,"model_names, llm_repo_id",,388
+project\moirai-agent\gift_eval\eval.py,Function,extract_quantiles_prediction,df,Extract quantiles predictions and convert them into glutonts compatible format,56
+project\moirai-agent\gift_eval\eval.py,Function,eval_dataset,"dataset, ds_config, df",,89
+project\moirai-agent\gift_eval\eval.py,Function,get_prediction_df,dataset_config,,128
+project\moirai-agent\gift_eval\eval.py,Function,reformatted_metrics_for_leaderboard,row,,174
+project\moirai-agent\gift_eval\gift_eval.py,Class,Term,N/A,,68
+project\moirai-agent\gift_eval\gift_eval.py,Method,Term.multiplier,,,74
+project\moirai-agent\gift_eval\gift_eval.py,Function,itemize_start,data_entry,,83
+project\moirai-agent\gift_eval\gift_eval.py,Function,maybe_reconvert_freq,freq,"if the freq is one of the newest pandas freqs, convert it to the old freq",88
+project\moirai-agent\gift_eval\gift_eval.py,Class,MultivariateToUnivariate,N/A,,105
+project\moirai-agent\gift_eval\gift_eval.py,Method,MultivariateToUnivariate.__init__,field,,106
+project\moirai-agent\gift_eval\gift_eval.py,Class,Dataset,N/A,,122
+project\moirai-agent\gift_eval\gift_eval.py,Method,Dataset.__init__,"name, term, to_univariate, storage_env_var",,123
+project\moirai-agent\gift_eval\gift_eval.py,Method,Dataset.prediction_length,,,150
+project\moirai-agent\gift_eval\gift_eval.py,Method,Dataset.freq,,,159
+project\moirai-agent\gift_eval\gift_eval.py,Method,Dataset.target_dim,,,163
+project\moirai-agent\gift_eval\gift_eval.py,Method,Dataset.past_feat_dynamic_real_dim,,,171
+project\moirai-agent\gift_eval\gift_eval.py,Method,Dataset.windows,,,189
+project\moirai-agent\gift_eval\gift_eval.py,Method,Dataset.sum_series_length,,,208
+project\moirai-agent\gift_eval\gift_eval.py,Method,Dataset.training_dataset,,,218
+project\moirai-agent\gift_eval\gift_eval.py,Method,Dataset.validation_dataset,,,225
+project\moirai-agent\gift_eval\gift_eval.py,Method,Dataset.test_data,,,232
+project\moirai-agent\gift_eval\tsf_models.py,Function,set_random_seeds,seed,,7
+project\moirai-agent\gift_eval\tsf_models.py,Function,pad_to_left,"series_list, value",,16
+project\moirai-agent\gift_eval\tsf_models.py,Function,get_chronos_forecast_fn,device,,30
+project\moirai-agent\gift_eval\tsf_models.py,Function,get_timesfm_forecast_fn,device,,81
+project\moirai-agent\gift_eval\tsf_models.py,Function,get_tirex_forecast_fn,device,,135
+project\moirai-agent\gift_eval\tsf_models.py,Function,get_moirai_forecast_fn,device,,174
+project\vn1_competition\prepare_data.py,Function,train_example_gen_func,,,10
+project\vn1_competition\prepare_data.py,Function,val_example_gen_func,,,20
+project\vn1_competition\prepare_data.py,Function,get_data,"file_path1, file_path2",,30
+project\vn1_competition\src\forecast.py,Class,SampleNLLLoss,N/A,,43
+project\vn1_competition\src\forecast.py,Method,SampleNLLLoss.reduce_loss,"loss, prediction_mask, observed_mask, sample_id, variate_id",,44
+project\vn1_competition\src\forecast.py,Class,Forecast,N/A,,71
+project\vn1_competition\src\forecast.py,Method,Forecast.__init__,"prediction_length, target_dim, feat_dynamic_real_dim, past_feat_dynamic_real_dim, context_length, module_kwargs, module, patch_size, num_samples",,72
+project\vn1_competition\src\forecast.py,Method,Forecast.hparams_context,"prediction_length, target_dim, feat_dynamic_real_dim, past_feat_dynamic_real_dim, context_length, patch_size, num_samples",,93
+project\vn1_competition\src\forecast.py,Method,Forecast.create_predictor,"batch_size, device",,122
+project\vn1_competition\src\forecast.py,Method,Forecast.describe_inputs,batch_size,,152
+project\vn1_competition\src\forecast.py,Method,Forecast.prediction_input_names,,,212
+project\vn1_competition\src\forecast.py,Method,Forecast.training_input_names,,,216
+project\vn1_competition\src\forecast.py,Method,Forecast.past_length,,,220
+project\vn1_competition\src\forecast.py,Method,Forecast.context_token_length,patch_size,,227
+project\vn1_competition\src\forecast.py,Method,Forecast.prediction_token_length,patch_size,,230
+project\vn1_competition\src\forecast.py,Method,Forecast.max_patch_size,,,234
+project\vn1_competition\src\forecast.py,Method,Forecast.forward,"past_target, past_observed_target, past_is_pad, feat_dynamic_real, observed_feat_dynamic_real, past_feat_dynamic_real, past_observed_feat_dynamic_real, num_samples",,237
+project\vn1_competition\src\forecast.py,Method,Forecast.get_default_transform,,,938
+project\vn1_competition\src\main.py,Function,load_context,"file_path1, file_path2",,10
+project\vn1_competition\src\main.py,Function,predict,"df_context, df_future, checkpoint_path",,33
+project\vn1_competition\src\main.py,Function,vn1_competition_evaluation,df,,77
+project\vn1_competition\src\main.py,Function,main,,,102
+src\uni2ts\callbacks\HuggingFaceCheckpoint.py,Class,HuggingFaceCheckpoint,N/A,Save the model to the Hugging Face format.,42
+src\uni2ts\callbacks\HuggingFaceCheckpoint.py,Method,HuggingFaceCheckpoint.__init__,"dirpath, filename, monitor, save_top_k, mode, every_n_epochs",,48
+src\uni2ts\common\core.py,Function,abstract_class_property,,,22
+src\uni2ts\common\env.py,Function,get_path_var,var,,24
+src\uni2ts\common\env.py,Class,Env,N/A,,30
+src\uni2ts\common\env.py,Method,Env.monkey_patch_path_vars,cls,,48
+src\uni2ts\common\hydra_util.py,Function,register_resolver,name,,23
+src\uni2ts\common\hydra_util.py,Function,resolve_as_tuple,ls,,32
+src\uni2ts\common\hydra_util.py,Function,resolve_cls_getattr,"cls_name, attribute_name",,37
+src\uni2ts\common\hydra_util.py,Function,resolve_floordiv,"a, b",,45
+src\uni2ts\common\hydra_util.py,Function,resolve_mul,"a, b",,50
+src\uni2ts\common\sampler.py,Function,uniform_sampler,n,,25
+src\uni2ts\common\sampler.py,Function,binomial_sampler,"n, p",,29
+src\uni2ts\common\sampler.py,Function,beta_binomial_sampler,"n, a, b",,33
+src\uni2ts\common\sampler.py,Function,get_sampler,distribution,,44
+src\uni2ts\common\torch_util.py,Function,packed_attention_mask,sample_id,,37
+src\uni2ts\common\torch_util.py,Function,packed_causal_attention_mask,"sample_id, time_id",,45
+src\uni2ts\common\torch_util.py,Function,mask_fill,"tensor, mask, value",,57
+src\uni2ts\common\torch_util.py,Function,safe_div,"numer, denom",,66
+src\uni2ts\common\torch_util.py,Function,size_to_mask,"max_size, sizes",,77
+src\uni2ts\common\torch_util.py,Function,fixed_size,value,,85
+src\uni2ts\common\torch_util.py,Function,sized_mean,"value, sizes, dim, keepdim, size_keepdim, correction",,92
+src\uni2ts\common\torch_util.py,Function,masked_mean,"value, mask, dim, keepdim, correction",,110
+src\uni2ts\common\torch_util.py,Function,unsqueeze_trailing_dims,"x, shape",,123
+src\uni2ts\common\typing.py,Class,DateTime64,N/A,,24
+src\uni2ts\common\typing.py,Class,Character,N/A,,28
+src\uni2ts\data\dataset.py,Class,SampleTimeSeriesType,N/A,How to sample from the dataset.,36
+src\uni2ts\data\dataset.py,Class,TimeSeriesDataset,N/A,,49
+src\uni2ts\data\dataset.py,Method,TimeSeriesDataset.__init__,"indexer, transform, sample_time_series, dataset_weight",:param indexer: Underlying Indexer object,50
+src\uni2ts\data\dataset.py,Method,TimeSeriesDataset.num_ts,,Get the number of time series in the dataset,94
+src\uni2ts\data\dataset.py,Class,MultiSampleTimeSeriesDataset,N/A,Samples multiple time series and stacks them into a single time series.,127
+src\uni2ts\data\dataset.py,Method,MultiSampleTimeSeriesDataset.__init__,"indexer, transform, max_ts, combine_fields, sample_time_series, dataset_weight, sampler",:param indexer: Underlying Indexer object,133
+src\uni2ts\data\dataset.py,Class,EvalDataset,N/A,Dataset class for validation.,185
+src\uni2ts\data\dataset.py,Method,EvalDataset.__init__,"windows, indexer, transform",:param windows: number of windows to perform evaluation on,191
+src\uni2ts\data\dataset.py,Class,FinetuneDataset,N/A,This class is identical to EvalDataset. It is created solely to avoid confusion due to naming.,214
+src\uni2ts\data\dataset.py,Method,FinetuneDataset.__init__,"windows, indexer, transform",:param windows: number of windows to perform evaluation on,219
+src\uni2ts\data\loader.py,Class,Collate,N/A,A Callable abstract class for PyTorch DataLoader's collate_fn argument.,32
+src\uni2ts\data\loader.py,Class,PadCollate,N/A,Pads uneven sequences with padding function defined by pad_func_map.,55
+src\uni2ts\data\loader.py,Method,PadCollate.pad_samples,batch,,75
+src\uni2ts\data\loader.py,Method,PadCollate.get_sample_id,batch,,92
+src\uni2ts\data\loader.py,Class,PackCollate,N/A,Packs uneven sequences with the first fit decreasing bin packing strategy.,103
+src\uni2ts\data\loader.py,Method,PackCollate.first_fit_decreasing_bin_packing,batch,Implements the first fit decreasing bin packing strategy.,125
+src\uni2ts\data\loader.py,Method,PackCollate.get_sample_id,"batch, bin_spaces",Create an array of integers representing the sample id in a sequence.,161
+src\uni2ts\data\loader.py,Method,PackCollate.merge_batch,"batch, bin_spaces",Combines packed samples into BatchedSample format.,186
+src\uni2ts\data\loader.py,Class,SliceableBatchedSample,N/A,A BatchedSample that can be sliced.,213
+src\uni2ts\data\loader.py,Class,Metadata,N/A,,235
+src\uni2ts\data\loader.py,Class,BatchedSampleQueue,N/A,Queue data structure storing batched samples.,241
+src\uni2ts\data\loader.py,Method,BatchedSampleQueue.append,batch,Appends a batch to the end of the queue.,274
+src\uni2ts\data\loader.py,Method,BatchedSampleQueue.appendleft,batch,Appends a batch to the start of the queue.,281
+src\uni2ts\data\loader.py,Method,BatchedSampleQueue.popleft,size,Pops a batch from the start of the queue.,288
+src\uni2ts\data\loader.py,Method,BatchedSampleQueue.as_batched_data,,Returns the queue as a BatchedSample,304
+src\uni2ts\data\loader.py,Class,_BatchedSampleIterator,N/A,Iterator returning batched samples with a fixed batch size.,317
+src\uni2ts\data\loader.py,Method,_BatchedSampleIterator.has_next,,Check if iterator still has next.,379
+src\uni2ts\data\loader.py,Class,DataLoader,N/A,Wrapper on PyTorch's DataLoader class implementing:,390
+src\uni2ts\data\loader.py,Method,DataLoader.__init__,"dataset, batch_size, batch_size_factor, cycle, num_batches_per_epoch, shuffle, sampler, num_workers, collate_fn, pin_memory, drop_last, fill_last, worker_init_fn, prefetch_factor, persistent_workers",Only wrapper specific arguments are documented below.,408
+src\uni2ts\data\loader.py,Method,DataLoader.worker_init_fn,,Getter for worker_init_fn,481
+src\uni2ts\data\loader.py,Method,DataLoader.worker_init_fn,worker_init_fn,Setter for worker_init_fn,486
+src\uni2ts\data\builder\simple.py,Function,_from_long_dataframe,"df, offset, date_offset, freq",,40
+src\uni2ts\data\builder\simple.py,Function,_from_wide_dataframe,"df, offset, date_offset, freq",,90
+src\uni2ts\data\builder\simple.py,Function,_from_wide_dataframe_multivariate,"df, offset, date_offset, freq",,140
+src\uni2ts\data\builder\simple.py,Class,SimpleDatasetBuilder,N/A,,186
+src\uni2ts\data\builder\simple.py,Method,SimpleDatasetBuilder.build_dataset,"file, dataset_type, offset, date_offset, freq",,195
+src\uni2ts\data\builder\simple.py,Method,SimpleDatasetBuilder.load_dataset,transform_map,,231
+src\uni2ts\data\builder\simple.py,Class,SimpleFinetuneDatasetBuilder,N/A,,247
+src\uni2ts\data\builder\simple.py,Method,SimpleFinetuneDatasetBuilder.build_dataset,"file, dataset_type, offset, date_offset, freq, normalize",,267
+src\uni2ts\data\builder\simple.py,Method,SimpleFinetuneDatasetBuilder.load_dataset,transform_map,,319
+src\uni2ts\data\builder\simple.py,Method,SimpleFinetuneDatasetBuilder.scale,"data, start, end",,343
+src\uni2ts\data\builder\simple.py,Class,SimpleEvalDatasetBuilder,N/A,,351
+src\uni2ts\data\builder\simple.py,Method,SimpleEvalDatasetBuilder.build_dataset,"file, dataset_type, freq, mean, std",,365
+src\uni2ts\data\builder\simple.py,Method,SimpleEvalDatasetBuilder.load_dataset,transform_map,,399
+src\uni2ts\data\builder\simple.py,Function,generate_finetune_builder,"dataset, train_length, prediction_length, context_length, patch_size, mode, storage_path, distance","By default, 'distance' is set to 1 for sliding window. A larger value can be used to reduce computational cost.",424
+src\uni2ts\data\builder\simple.py,Function,generate_eval_builder,"dataset, offset, eval_length, prediction_length, context_length, patch_size, mode, storage_path, distance","By default, 'distance' is set to prediction length for rolling evaluation.",451
+src\uni2ts\data\builder\simple.py,Function,generate_eval_builders,"dataset, offset, eval_length, prediction_lengths, context_lengths, patch_sizes, storage_path",,486
+src\uni2ts\data\builder\_base.py,Class,DatasetBuilder,N/A,Base class for DatasetBuilders.,25
+src\uni2ts\data\builder\_base.py,Method,DatasetBuilder.build_dataset,,Builds the dataset into the required file format.,31
+src\uni2ts\data\builder\_base.py,Method,DatasetBuilder.load_dataset,transform_map,Load the dataset.,38
+src\uni2ts\data\builder\_base.py,Class,ConcatDatasetBuilder,N/A,Concatenates DatasetBuilders such that they can be loaded together.,50
+src\uni2ts\data\builder\_base.py,Method,ConcatDatasetBuilder.__init__,,:param builders: DatasetBuilders to be concatenated together.,55
+src\uni2ts\data\builder\_base.py,Method,ConcatDatasetBuilder.build_dataset,,,66
+src\uni2ts\data\builder\_base.py,Method,ConcatDatasetBuilder.load_dataset,transform_map,Loads all builders with ConcatDataset.,71
+src\uni2ts\data\builder\lotsa_v1\buildings_bench.py,Class,BuildingsBenchDatasetBuilder,N/A,,48
+src\uni2ts\data\builder\lotsa_v1\buildings_bench.py,Method,BuildingsBenchDatasetBuilder.build_dataset,dataset,,72
+src\uni2ts\data\builder\lotsa_v1\buildings_bench.py,Class,Buildings900KDatasetBuilder,N/A,,111
+src\uni2ts\data\builder\lotsa_v1\buildings_bench.py,Method,Buildings900KDatasetBuilder.build_dataset,"dataset, num_proc",,118
+src\uni2ts\data\builder\lotsa_v1\cloudops_tsf.py,Class,CloudOpsTSFDatasetBuilder,N/A,,32
+src\uni2ts\data\builder\lotsa_v1\cloudops_tsf.py,Method,CloudOpsTSFDatasetBuilder.build_dataset,"dataset, num_proc",,41
+src\uni2ts\data\builder\lotsa_v1\cmip6.py,Class,CMIP6DatasetBuilder,N/A,,72
+src\uni2ts\data\builder\lotsa_v1\cmip6.py,Method,CMIP6DatasetBuilder.build_dataset,"dataset, num_proc",,78
+src\uni2ts\data\builder\lotsa_v1\era5.py,Class,ERA5DatasetBuilder,N/A,,53
+src\uni2ts\data\builder\lotsa_v1\era5.py,Method,ERA5DatasetBuilder.build_dataset,"dataset, num_proc",,59
+src\uni2ts\data\builder\lotsa_v1\gluonts.py,Function,default_prediction_length_from_frequency,freq,,43
+src\uni2ts\data\builder\lotsa_v1\gluonts.py,Function,generate_forecasting_dataset,"dataset_path, dataset_name, dataset_writer, prediction_length",,67
+src\uni2ts\data\builder\lotsa_v1\gluonts.py,Class,GluonTSDatasetBuilder,N/A,,345
+src\uni2ts\data\builder\lotsa_v1\gluonts.py,Method,GluonTSDatasetBuilder.build_dataset,dataset,,359
+src\uni2ts\data\builder\lotsa_v1\largest.py,Class,LargeSTDatasetBuilder,N/A,,32
+src\uni2ts\data\builder\lotsa_v1\largest.py,Method,LargeSTDatasetBuilder.build_dataset,"dataset, num_proc",,43
+src\uni2ts\data\builder\lotsa_v1\lib_city.py,Class,LibCityDatasetBuilder,N/A,,34
+src\uni2ts\data\builder\lotsa_v1\lib_city.py,Method,LibCityDatasetBuilder.build_dataset,"dataset, num_proc",,59
+src\uni2ts\data\builder\lotsa_v1\others.py,Function,_get_kdd_2022_gen_func,data_path,,48
+src\uni2ts\data\builder\lotsa_v1\others.py,Function,_get_godaddy_gen_func,data_path,,94
+src\uni2ts\data\builder\lotsa_v1\others.py,Function,_get_favorita_sales_gen_func,"data_path, length_threshold, missing_threshold",,123
+src\uni2ts\data\builder\lotsa_v1\others.py,Function,_get_favorita_transactions_gen_func,data_path,,172
+src\uni2ts\data\builder\lotsa_v1\others.py,Function,_get_restaurant_gen_func,"data_path, missing_threshold",,205
+src\uni2ts\data\builder\lotsa_v1\others.py,Function,_get_hierarchical_sales_gen_func,data_path,,245
+src\uni2ts\data\builder\lotsa_v1\others.py,Function,_get_china_air_quality_gen_func,data_path,,272
+src\uni2ts\data\builder\lotsa_v1\others.py,Function,_get_beijing_air_quality_gen_func,data_path,,320
+src\uni2ts\data\builder\lotsa_v1\others.py,Function,_get_residential_load_power_gen_func,data_path,,379
+src\uni2ts\data\builder\lotsa_v1\others.py,Function,_get_residential_pv_power_gen_func,data_path,,427
+src\uni2ts\data\builder\lotsa_v1\others.py,Function,_get_cdc_fluview_ilinet_gen_func,data_path,,471
+src\uni2ts\data\builder\lotsa_v1\others.py,Function,_get_cdc_fluview_who_nrevss_gen_func,data_path,,531
+src\uni2ts\data\builder\lotsa_v1\others.py,Function,_get_project_tycho_gen_func,"data_path, length_threshold, missing_threshold",,711
+src\uni2ts\data\builder\lotsa_v1\others.py,Class,OthersLOTSADatasetBuilder,N/A,,761
+src\uni2ts\data\builder\lotsa_v1\others.py,Method,OthersLOTSADatasetBuilder.build_dataset,dataset,,789
+src\uni2ts\data\builder\lotsa_v1\proenfo.py,Function,_get_gfc12_load_gen_func,proenfo_path,,40
+src\uni2ts\data\builder\lotsa_v1\proenfo.py,Function,_get_gfc14_load_gen_func,proenfo_path,,66
+src\uni2ts\data\builder\lotsa_v1\proenfo.py,Function,_get_gfc17_load_gen_func,proenfo_path,,90
+src\uni2ts\data\builder\lotsa_v1\proenfo.py,Function,_get_spain_gen_func,proenfo_path,,116
+src\uni2ts\data\builder\lotsa_v1\proenfo.py,Function,_get_pdb_gen_func,proenfo_path,,141
+src\uni2ts\data\builder\lotsa_v1\proenfo.py,Function,_get_elf_gen_func,proenfo_path,,166
+src\uni2ts\data\builder\lotsa_v1\proenfo.py,Function,_get_bull_gen_func,proenfo_path,,189
+src\uni2ts\data\builder\lotsa_v1\proenfo.py,Function,_get_cockatoo_gen_func,proenfo_path,,219
+src\uni2ts\data\builder\lotsa_v1\proenfo.py,Function,_get_hog_gen_func,proenfo_path,,255
+src\uni2ts\data\builder\lotsa_v1\proenfo.py,Function,_get_covid19_energy_gen_func,proenfo_path,,291
+src\uni2ts\data\builder\lotsa_v1\proenfo.py,Class,ProEnFoDatasetBuilder,N/A,,322
+src\uni2ts\data\builder\lotsa_v1\proenfo.py,Method,ProEnFoDatasetBuilder.build_dataset,dataset,,347
+src\uni2ts\data\builder\lotsa_v1\subseasonal.py,Function,_get_subseasonal_precip_gen_func,,,39
+src\uni2ts\data\builder\lotsa_v1\subseasonal.py,Function,_get_subseasonal_gen_func,,,69
+src\uni2ts\data\builder\lotsa_v1\subseasonal.py,Class,SubseasonalDatasetBuilder,N/A,,127
+src\uni2ts\data\builder\lotsa_v1\subseasonal.py,Method,SubseasonalDatasetBuilder.build_dataset,dataset,,139
+src\uni2ts\data\builder\lotsa_v1\_base.py,Class,LOTSADatasetBuilder,N/A,Base class for LOTSA dataset builders.,33
+src\uni2ts\data\builder\lotsa_v1\_base.py,Method,LOTSADatasetBuilder.__init__,"datasets, weight_map, sample_time_series, storage_path",:param datasets: list of datasets to load,49
+src\uni2ts\data\builder\lotsa_v1\_base.py,Method,LOTSADatasetBuilder.load_dataset,transform_map,Loads all datasets in dataset_list,71
+src\uni2ts\data\indexer\hf_dataset_indexer.py,Class,HuggingFaceDatasetIndexer,N/A,Indexer for Hugging Face Datasets,30
+src\uni2ts\data\indexer\hf_dataset_indexer.py,Method,HuggingFaceDatasetIndexer.__init__,"dataset, uniform",:param dataset: underlying Hugging Face Dataset,35
+src\uni2ts\data\indexer\hf_dataset_indexer.py,Method,HuggingFaceDatasetIndexer.get_proportional_probabilities,field,Obtain proportion of each time series based on number of time steps.,119
+src\uni2ts\data\indexer\_base.py,Class,Indexer,N/A,Base class for all Indexers.,24
+src\uni2ts\data\indexer\_base.py,Method,Indexer.__init__,uniform,:param uniform: whether the underlying data has uniform length,31
+src\uni2ts\data\indexer\_base.py,Method,Indexer.check_index,idx,Check the validity of a given index.,37
+src\uni2ts\data\indexer\_base.py,Method,Indexer.get_uniform_probabilities,,Obtains uniform probability distribution over all time series.,97
+src\uni2ts\data\indexer\_base.py,Method,Indexer.get_proportional_probabilities,field,Obtain proportion of each time series based on number of time steps.,105
+src\uni2ts\distribution\laplace.py,Class,LaplaceOutput,N/A,,26
+src\uni2ts\distribution\laplace.py,Method,LaplaceOutput.domain_map,,,31
+src\uni2ts\distribution\laplace.py,Class,LaplaceFixedScaleOutput,N/A,,48
+src\uni2ts\distribution\laplace.py,Method,LaplaceFixedScaleOutput.__init__,scale,,52
+src\uni2ts\distribution\laplace.py,Method,LaplaceFixedScaleOutput.domain_map,,,56
+src\uni2ts\distribution\log_normal.py,Class,LogNormalOutput,N/A,,26
+src\uni2ts\distribution\log_normal.py,Method,LogNormalOutput.domain_map,,,31
+src\uni2ts\distribution\mixture.py,Class,Mixture,N/A,,28
+src\uni2ts\distribution\mixture.py,Method,Mixture.__init__,"weights, components, validate_args",,32
+src\uni2ts\distribution\mixture.py,Method,Mixture.expand,"batch_shape, _instance",,68
+src\uni2ts\distribution\mixture.py,Method,Mixture.log_prob,value,,81
+src\uni2ts\distribution\mixture.py,Method,Mixture.sample,sample_shape,,127
+src\uni2ts\distribution\mixture.py,Method,Mixture.support,,,143
+src\uni2ts\distribution\mixture.py,Method,Mixture.mean,,,147
+src\uni2ts\distribution\mixture.py,Method,Mixture.variance,,,153
+src\uni2ts\distribution\mixture.py,Method,Mixture.cdf,value,,164
+src\uni2ts\distribution\mixture.py,Class,MixtureOutput,N/A,,170
+src\uni2ts\distribution\mixture.py,Method,MixtureOutput.__init__,components,,173
+src\uni2ts\distribution\mixture.py,Method,MixtureOutput.args_dim,,,195
+src\uni2ts\distribution\mixture.py,Method,MixtureOutput.domain_map,,,202
+src\uni2ts\distribution\negative_binomial.py,Class,NegativeBinomial,N/A,,27
+src\uni2ts\distribution\negative_binomial.py,Method,NegativeBinomial.__init__,"total_count, logits, validate_args",,35
+src\uni2ts\distribution\negative_binomial.py,Method,NegativeBinomial.expand,"batch_shape, _instance",,49
+src\uni2ts\distribution\negative_binomial.py,Method,NegativeBinomial.probs,,,62
+src\uni2ts\distribution\negative_binomial.py,Method,NegativeBinomial.sample,sample_shape,,65
+src\uni2ts\distribution\negative_binomial.py,Method,NegativeBinomial.log_prob,value,,76
+src\uni2ts\distribution\negative_binomial.py,Method,NegativeBinomial.mean,,,92
+src\uni2ts\distribution\negative_binomial.py,Method,NegativeBinomial.variance,,,96
+src\uni2ts\distribution\negative_binomial.py,Class,NegativeBinomialOutput,N/A,,100
+src\uni2ts\distribution\negative_binomial.py,Method,NegativeBinomialOutput.domain_map,,,105
+src\uni2ts\distribution\normal.py,Class,NormalOutput,N/A,,26
+src\uni2ts\distribution\normal.py,Method,NormalOutput.domain_map,,,31
+src\uni2ts\distribution\normal.py,Class,NormalFixedScaleOutput,N/A,,47
+src\uni2ts\distribution\normal.py,Method,NormalFixedScaleOutput.__init__,scale,,51
+src\uni2ts\distribution\normal.py,Method,NormalFixedScaleOutput.domain_map,,,55
+src\uni2ts\distribution\pareto.py,Class,ParetoOutput,N/A,,26
+src\uni2ts\distribution\pareto.py,Method,ParetoOutput.domain_map,,,31
+src\uni2ts\distribution\pareto.py,Class,ParetoFixedAlphaOutput,N/A,,51
+src\uni2ts\distribution\pareto.py,Method,ParetoFixedAlphaOutput.__init__,alpha,,55
+src\uni2ts\distribution\pareto.py,Method,ParetoFixedAlphaOutput.domain_map,,,60
+src\uni2ts\distribution\student_t.py,Class,StudentTOutput,N/A,,26
+src\uni2ts\distribution\student_t.py,Method,StudentTOutput.domain_map,,,31
+src\uni2ts\distribution\_base.py,Function,tree_map_multi,"func, tree","Tree map with function requiring multiple inputs, where other inputs are from a PyTree too.",32
+src\uni2ts\distribution\_base.py,Function,convert_to_module,tree,Convert a simple container PyTree into an nn.Module PyTree,42
+src\uni2ts\distribution\_base.py,Function,convert_to_container,tree,Convert an nn.Module PyTree into a simple container PyTree,53
+src\uni2ts\distribution\_base.py,Class,DistrParamProj,N/A,Projection layer from representations to distribution parameters.,62
+src\uni2ts\distribution\_base.py,Method,DistrParamProj.__init__,"in_features, out_features, args_dim, domain_map, proj_layer",:param in_features: size of representation,67
+src\uni2ts\distribution\_base.py,Method,DistrParamProj.forward,,,115
+src\uni2ts\distribution\_base.py,Class,AffineTransformed,N/A,,130
+src\uni2ts\distribution\_base.py,Method,AffineTransformed.__init__,"base_dist, loc, scale, validate_args",,131
+src\uni2ts\distribution\_base.py,Method,AffineTransformed.mean,,,147
+src\uni2ts\distribution\_base.py,Method,AffineTransformed.variance,,,151
+src\uni2ts\distribution\_base.py,Class,DistributionOutput,N/A,Base class for distribution outputs.,156
+src\uni2ts\distribution\_base.py,Method,DistributionOutput.distribution,"distr_params, loc, scale, validate_args",,164
+src\uni2ts\distribution\_base.py,Method,DistributionOutput.args_dim,,Returns the dimensionality of the distribution parameters in the form of a pytree.,185
+src\uni2ts\distribution\_base.py,Method,DistributionOutput.domain_map,,Returns a pytree of callables that maps the unconstrained distribution parameters,198
+src\uni2ts\distribution\_base.py,Method,DistributionOutput.get_param_proj,"in_features, out_features, proj_layer",Get a projection layer mapping representations to distribution parameters.,207
+src\uni2ts\eval_util\data.py,Class,MetaData,N/A,,19
+src\uni2ts\eval_util\data.py,Function,get_gluonts_val_dataset,"dataset_name, prediction_length, mode, regenerate",,28
+src\uni2ts\eval_util\data.py,Function,get_gluonts_test_dataset,"dataset_name, prediction_length, mode, regenerate",,57
+src\uni2ts\eval_util\data.py,Function,get_lsf_val_dataset,"dataset_name, prediction_length, mode",,86
+src\uni2ts\eval_util\data.py,Function,get_lsf_test_dataset,"dataset_name, prediction_length, mode",,111
+src\uni2ts\eval_util\data.py,Function,get_custom_eval_dataset,"dataset_name, offset, windows, distance, prediction_length, mode",,136
+src\uni2ts\eval_util\evaluation.py,Class,BatchForecast,N/A,"Wrapper around ``Forecast`` objects, that adds a batch dimension",34
+src\uni2ts\eval_util\evaluation.py,Function,_get_data_batch,"input_batch, label_batch, forecast_batch, seasonality, mask_invalid_label, allow_nan_forecast",,57
+src\uni2ts\eval_util\evaluation.py,Function,evaluate_forecasts_raw,forecasts,"Evaluate ``forecasts`` by comparing them with ``test_data``, according",95
+src\uni2ts\eval_util\evaluation.py,Function,evaluate_forecasts,forecasts,"Evaluate ``forecasts`` by comparing them with ``test_data``, according",176
+src\uni2ts\eval_util\evaluation.py,Function,evaluate_model,model,"Evaluate ``model`` when applied to ``test_data``, according",228
+src\uni2ts\eval_util\metrics.py,Class,MedianMSE,N/A,Mean Squared Error,11
+src\uni2ts\eval_util\plot.py,Function,plot_single,"inp, label, forecast, context_length, intervals, ax, dim, name, show_label",,10
+src\uni2ts\eval_util\plot.py,Function,plot_next_multi,"axes, input_it, label_it, forecast_it, context_length, intervals, dim, name, show_label",,48
+src\uni2ts\eval_util\_hf_dataset.py,Class,HFDataset,N/A,,8
+src\uni2ts\eval_util\_hf_dataset.py,Method,HFDataset.__init__,"dataset_name, storage_path",,9
+src\uni2ts\eval_util\_lsf_dataset.py,Class,LSFDataset,N/A,,9
+src\uni2ts\eval_util\_lsf_dataset.py,Method,LSFDataset.__init__,"dataset_name, mode, split",,10
+src\uni2ts\eval_util\_lsf_dataset.py,Method,LSFDataset.scale,"data, start, end",,71
+src\uni2ts\eval_util\_pf_dataset.py,Function,_load_etth,"dataset_name, prediction_length",,13
+src\uni2ts\eval_util\_pf_dataset.py,Function,_load_ettm,"dataset_name, prediction_length",,24
+src\uni2ts\eval_util\_pf_dataset.py,Function,_load_metr_la,"dataset_name, prediction_length",,35
+src\uni2ts\eval_util\_pf_dataset.py,Function,_load_walmart,"dataset_name, prediction_length",,50
+src\uni2ts\eval_util\_pf_dataset.py,Function,_load_jena_weather,"dataset_name, prediction_length",,72
+src\uni2ts\eval_util\_pf_dataset.py,Function,_load_istanbul_traffic,"dataset_name, prediction_length",,87
+src\uni2ts\eval_util\_pf_dataset.py,Function,_load_turkey_power,"dataset_name, prediction_length",,103
+src\uni2ts\eval_util\_pf_dataset.py,Function,generate_pf_dataset,"dataset_path, dataset_name, dataset_writer, prediction_length",,134
+src\uni2ts\loss\packed\distribution.py,Class,PackedNLLLoss,N/A,,23
+src\uni2ts\loss\packed\normalized.py,Class,PointNormType,N/A,,30
+src\uni2ts\loss\packed\normalized.py,Class,PackedPointNormalizedLoss,N/A,,45
+src\uni2ts\loss\packed\normalized.py,Method,PackedPointNormalizedLoss.__init__,"normalize, correction, epsilon",,48
+src\uni2ts\loss\packed\normalized.py,Method,PackedPointNormalizedLoss.denominator_func,,,76
+src\uni2ts\loss\packed\normalized.py,Method,PackedPointNormalizedLoss.none_denominator,"target, observed_mask, sample_id, variate_id",,91
+src\uni2ts\loss\packed\normalized.py,Method,PackedPointNormalizedLoss.reduce_denominator,"value, observed_mask, sample_id, variate_id",,100
+src\uni2ts\loss\packed\normalized.py,Method,PackedPointNormalizedLoss.abs_target_denominator,"target, observed_mask, sample_id, variate_id",,123
+src\uni2ts\loss\packed\normalized.py,Method,PackedPointNormalizedLoss.abs_target_sq_denominator,"target, observed_mask, sample_id, variate_id",,134
+src\uni2ts\loss\packed\normalized.py,Method,PackedPointNormalizedLoss.target_denominator,"target, observed_mask, sample_id, variate_id",,146
+src\uni2ts\loss\packed\normalized.py,Method,PackedPointNormalizedLoss.target_sq_denominator,"target, observed_mask, sample_id, variate_id",,155
+src\uni2ts\loss\packed\normalized.py,Method,PackedPointNormalizedLoss.std_dev_denominator,"target, observed_mask, sample_id, variate_id",,166
+src\uni2ts\loss\packed\normalized.py,Method,PackedPointNormalizedLoss.var_denominator,"target, observed_mask, sample_id, variate_id",,177
+src\uni2ts\loss\packed\normalized.py,Class,PackedNMAELoss,N/A,,211
+src\uni2ts\loss\packed\normalized.py,Class,PackedNMSELoss,N/A,,215
+src\uni2ts\loss\packed\normalized.py,Class,PackedNRMSELoss,N/A,,219
+src\uni2ts\loss\packed\normalized.py,Method,PackedNRMSELoss.reduce_loss,"loss, prediction_mask, observed_mask, sample_id, variate_id",,222
+src\uni2ts\loss\packed\normalized.py,Class,PackedNMLSELoss,N/A,,263
+src\uni2ts\loss\packed\normalized.py,Method,PackedNMLSELoss.__init__,df,,266
+src\uni2ts\loss\packed\percentage_error.py,Class,PackedMAPELoss,N/A,,25
+src\uni2ts\loss\packed\percentage_error.py,Class,PackedSMAPELoss,N/A,,40
+src\uni2ts\loss\packed\point.py,Class,PackedMAELoss,N/A,,19
+src\uni2ts\loss\packed\point.py,Method,PackedMAELoss.__init__,,,20
+src\uni2ts\loss\packed\point.py,Class,PackedMSELoss,N/A,,24
+src\uni2ts\loss\packed\point.py,Method,PackedMSELoss.__init__,,,25
+src\uni2ts\loss\packed\point.py,Class,PackedRMSELoss,N/A,,29
+src\uni2ts\loss\packed\point.py,Method,PackedRMSELoss.__init__,,,30
+src\uni2ts\loss\packed\quantile.py,Class,PackedQuantileLoss,N/A,,14
+src\uni2ts\loss\packed\quantile.py,Method,PackedQuantileLoss.__init__,quantile_levels,,17
+src\uni2ts\loss\packed\quantile.py,Class,PackedQuantileMAELoss,N/A,,57
+src\uni2ts\loss\packed\_base.py,Class,PackedLoss,N/A,Abstract base class for loss functions supporting packed inputs.,27
+src\uni2ts\loss\packed\_base.py,Method,PackedLoss.reduce_loss,"loss, prediction_mask, observed_mask, sample_id, variate_id",,76
+src\uni2ts\loss\packed\_base.py,Class,PackedPointLoss,N/A,Abstract base class for loss functions on point forecasts.,112
+src\uni2ts\loss\packed\_base.py,Class,PackedQuantileLoss,N/A,Abstract base class for loss functions on quantile forecasts.,127
+src\uni2ts\loss\packed\_base.py,Class,PackedDistributionLoss,N/A,Abstract base class for loss functions on probabilistic (distribution) forecasts.,142
+src\uni2ts\model\moirai\finetune.py,Class,SetTrainableParamsMixin,N/A,A basic version of Mixin class for setting trainable parameters. Haven't applied it in the current model.,68
+src\uni2ts\model\moirai\finetune.py,Method,SetTrainableParamsMixin.set_trainable_params,"finetune_pattern, named_parameters",,74
+src\uni2ts\model\moirai\finetune.py,Class,MoiraiFinetune,N/A,,92
+src\uni2ts\model\moirai\finetune.py,Method,MoiraiFinetune.__init__,"min_patches, min_mask_ratio, max_mask_ratio, max_dim, num_training_steps, num_warmup_steps, module_kwargs, module, num_samples, beta1, beta2, loss_func, val_metric, lr, weight_decay, log_on_step, context_length, prediction_length, patch_size, finetune_pattern",,110
+src\uni2ts\model\moirai\finetune.py,Method,MoiraiFinetune.forward,"target, observed_mask, sample_id, time_id, variate_id, prediction_mask, patch_size",,150
+src\uni2ts\model\moirai\finetune.py,Method,MoiraiFinetune.training_step,"batch, batch_idx",,171
+src\uni2ts\model\moirai\finetune.py,Method,MoiraiFinetune.validation_step,"batch, batch_idx, dataloader_idx",,206
+src\uni2ts\model\moirai\finetune.py,Method,MoiraiFinetune.configure_optimizers,,,283
+src\uni2ts\model\moirai\finetune.py,Method,MoiraiFinetune.train_transform_map,,,380
+src\uni2ts\model\moirai\finetune.py,Method,MoiraiFinetune.val_transform_map,,,510
+src\uni2ts\model\moirai\finetune.py,Class,MoiraiLinearProbe,N/A,,642
+src\uni2ts\model\moirai\forecast.py,Class,SampleNLLLoss,N/A,,44
+src\uni2ts\model\moirai\forecast.py,Method,SampleNLLLoss.reduce_loss,"loss, prediction_mask, observed_mask, sample_id, variate_id",,45
+src\uni2ts\model\moirai\forecast.py,Class,MoiraiForecast,N/A,,72
+src\uni2ts\model\moirai\forecast.py,Method,MoiraiForecast.__init__,"prediction_length, target_dim, feat_dynamic_real_dim, past_feat_dynamic_real_dim, context_length, module_kwargs, module, patch_size, num_samples",,73
+src\uni2ts\model\moirai\forecast.py,Method,MoiraiForecast.hparams_context,"prediction_length, target_dim, feat_dynamic_real_dim, past_feat_dynamic_real_dim, context_length, patch_size, num_samples",,94
+src\uni2ts\model\moirai\forecast.py,Method,MoiraiForecast.create_predictor,"batch_size, device",,123
+src\uni2ts\model\moirai\forecast.py,Method,MoiraiForecast.describe_inputs,batch_size,,153
+src\uni2ts\model\moirai\forecast.py,Method,MoiraiForecast.prediction_input_names,,,213
+src\uni2ts\model\moirai\forecast.py,Method,MoiraiForecast.training_input_names,,,217
+src\uni2ts\model\moirai\forecast.py,Method,MoiraiForecast.past_length,,,221
+src\uni2ts\model\moirai\forecast.py,Method,MoiraiForecast.context_token_length,patch_size,,228
+src\uni2ts\model\moirai\forecast.py,Method,MoiraiForecast.prediction_token_length,patch_size,,231
+src\uni2ts\model\moirai\forecast.py,Method,MoiraiForecast.max_patch_size,,,235
+src\uni2ts\model\moirai\forecast.py,Method,MoiraiForecast.forward,"past_target, past_observed_target, past_is_pad, feat_dynamic_real, observed_feat_dynamic_real, past_feat_dynamic_real, past_observed_feat_dynamic_real, num_samples",,238
+src\uni2ts\model\moirai\forecast.py,Method,MoiraiForecast.get_default_transform,,,941
+src\uni2ts\model\moirai\module.py,Function,encode_distr_output,distr_output,Serialization function for DistributionOutput,41
+src\uni2ts\model\moirai\module.py,Function,safe_target_check,obj,,63
+src\uni2ts\model\moirai\module.py,Function,decode_distr_output,config,,77
+src\uni2ts\model\moirai\module.py,Class,MoiraiModule,N/A,"Contains components of Moirai, to ensure implementation is identical across models.",82
+src\uni2ts\model\moirai\module.py,Method,MoiraiModule.__init__,"distr_output, d_model, num_layers, patch_sizes, max_seq_len, attn_dropout_p, dropout_p, scaling",:param distr_output: distribution output object,92
+src\uni2ts\model\moirai\module.py,Method,MoiraiModule.forward,"target, observed_mask, sample_id, time_id, variate_id, prediction_mask, patch_size",Defines the forward pass of MoiraiModule.,151
+src\uni2ts\model\moirai\pretrain.py,Class,MoiraiPretrain,N/A,,65
+src\uni2ts\model\moirai\pretrain.py,Method,MoiraiPretrain.__init__,"min_patches, min_mask_ratio, max_mask_ratio, max_dim, num_training_steps, num_warmup_steps, module_kwargs, module, num_samples, beta1, beta2, loss_func, val_metric, lr, weight_decay, log_on_step",,83
+src\uni2ts\model\moirai\pretrain.py,Method,MoiraiPretrain.forward,"target, observed_mask, sample_id, time_id, variate_id, prediction_mask, patch_size",Redirects to the forward function of MoiraiModule.,112
+src\uni2ts\model\moirai\pretrain.py,Method,MoiraiPretrain.training_step,"batch, batch_idx",Implements LightningModule training_step. Logs training loss.,145
+src\uni2ts\model\moirai\pretrain.py,Method,MoiraiPretrain.validation_step,"batch, batch_idx, dataloader_idx",Implements LightningModule validation_step. Logs validation loss and additional metrics from val_metric.,187
+src\uni2ts\model\moirai\pretrain.py,Method,MoiraiPretrain.configure_optimizers,,Implements LightningModule configure_optimizers which defines the configuration of optimizer and learning rate,272
+src\uni2ts\model\moirai\pretrain.py,Method,MoiraiPretrain.train_transform_map,,"Get a dictionary of Transforms, with a default Transform as defined:",359
+src\uni2ts\model\moirai2\forecast.py,Class,Moirai2Forecast,N/A,,45
+src\uni2ts\model\moirai2\forecast.py,Method,Moirai2Forecast.__init__,"prediction_length, target_dim, feat_dynamic_real_dim, past_feat_dynamic_real_dim, context_length, module_kwargs, module",,46
+src\uni2ts\model\moirai2\forecast.py,Method,Moirai2Forecast.hparams_context,"prediction_length, target_dim, feat_dynamic_real_dim, past_feat_dynamic_real_dim, context_length",,70
+src\uni2ts\model\moirai2\forecast.py,Method,Moirai2Forecast.create_predictor,"batch_size, device",,95
+src\uni2ts\model\moirai2\forecast.py,Method,Moirai2Forecast.describe_inputs,batch_size,,126
+src\uni2ts\model\moirai2\forecast.py,Method,Moirai2Forecast.prediction_input_names,,,186
+src\uni2ts\model\moirai2\forecast.py,Method,Moirai2Forecast.training_input_names,,,190
+src\uni2ts\model\moirai2\forecast.py,Method,Moirai2Forecast.past_length,,,194
+src\uni2ts\model\moirai2\forecast.py,Method,Moirai2Forecast.context_token_length,patch_size,,197
+src\uni2ts\model\moirai2\forecast.py,Method,Moirai2Forecast.prediction_token_length,patch_size,,200
+src\uni2ts\model\moirai2\forecast.py,Method,Moirai2Forecast.max_patch_size,,,204
+src\uni2ts\model\moirai2\forecast.py,Method,Moirai2Forecast.forward,"past_target, past_observed_target, past_is_pad, feat_dynamic_real, observed_feat_dynamic_real, past_feat_dynamic_real, past_observed_feat_dynamic_real",,207
+src\uni2ts\model\moirai2\forecast.py,Method,Moirai2Forecast.predict,"past_target, feat_dynamic_real, past_feat_dynamic_real",,437
+src\uni2ts\model\moirai2\forecast.py,Method,Moirai2Forecast.get_default_transform,,,1019
+src\uni2ts\model\moirai2\module.py,Class,Moirai2Module,N/A,"Contains components of Moirai, to ensure implementation is identical across models.",36
+src\uni2ts\model\moirai2\module.py,Method,Moirai2Module.__init__,"d_model, d_ff, num_layers, patch_size, max_seq_len, attn_dropout_p, dropout_p, scaling, num_predict_token, quantile_levels",:param d_model: model hidden dimensions,45
+src\uni2ts\model\moirai2\module.py,Method,Moirai2Module.forward,"target, observed_mask, sample_id, time_id, variate_id, prediction_mask, training_mode",Defines the forward pass of MoiraiDecoderModule.,112
+src\uni2ts\model\moirai_moe\forecast.py,Class,SampleNLLLoss,N/A,,45
+src\uni2ts\model\moirai_moe\forecast.py,Method,SampleNLLLoss.reduce_loss,"loss, prediction_mask, observed_mask, sample_id, variate_id",,46
+src\uni2ts\model\moirai_moe\forecast.py,Class,MoiraiMoEForecast,N/A,,73
+src\uni2ts\model\moirai_moe\forecast.py,Method,MoiraiMoEForecast.__init__,"prediction_length, target_dim, feat_dynamic_real_dim, past_feat_dynamic_real_dim, context_length, module_kwargs, module, patch_size, num_samples",,74
+src\uni2ts\model\moirai_moe\forecast.py,Method,MoiraiMoEForecast.hparams_context,"prediction_length, target_dim, feat_dynamic_real_dim, past_feat_dynamic_real_dim, context_length, patch_size, num_samples",,95
+src\uni2ts\model\moirai_moe\forecast.py,Method,MoiraiMoEForecast.create_predictor,"batch_size, device",,124
+src\uni2ts\model\moirai_moe\forecast.py,Method,MoiraiMoEForecast.describe_inputs,batch_size,,154
+src\uni2ts\model\moirai_moe\forecast.py,Method,MoiraiMoEForecast.prediction_input_names,,,214
+src\uni2ts\model\moirai_moe\forecast.py,Method,MoiraiMoEForecast.training_input_names,,,218
+src\uni2ts\model\moirai_moe\forecast.py,Method,MoiraiMoEForecast.past_length,,,222
+src\uni2ts\model\moirai_moe\forecast.py,Method,MoiraiMoEForecast.context_token_length,patch_size,,229
+src\uni2ts\model\moirai_moe\forecast.py,Method,MoiraiMoEForecast.prediction_token_length,patch_size,,232
+src\uni2ts\model\moirai_moe\forecast.py,Method,MoiraiMoEForecast.max_patch_size,,,236
+src\uni2ts\model\moirai_moe\forecast.py,Method,MoiraiMoEForecast.forward,"past_target, past_observed_target, past_is_pad, feat_dynamic_real, observed_feat_dynamic_real, past_feat_dynamic_real, past_observed_feat_dynamic_real, num_samples",,239
+src\uni2ts\model\moirai_moe\forecast.py,Method,MoiraiMoEForecast.get_default_transform,,,852
+src\uni2ts\model\moirai_moe\module.py,Function,encode_distr_output,distr_output,Serialization function for DistributionOutput,41
+src\uni2ts\model\moirai_moe\module.py,Function,safe_target_check,obj,,63
+src\uni2ts\model\moirai_moe\module.py,Function,decode_distr_output,config,,77
+src\uni2ts\model\moirai_moe\module.py,Class,MoiraiMoEModule,N/A,"Contains components of Moirai, to ensure implementation is identical across models.",82
+src\uni2ts\model\moirai_moe\module.py,Method,MoiraiMoEModule.__init__,"distr_output, d_model, d_ff, num_layers, patch_sizes, max_seq_len, attn_dropout_p, dropout_p, scaling",:param distr_output: distribution output object,92
+src\uni2ts\model\moirai_moe\module.py,Method,MoiraiMoEModule.forward,"target, observed_mask, sample_id, time_id, variate_id, prediction_mask, patch_size",Defines the forward pass of MoiraiMoEModule.,160
+src\uni2ts\module\attention.py,Function,native_scaled_dot_product_attention,"query, key, value, attn_mask, dropout_p, scale",,33
+src\uni2ts\module\attention.py,Class,GroupedQueryAttention,N/A,,58
+src\uni2ts\module\attention.py,Method,GroupedQueryAttention.__init__,"dim, num_heads, num_groups, bias, norm_layer, softmax_scale, attn_dropout_p, var_attn_bias, time_attn_bias, var_qk_proj, time_qk_proj",,59
+src\uni2ts\module\attention.py,Method,GroupedQueryAttention.forward,"query, key, value, attn_mask, query_var_id, kv_var_id, query_time_id, kv_time_id",,231
+src\uni2ts\module\attention.py,Class,MultiQueryAttention,N/A,,308
+src\uni2ts\module\attention.py,Method,MultiQueryAttention.__init__,"dim, num_heads, bias, norm_layer, softmax_scale, attn_dropout_p, var_attn_bias, time_attn_bias, var_qk_proj, time_qk_proj",,309
+src\uni2ts\module\attention.py,Class,MultiHeadAttention,N/A,,337
+src\uni2ts\module\attention.py,Method,MultiHeadAttention.__init__,"dim, num_heads, bias, norm_layer, softmax_scale, attn_dropout_p, var_attn_bias, time_attn_bias, var_qk_proj, time_qk_proj",,338
+src\uni2ts\module\ffn.py,Class,FeedForward,N/A,,25
+src\uni2ts\module\ffn.py,Method,FeedForward.__init__,"in_dim, hidden_dim, out_dim, activation, bias, ffn_dropout_p",,26
+src\uni2ts\module\ffn.py,Method,FeedForward.forward,"x, centroid",,51
+src\uni2ts\module\ffn.py,Class,GatedLinearUnitFeedForward,N/A,,65
+src\uni2ts\module\ffn.py,Method,GatedLinearUnitFeedForward.__init__,"in_dim, hidden_dim, out_dim, activation, bias, ffn_dropout_p",,66
+src\uni2ts\module\ffn.py,Method,GatedLinearUnitFeedForward.adjust_hidden_dim,dim,,86
+src\uni2ts\module\ffn.py,Class,MoEFeedForward,N/A,,95
+src\uni2ts\module\ffn.py,Method,MoEFeedForward.__init__,"num_experts, num_experts_per_token, in_dim, hidden_dim, out_dim, activation, bias, ffn_dropout_p",,96
+src\uni2ts\module\ffn.py,Method,MoEFeedForward.forward,"x, centroid",,125
+src\uni2ts\module\norm.py,Class,RMSNorm,N/A,,23
+src\uni2ts\module\norm.py,Method,RMSNorm.__init__,"normalized_shape, eps, weight, dtype",,24
+src\uni2ts\module\norm.py,Method,RMSNorm.forward,x,,44
+src\uni2ts\module\norm.py,Method,RMSNorm.extra_repr,,,54
+src\uni2ts\module\packed_scaler.py,Class,PackedScaler,N/A,,26
+src\uni2ts\module\packed_scaler.py,Method,PackedScaler.forward,"target, observed_mask, sample_id, variate_id",,27
+src\uni2ts\module\packed_scaler.py,Class,PackedNOPScaler,N/A,,63
+src\uni2ts\module\packed_scaler.py,Class,PackedStdScaler,N/A,,78
+src\uni2ts\module\packed_scaler.py,Method,PackedStdScaler.__init__,"correction, minimum_scale",,79
+src\uni2ts\module\packed_scaler.py,Class,PackedAbsMeanScaler,N/A,,125
+src\uni2ts\module\transformer.py,Class,TransformerEncoderLayer,N/A,,30
+src\uni2ts\module\transformer.py,Method,TransformerEncoderLayer.__init__,"self_attn, ffn, norm1, norm2, post_attn_dropout_p, pre_norm",,31
+src\uni2ts\module\transformer.py,Method,TransformerEncoderLayer.forward,"x, attn_mask, var_id, time_id, centroid",,50
+src\uni2ts\module\transformer.py,Class,TransformerEncoder,N/A,,91
+src\uni2ts\module\transformer.py,Method,TransformerEncoder.__init__,"d_model, num_layers, num_heads, num_groups, pre_norm, attn_dropout_p, dropout_p, norm_layer, activation, use_moe, use_glu, use_qk_norm, var_attn_bias_layer, time_attn_bias_layer, var_qk_proj_layer, time_qk_proj_layer, shared_var_attn_bias, shared_time_attn_bias, shared_var_qk_proj, shared_time_qk_proj, d_ff",,92
+src\uni2ts\module\transformer.py,Method,TransformerEncoder.get_layer,"dim, num_heads, num_groups, layer, shared_layer",,203
+src\uni2ts\module\transformer.py,Method,TransformerEncoder.forward,"x, attn_mask, var_id, time_id",,217
+src\uni2ts\module\ts_embed.py,Function,fs2idx,"feat_size, feat_sizes",,27
+src\uni2ts\module\ts_embed.py,Class,MultiInSizeLinear,N/A,,37
+src\uni2ts\module\ts_embed.py,Method,MultiInSizeLinear.__init__,"in_features_ls, out_features, bias, dtype",,38
+src\uni2ts\module\ts_embed.py,Method,MultiInSizeLinear.reset_parameters,,,78
+src\uni2ts\module\ts_embed.py,Method,MultiInSizeLinear.forward,"x, in_feat_size",,89
+src\uni2ts\module\ts_embed.py,Method,MultiInSizeLinear.extra_repr,,,104
+src\uni2ts\module\ts_embed.py,Class,FeatLinear,N/A,,113
+src\uni2ts\module\ts_embed.py,Method,FeatLinear.__init__,"in_features_ls, out_features, bias, dtype",,114
+src\uni2ts\module\ts_embed.py,Method,FeatLinear.reset_parameters,,,144
+src\uni2ts\module\ts_embed.py,Method,FeatLinear.forward,"x, in_feat_size",,151
+src\uni2ts\module\ts_embed.py,Method,FeatLinear.extra_repr,,,166
+src\uni2ts\module\ts_embed.py,Class,MultiOutSizeLinear,N/A,,175
+src\uni2ts\module\ts_embed.py,Method,MultiOutSizeLinear.__init__,"in_features, out_features_ls, dim, bias, dtype",,176
+src\uni2ts\module\ts_embed.py,Method,MultiOutSizeLinear.reset_parameters,,,218
+src\uni2ts\module\ts_embed.py,Method,MultiOutSizeLinear.forward,"x, out_feat_size",,230
+src\uni2ts\module\ts_embed.py,Method,MultiOutSizeLinear.extra_repr,,,245
+src\uni2ts\module\ts_embed.py,Class,ResidualBlock,N/A,,254
+src\uni2ts\module\ts_embed.py,Method,ResidualBlock.__init__,"input_dims, hidden_dims, output_dims",,255
+src\uni2ts\module\ts_embed.py,Method,ResidualBlock.reset_parameters,,,277
+src\uni2ts\module\ts_embed.py,Method,ResidualBlock.forward,x,,286
+src\uni2ts\module\position\additive.py,Class,SinusoidalPositionEncoding,N/A,,23
+src\uni2ts\module\position\additive.py,Method,SinusoidalPositionEncoding.__init__,,Construct a sinusoidal positional embedding module.,24
+src\uni2ts\module\position\additive.py,Method,SinusoidalPositionEncoding.forward,pos_id,,56
+src\uni2ts\module\position\additive.py,Class,LearnedEmbedding,N/A,,62
+src\uni2ts\module\position\additive.py,Method,LearnedEmbedding.__init__,,,63
+src\uni2ts\module\position\additive.py,Method,LearnedEmbedding.forward,pos_id,,75
+src\uni2ts\module\position\attn_bias.py,Class,AttentionBias,N/A,,24
+src\uni2ts\module\position\attn_bias.py,Method,AttentionBias.__init__,"dim, num_heads, num_groups",,25
+src\uni2ts\module\position\attn_bias.py,Method,AttentionBias.forward,"query, key, query_id, kv_id",,41
+src\uni2ts\module\position\attn_bias.py,Class,RelativeAttentionBias,N/A,,50
+src\uni2ts\module\position\attn_bias.py,Method,RelativeAttentionBias.__init__,"num_buckets, dim, num_heads, num_groups",,51
+src\uni2ts\module\position\attn_bias.py,Method,RelativeAttentionBias.forward,"query, key, query_id, kv_id",,57
+src\uni2ts\module\position\attn_bias.py,Class,BinaryAttentionBias,N/A,,67
+src\uni2ts\module\position\attn_bias.py,Method,BinaryAttentionBias.__init__,"dim, num_heads, num_groups",,68
+src\uni2ts\module\position\attn_bias.py,Method,BinaryAttentionBias.forward,"query, key, query_id, kv_id",,72
+src\uni2ts\module\position\attn_bias.py,Class,LinearAttentionBias,N/A,,90
+src\uni2ts\module\position\attn_bias.py,Method,LinearAttentionBias.__init__,"dim, num_heads, num_groups",,91
+src\uni2ts\module\position\attn_bias.py,Method,LinearAttentionBias.forward,"query, key, query_id, kv_id",,102
+src\uni2ts\module\position\attn_projection.py,Class,Projection,N/A,,27
+src\uni2ts\module\position\attn_projection.py,Method,Projection.__init__,"proj_width, num_heads, num_groups",,28
+src\uni2ts\module\position\attn_projection.py,Method,Projection.forward,"x, seq_id",,36
+src\uni2ts\module\position\attn_projection.py,Class,IdentityProjection,N/A,,43
+src\uni2ts\module\position\attn_projection.py,Method,IdentityProjection.__init__,,,44
+src\uni2ts\module\position\attn_projection.py,Method,IdentityProjection.forward,"x, seq_id",,47
+src\uni2ts\module\position\attn_projection.py,Class,RotaryProjection,N/A,,55
+src\uni2ts\module\position\attn_projection.py,Method,RotaryProjection.__init__,,,56
+src\uni2ts\module\position\attn_projection.py,Method,RotaryProjection.forward,"x, seq_id",,98
+src\uni2ts\module\position\attn_projection.py,Class,LearnedProjection,N/A,,109
+src\uni2ts\module\position\attn_projection.py,Method,LearnedProjection.__init__,,,110
+src\uni2ts\module\position\attn_projection.py,Method,LearnedProjection.reset_parameters,,,125
+src\uni2ts\module\position\attn_projection.py,Method,LearnedProjection.forward,"x, seq_id",,129
+src\uni2ts\module\position\attn_projection.py,Class,QueryKeyProjection,N/A,,138
+src\uni2ts\module\position\attn_projection.py,Method,QueryKeyProjection.__init__,"dim, num_heads, num_groups, proj_layer, kwargs, key_proj_layer, key_kwargs, partial_factor",,139
+src\uni2ts\module\position\attn_projection.py,Method,QueryKeyProjection.proj_width,,,177
+src\uni2ts\module\position\attn_projection.py,Method,QueryKeyProjection.split_sizes,,,183
+src\uni2ts\module\position\attn_projection.py,Method,QueryKeyProjection.forward,"query, key, query_id, kv_id",,192
+src\uni2ts\optim\lr_scheduler.py,Function,_get_constant_lambda,_,,25
+src\uni2ts\optim\lr_scheduler.py,Function,get_constant_schedule,"optimizer, last_epoch","Create a schedule with a constant learning rate, using the learning rate set in optimizer.",29
+src\uni2ts\optim\lr_scheduler.py,Function,get_reduce_on_plateau_schedule,optimizer,Create a schedule with a constant learning rate that decreases when a metric has stopped improving.,46
+src\uni2ts\optim\lr_scheduler.py,Function,_get_constant_schedule_with_warmup_lr_lambda,current_step,,64
+src\uni2ts\optim\lr_scheduler.py,Function,get_constant_schedule_with_warmup,"optimizer, num_warmup_steps, last_epoch",Create a schedule with a constant learning rate preceded by a warmup period during which the learning rate,72
+src\uni2ts\optim\lr_scheduler.py,Function,_get_linear_schedule_with_warmup_lr_lambda,current_step,,97
+src\uni2ts\optim\lr_scheduler.py,Function,get_linear_schedule_with_warmup,"optimizer, num_warmup_steps, num_training_steps, last_epoch","Create a schedule with a learning rate that decreases linearly from the initial lr set in the optimizer to 0, after",109
+src\uni2ts\optim\lr_scheduler.py,Function,_get_cosine_schedule_with_warmup_lr_lambda,current_step,,138
+src\uni2ts\optim\lr_scheduler.py,Function,get_cosine_schedule_with_warmup,"optimizer, num_warmup_steps, num_training_steps, num_cycles, last_epoch",Create a schedule with a learning rate that decreases following the values of the cosine function between the,155
+src\uni2ts\optim\lr_scheduler.py,Function,_get_cosine_with_hard_restarts_schedule_with_warmup_lr_lambda,current_step,,193
+src\uni2ts\optim\lr_scheduler.py,Function,get_cosine_with_hard_restarts_schedule_with_warmup,"optimizer, num_warmup_steps, num_training_steps, num_cycles, last_epoch",Create a schedule with a learning rate that decreases following the values of the cosine function between the,212
+src\uni2ts\optim\lr_scheduler.py,Function,_get_polynomial_decay_schedule_with_warmup_lr_lambda,current_step,,249
+src\uni2ts\optim\lr_scheduler.py,Function,get_polynomial_decay_schedule_with_warmup,"optimizer, num_warmup_steps, num_training_steps, lr_end, power, last_epoch",Create a schedule with a learning rate that decreases as a polynomial decay from the initial lr set in the,270
+src\uni2ts\optim\lr_scheduler.py,Function,_get_inverse_sqrt_schedule_lr_lambda,current_step,,323
+src\uni2ts\optim\lr_scheduler.py,Function,get_inverse_sqrt_schedule,"optimizer, num_warmup_steps, timescale, last_epoch","Create a schedule with an inverse square-root learning rate, from the initial lr set in the optimizer, after a",333
+src\uni2ts\optim\lr_scheduler.py,Class,SchedulerType,N/A,,370
+src\uni2ts\optim\lr_scheduler.py,Function,get_scheduler,"name, optimizer, num_warmup_steps, num_training_steps, scheduler_specific_kwargs",Unified API to get any scheduler from its name.,393
+src\uni2ts\transform\crop.py,Class,PatchCrop,N/A,Crop fields in a data_entry in the temporal dimension based on a patch_size.,31
+src\uni2ts\transform\crop.py,Class,EvalCrop,N/A,,112
+src\uni2ts\transform\crop.py,Class,FinetunePatchCrop,N/A,"Similar to EvalCrop, crop training samples based on specific context_length and prediction_length",151
+src\uni2ts\transform\feature.py,Class,AddVariateIndex,N/A,Add variate_id to data_entry,27
+src\uni2ts\transform\feature.py,Class,AddTimeIndex,N/A,Add time_id to data_entry,75
+src\uni2ts\transform\feature.py,Class,AddObservedMask,N/A,,108
+src\uni2ts\transform\feature.py,Class,AddSampleIndex,N/A,Add sample_id when sequence packing is not used. Follow the implementation in MoiraiForecast.,131
+src\uni2ts\transform\field.py,Class,SetValue,N/A,,24
+src\uni2ts\transform\field.py,Class,LambdaSetFieldIfNotPresent,N/A,,32
+src\uni2ts\transform\field.py,Method,LambdaSetFieldIfNotPresent.set_field,"data_entry, field, value",,37
+src\uni2ts\transform\field.py,Class,SelectFields,N/A,,47
+src\uni2ts\transform\field.py,Class,RemoveFields,N/A,,58
+src\uni2ts\transform\imputation.py,Class,ImputationMethod,N/A,,26
+src\uni2ts\transform\imputation.py,Class,DummyValueImputation,N/A,,33
+src\uni2ts\transform\imputation.py,Class,LastValueImputation,N/A,,44
+src\uni2ts\transform\imputation.py,Class,CausalMeanImputation,N/A,This class replaces each missing value with the average of all the values,66
+src\uni2ts\transform\imputation.py,Class,ImputeTimeSeries,N/A,,112
+src\uni2ts\transform\pad.py,Class,Pad,N/A,,26
+src\uni2ts\transform\pad.py,Method,Pad.map,"data_entry, field",,40
+src\uni2ts\transform\pad.py,Class,PadFreq,N/A,,54
+src\uni2ts\transform\pad.py,Method,PadFreq.map,"data_entry, field",,69
+src\uni2ts\transform\pad.py,Class,EvalPad,N/A,,84
+src\uni2ts\transform\pad.py,Method,EvalPad.map,"data_entry, field",,99
+src\uni2ts\transform\patch.py,Class,PatchSizeConstraints,N/A,,33
+src\uni2ts\transform\patch.py,Class,FixedPatchSizeConstraints,N/A,,44
+src\uni2ts\transform\patch.py,Class,DefaultPatchSizeConstraints,N/A,,57
+src\uni2ts\transform\patch.py,Class,GetPatchSize,N/A,,78
+src\uni2ts\transform\patch.py,Class,Patchify,N/A,,124
+src\uni2ts\transform\resample.py,Class,SampleDimension,N/A,,30
+src\uni2ts\transform\resample.py,Class,Subsample,N/A,,70
+src\uni2ts\transform\resample.py,Class,GaussianFilterSubsample,N/A,,77
+src\uni2ts\transform\resample.py,Class,Downsample,N/A,,85
+src\uni2ts\transform\resample.py,Class,Upsample,N/A,,90
+src\uni2ts\transform\reshape.py,Class,SequencifyField,N/A,,27
+src\uni2ts\transform\reshape.py,Class,PackFields,N/A,,41
+src\uni2ts\transform\reshape.py,Method,PackFields.pop_field,"data_entry, field",,63
+src\uni2ts\transform\reshape.py,Class,FlatPackFields,N/A,,68
+src\uni2ts\transform\reshape.py,Method,FlatPackFields.pop_field,"data_entry, field",,90
+src\uni2ts\transform\reshape.py,Class,PackCollection,N/A,,95
+src\uni2ts\transform\reshape.py,Class,FlatPackCollection,N/A,,111
+src\uni2ts\transform\reshape.py,Class,Transpose,N/A,,127
+src\uni2ts\transform\reshape.py,Method,Transpose.transpose,"data_entry, field",,141
+src\uni2ts\transform\task.py,Class,MaskedPrediction,N/A,,28
+src\uni2ts\transform\task.py,Class,ExtendMask,N/A,,89
+src\uni2ts\transform\task.py,Class,EvalMaskedPrediction,N/A,,117
+src\uni2ts\transform\_base.py,Class,Transformation,N/A,,21
+src\uni2ts\transform\_base.py,Method,Transformation.chain,other,,25
+src\uni2ts\transform\_base.py,Class,Chain,N/A,Chain multiple transformations together.,38
+src\uni2ts\transform\_base.py,Class,Identity,N/A,,66
+src\uni2ts\transform\_mixin.py,Class,MapFuncMixin,N/A,,22
+src\uni2ts\transform\_mixin.py,Method,MapFuncMixin.map_func,"func, data_entry, fields, optional_fields",,24
+src\uni2ts\transform\_mixin.py,Class,ApplyFuncMixin,N/A,,37
+src\uni2ts\transform\_mixin.py,Method,ApplyFuncMixin.apply_func,"func, data_entry, fields, optional_fields",,39
+src\uni2ts\transform\_mixin.py,Class,CollectFuncMixin,N/A,,52
+src\uni2ts\transform\_mixin.py,Method,CollectFuncMixin.collect_func_list,"func, data_entry, fields, optional_fields",,54
+src\uni2ts\transform\_mixin.py,Method,CollectFuncMixin.collect_func_dict,"func, data_entry, fields, optional_fields",,69
+src\uni2ts\transform\_mixin.py,Method,CollectFuncMixin.collect_func,"func, data_entry, fields, optional_fields",,83
+src\uni2ts\transform\_mixin.py,Class,CheckArrNDimMixin,N/A,,112
+src\uni2ts\transform\_mixin.py,Method,CheckArrNDimMixin.check_ndim,"name, arr, expected_ndim",,113
+test\conftest.py,Function,pytest_addoption,parser,,25
+test\conftest.py,Function,pytest_configure,config,,32
+test\conftest.py,Function,pytest_collection_modifyitems,"config, items",,36
+test\test_fixture.py,Function,test_create_data_entry,"create_data_entry, length, freq, target_dim, past_feat_dynamic_real_dim",,27
+test\test_fixture.py,Function,test_create_example,"create_example, length, freq, target_dim, past_feat_dynamic_real_dim",,57
+test\common\test_sampler.py,Function,test_samplers_support,"distribution, val",,27
+test\common\test_sampler.py,Function,check_pmf,"sampler, pmf_fn, val, num_samples",,37
+test\common\test_sampler.py,Function,test_uniform_pmf,"val, p",,74
+test\common\test_sampler.py,Function,test_binomial_pmf,"val, p",,89
+test\common\test_sampler.py,Function,test_beta_binomial_pmf,"val, a, b",,105
+test\common\test_torch_util.py,Function,test_packed_attention_mask,"sample_id, attention_mask",,82
+test\common\test_torch_util.py,Function,test_mask_fill,"batch_shape, seq_len, dim, mask_ratio",,99
+test\common\test_torch_util.py,Function,test_sized_mean,"shape, dim, max_size, full_size, seed",,130
+test\common\test_torch_util.py,Function,test_masked_mean,"shape, dim, seed",,185
+test\data\test_dataset.py,Function,test_global_dataset,hf_dataset_path,,46
+test\data\test_dataset.py,Function,test_multi_dataset,hf_dataset_path,,77
+test\data\test_dataset.py,Function,test_weighted_dataset,"hf_dataset_path, weight, sample_time_series, seed",,139
+test\data\test_dataset.py,Function,test_eval_dataset,"hf_dataset_path, windows",,203
+test\data\test_indexer.py,Function,_test_item,"item, target_dim, past_feat_dynamic_real_dim, ts_lengths",,35
+test\data\test_indexer.py,Function,_test_batch,"batch, target_dim, past_feat_dynamic_real_dim, ts_lengths",,61
+test\data\test_indexer.py,Function,test_hf_dataset_indexer_int,hf_dataset_path,,108
+test\data\test_indexer.py,Function,test_hf_dataset_indexer_list,hf_dataset_path,,141
+test\data\test_indexer.py,Function,test_hf_dataset_indexer_slice,hf_dataset_path,,174
+test\data\test_indexer.py,Function,test_hf_dataset_indexer_index_error,"hf_dataset_path, idx",,200
+test\data\test_loader.py,Class,SimpleDataset,N/A,,30
+test\data\test_loader.py,Class,SimpleDataset2,N/A,,45
+test\data\test_loader.py,Class,TSDataset,N/A,,58
+test\data\test_loader.py,Function,test_basic,"dataset_size, batch_size, batch_size_factor, drop_last, fill_last",,91
+test\data\test_loader.py,Function,test_loop,"dataset_size, batch_size, num_epochs",,115
+test\data\test_loader.py,Function,test_cycle_loop,"dataset_size, batch_size, batch_size_factor",,136
+test\data\test_loader.py,Function,test_num_batches_per_epoch,"dataset_size, batch_size, num_batches_per_epoch, num_epochs",,161
+test\data\test_loader.py,Function,test_multiple_fields,,,182
+test\data\test_loader.py,Function,test_shuffle,,,201
+test\data\test_loader.py,Function,test_input_longer_than_max_length,,,226
+test\data\test_loader.py,Function,test_non_ts_input,create_example,,244
+test\data\test_loader.py,Function,test_dtype,dtype,,270
+test\data\test_loader.py,Function,test_packing_single_dim,"create_example, batch_size, batch_size_factor",,299
+test\data\test_loader.py,Function,test_packing_multi_dim,"create_example, target_dim, past_feat_dynamic_real_dim",,339
+test\data\builder\test_base.py,Function,test_dataset_builder,airpassengers_dataset_builder,,28
+test\data\builder\test_simple.py,Function,test_simple_dataset_builder_wide,"tmp_path_factory, get_wide_df, multivariate, offset, date_offset",,41
+test\data\builder\test_simple.py,Function,test_simple_dataset_builder_long,"tmp_path_factory, get_long_df, offset, date_offset",,99
+test\distribution\test_base.py,Function,test_multi_out_size_linear_proj,"out_features, args_dim, batch_shape, in_features",,57
+test\distribution\test_mixture.py,Function,histogram,samples,,42
+test\distribution\test_mixture.py,Function,diff,"x, y",,47
+test\distribution\test_mixture.py,Function,get_normal_distribution,"shape, loc, scale",,51
+test\distribution\test_mixture.py,Function,get_student_t_distribution,"shape, loc, scale, df",,61
+test\distribution\test_mixture.py,Function,test_mixture_sample_stats,"distr1_func, distr2_func, logits, batch_shape",,96
+test\distribution\test_mixture.py,Function,test_mixture_log_prob,"distribution, values_outside_support, p",,163
+test\distribution\test_mixture.py,Function,test_mixture_grads,,,182
+test\distribution\test_mixture.py,Function,test_mixture_output,"batch_shape, hidden_dim, patch_sizes, sample_shape",,221
+test\distribution\test_negative_binomial.py,Function,test_neg_binom,"total_count, logits, sample_shape",,57
+test\distribution\test_negative_binomial.py,Function,test_neg_binom_log_prob,"total_count, logits, value",,104
+test\distribution\test_negative_binomial.py,Function,test_continuous_neg_binom_log_prob,"total_count, logits, value",,131
+test\distribution\test_student_t.py,Function,test_student_t_output_shape,"batch_shape, in_features, out_features_ls, sample_shape",,26
+test\fixture\fixture.py,Function,create_data_entry,,,34
+test\fixture\fixture.py,Function,create_example,,,70
+test\fixture\fixture.py,Function,parquet_files,"tmp_path_factory, create_data_entry, request",,106
+test\fixture\fixture.py,Function,hf_dataset_path,"tmp_path_factory, create_example, request",,142
+test\fixture\fixture.py,Class,AirPassengersDatasetBuilder,N/A,,172
+test\fixture\fixture.py,Method,AirPassengersDatasetBuilder.build_dataset,,,181
+test\fixture\fixture.py,Function,airpassengers_dataset_builder,"tmp_path_factory, request",,197
+test\fixture\fixture.py,Function,get_wide_df,"tmp_path_factory, request",,215
+test\fixture\fixture.py,Function,get_long_df,"tmp_path_factory, request",,236
+test\loss\test_packed_loss.py,Function,pack_seq,"xs, max_seq_len",,42
+test\loss\test_packed_loss.py,Function,_test_packed_loss,"loss_accum_func, packed_loss_func, samples, max_seq_len, max_patch_size, observed_pct, possible_nan",,63
+test\loss\test_packed_loss.py,Function,test_packed_rmse_loss,"max_seq_len, max_patch_size, samples, observed_pct, seed",,183
+test\loss\test_packed_loss.py,Function,test_packed_mae_loss,"max_seq_len, max_patch_size, samples, observed_pct, seed",,220
+test\loss\test_packed_loss.py,Function,test_packed_mape_loss,"max_seq_len, max_patch_size, samples, observed_pct, seed",,256
+test\loss\test_packed_loss.py,Function,test_packed_smape_loss,"max_seq_len, max_patch_size, samples, observed_pct, seed",,293
+test\loss\test_packed_loss.py,Function,test_packed_nmae_loss,"max_seq_len, max_patch_size, samples, observed_pct, seed, normalize",,331
+test\loss\test_packed_loss.py,Function,test_packed_nrmse_loss,"max_seq_len, max_patch_size, samples, observed_pct, seed, normalize",,418
+test\loss\test_packed_loss.py,Function,test_packed_nmlse_loss,"max_seq_len, max_patch_size, samples, observed_pct, seed",,505
+test\model\test_moirai.py,Function,test_moirai_pretrain,"batch_size, d_model, num_layers, max_seq_len, max_dim, patch_sizes, scaling, loss_func",,44
+test\model\test_moirai.py,Function,test_moirai_transform_map,"create_data_entry, target_dim, past_feat_dynamic_real_dim, length, max_seq_len, max_dim, patch_sizes, d_model, num_layers, scaling, loss_func",,130
+test\model\test_moirai.py,Function,test_moirai_forecast,"batch_size, context_length, prediction_length, target_dim, feat_dynamic_real_dim, past_feat_dynamic_real_dim, patch_size, num_samples",,205
+test\model\test_moirai.py,Function,test_moirai_forecast_auto,"batch_size, context_length, prediction_length, target_dim, feat_dynamic_real_dim, past_feat_dynamic_real_dim, num_samples",,263
+test\model\test_moirai.py,Function,test_moirai_forecast_hparams_context,"batch_size, context_length, prediction_length, target_dim, feat_dynamic_real_dim, past_feat_dynamic_real_dim, patch_size, num_samples",,321
+test\module\test_attention.py,Function,test_gqa,"batch_shape, dim, kv_len, q_len, use_attn_mask, num_heads, num_groups, norm_layer, softmax_scale, attn_dropout_p",,48
+test\module\test_attention.py,Function,test_all_masked,"batch_shape, dim, q_len, kv_len",,85
+test\module\test_attention.py,Function,test_mqa,"batch_shape, dim, q_len, kv_len",,107
+test\module\test_attention.py,Function,test_mha,"batch_shape, dim, q_len, kv_len",,139
+test\module\test_ffn.py,Function,test_feedforward,"use_glu, batch_shape, in_dim, hidden_dim, out_dim, activation, bias, ffn_dropout_p",,39
+test\module\test_norm.py,Function,test_rms_norm,"batch_shape, normalized_shape, weight",,29
+test\module\test_packed_scaler.py,Function,pack_seq,"xs, max_seq_len, pad_fn",,31
+test\module\test_packed_scaler.py,Function,_test_packed_scaler,"get_loc_scale_func, packed_scaler, samples, max_seq_len, max_patch_size, observed_pct",,53
+test\module\test_packed_scaler.py,Function,test_packed_nop_scaler,"max_seq_len, max_patch_size, samples, observed_pct, seed",,175
+test\module\test_packed_scaler.py,Function,test_packed_std_scaler,"max_seq_len, max_patch_size, samples, observed_pct, seed",,202
+test\module\test_packed_scaler.py,Function,test_packed_abs_mean_scaler,"max_seq_len, max_patch_size, samples, observed_pct, seed",,239
+test\module\test_transformer.py,Function,test_transformer_encoder_layer,"post_attn_dropout_p, pre_norm, dim, norm_layer",,47
+test\module\test_transformer.py,Function,test_transformer_encoder,"batch_shape, d_model, num_layers, num_heads, pre_norm, use_glu, num_groups, d_ff, expectation, dropout_p",,94
+test\module\test_transformer.py,Function,test_transformer_encoder_position_init,"var_attn_bias_layer, time_attn_bias_layer, var_qk_proj_layer, time_qk_proj_layer, shared_layers, d_model, num_layers",,180
+test\module\test_transformer.py,Function,test_transformer_encoder_position_forward,"var_attn_bias_layer, time_attn_bias_layer, var_qk_proj_layer, time_qk_proj_layer, batch_shape, use_attn_mask, use_var_id, use_time_id, time_len, d_model, num_layers, shared_layers",,292
+test\module\test_ts_embed.py,Function,test_multi_in_size_linear,"batch_shape, in_features_ls, out_features, bias, seed",,28
+test\module\test_ts_embed.py,Function,test_multi_out_size_linear,"batch_shape, in_features, out_features_ls, dim, bias, seed",,110
+test\module\position\test_additive.py,Function,test_sinusoidal_position_encoding,"batch_shape, seq_len, expectation, width, normalize, max_len",,42
+test\module\position\test_additive.py,Function,test_learned_embedding,"batch_shape, seq_len, expectation, width, normalize, max_len",,79
+test\module\position\test_attn_bias.py,Function,test_binary_attention_bias,"batch_shape, num_heads, num_groups, q_len, kv_len, dim",,29
+test\module\position\test_attn_bias.py,Function,test_linear_attention_bias,"batch_shape, num_heads, num_groups, q_len, kv_len, dim",,55
+test\module\position\test_attn_projection.py,Function,test_rotary_projection,"batch_shape, seq_len, dim, num_heads, num_groups, max_len, seed",,43
+test\transform\test_crop.py,Function,test_min_max,,,27
+test\transform\test_crop.py,Function,array_in,"arr, test_arr",,32
+test\transform\test_crop.py,Function,test_not_in_array,"arr, test_arr",,63
+test\transform\test_crop.py,Function,test_patch_crop,"create_data_entry, min_time_patches, max_patches, flatten, offset, length, dim, patch_size, expectation, seed",,122
+test\transform\test_crop.py,Function,test_patch_crop_transform_pipeline,"create_data_entry, length, freq, target_dim, past_feat_dynamic_real_dim, flatten, seed",,178
+test\transform\test_crop.py,Function,test_eval_crop,"create_data_entry, length, dim, prediction_length, context_length, windows, distance, offset, expectation",,268
+test\transform\test_feature.py,Function,test_add_variate_index,"field_map, optional_map, max_dim, patch_size, randomize, collection_type",,38
+test\transform\test_feature.py,Function,test_add_time_index,"field_map, optional_map, patch_size, collection_type",,107
+test\transform\test_feature.py,Function,test_add_observed_mask,"field_map, optional_map, collection_type",,157
+test\transform\test_imputation.py,Function,test_dummy_value_imputation,"x, y, value, fields",,47
+test\transform\test_imputation.py,Function,test_last_value_imputation,"x, y, value, fields",,89
+test\transform\test_pad.py,Function,test_pad,"min_length, target_length, dim",,31
+test\transform\test_pad.py,Function,test_pad_freq,"min_length, target_length, dim",,62
+test\transform\test_pad.py,Function,test_patch_eval_pad,"prediction_length, context_length, patch_size, dim",,91
+test\transform\test_patch.py,Function,fixed_patch_size_constraints,"start, stop",,39
+test\transform\test_patch.py,Function,test_default_patch_size_constraints,freq,,56
+test\transform\test_patch.py,Function,test_get_patch_size,"create_data_entry, freq, patch_sizes, patch_size_constraints, expectation",,85
+test\transform\test_patch.py,Function,test_patchify,"create_data_entry, target_dim",,112
+test\transform\test_resample.py,Function,test_sample_dimension_shape,"create_data_entry, target_dim, past_feat_dynamic_real_dim, seed",,27
+test\transform\test_reshape.py,Function,test_pack_fields,"length, output_field, field_dim_mapping, optional_field_dim_mapping, patch_size",,42
+test\transform\test_reshape.py,Function,test_flat_pack_fields,"length, output_field, field_dim_mapping, optional_field_dim_mapping, patch_size",,100
+test\transform\test_reshape.py,Function,test_pack_collection,"length, dims, patch_size",,156
+test\transform\test_reshape.py,Function,test_flat_pack_collection,"lengths, dims, patch_size",,208
+test\transform\test_reshape.py,Function,test_patch_size_sequence,"create_data_entry, length, target_dim",,251
+test\transform\test_task.py,Function,test_masked_prediction,"length, target_dim, min_mask_ratio, max_mask_ratio, truncate_map, optional_truncate_map, patch_size, truncate_list",,49
+test\transform\test_task.py,Function,test_extend_mask,"field_map, optional_map, patch_size, target_mask_shape",,138
+test\transform\test_task.py,Function,test_eval_masked_prediction,"length, target_dim, mask_length, truncate_map, optional_truncate_map, patch_size, truncate_list",,190

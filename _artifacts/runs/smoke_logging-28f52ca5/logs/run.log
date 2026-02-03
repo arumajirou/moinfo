@@ -1,0 +1,10 @@
+2026-02-03 16:16:33 | INFO | smoke_logging-28f52ca5 | moinfo | logger initialized
+2026-02-03 16:16:34 | INFO | smoke_logging-28f52ca5 | moinfo | run_dir=C:\moinfo\_artifacts\runs\smoke_logging-28f52ca5
+2026-02-03 16:16:34 | INFO | smoke_logging-28f52ca5 | moinfo | effective_config=C:\moinfo\_artifacts\runs\smoke_logging-28f52ca5\config\effective_config.json
+2026-02-03 16:16:34 | INFO | smoke_logging-28f52ca5 | moinfo | experiment start | step=smoke_fail | data=C:/moinfo/data/train.csv
+2026-02-03 16:16:34 | ERROR | smoke_logging-28f52ca5 | moinfo | experiment end (failed): intentional error for logging verification
+Traceback (most recent call last):
+  File "C:\Users\hashimoto.ryohei\AppData\Local\Temp\ipykernel_20536\517559258.py", line 50, in <module>
+    raise RuntimeError("intentional error for logging verification")
+RuntimeError: intentional error for logging verification
+2026-02-03 16:16:34 | ERROR | smoke_logging-28f52ca5 | moinfo | exception captured -> C:\moinfo\_artifacts\runs\smoke_logging-28f52ca5\logs\crash_context_20260203-161634.json

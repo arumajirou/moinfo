@@ -1,0 +1,748 @@
+Category,Type,Name,Docstring,File,Args
+CLI & Scripts,Function,main,,cli\eval.py,cfg
+CLI & Scripts,Class,DataModule,,cli\train.py,
+CLI & Scripts,Method,DataModule.__init__,,cli\train.py,"cfg, train_dataset, val_dataset"
+CLI & Scripts,Method,DataModule.get_dataloader,,cli\train.py,"dataset, dataloader_func, shuffle, world_size, batch_size, num_batches_per_epoch"
+CLI & Scripts,Method,DataModule.train_dataloader,,cli\train.py,
+CLI & Scripts,Method,DataModule.train_batch_size,,cli\train.py,
+CLI & Scripts,Method,DataModule.val_batch_size,,cli\train.py,
+CLI & Scripts,Method,DataModule.train_num_batches_per_epoch,,cli\train.py,
+CLI & Scripts,Function,main,,cli\train.py,cfg
+Utils & Core,Function,evaluate,,project\benchmarks\run_chronos.py,"pipeline, dataset, save_path, num_samples, batch_size, test_setting, pred_length"
+Utils & Core,Function,_mse,mse loss.,project\benchmarks\run_timesfm.py,"y_pred, y_true"
+Utils & Core,Function,_mae,mae loss.,project\benchmarks\run_timesfm.py,"y_pred, y_true"
+Utils & Core,Function,_smape,_smape loss.,project\benchmarks\run_timesfm.py,"y_pred, y_true"
+Utils & Core,Function,evaluate,,project\benchmarks\run_timesfm.py,"model, dataset, save_path, context_len, checkpoint_path, batch_size, test_setting, pred_length"
+Utils & Core,Function,imputation_nan,Impute missing value using Naive forecasting.,project\benchmarks\run_visionts.py,array
+Utils & Core,Function,norm_freq_str,,project\benchmarks\run_visionts.py,freq_str
+Utils & Core,Function,get_seasonality_list,,project\benchmarks\run_visionts.py,freq
+Utils & Core,Function,forcast_batch,,project\benchmarks\run_visionts.py,"batch, device, context_len, align_const, model"
+Utils & Core,Function,convert_context_len,,project\benchmarks\run_visionts.py,"context_len, no_periodicity_context_len, periodicity"
+Utils & Core,Function,evaluate,,project\benchmarks\run_visionts.py,"model, dataset, save_path, context_len, no_periodicity_context_len, device, checkpoint_dir, mae_arch, batch_size, test_setting, prediction_length, periodicity, norm_const, align_const"
+Agent & Tools,Function,main,,project\moirai-agent\ctx_forecast\gen_image.py,"in_file, out_file, img_root"
+Agent & Tools,Class,MCPClient,,project\moirai-agent\ctx_forecast\src\ctx_forecast\mcp_client.py,
+Agent & Tools,Method,MCPClient.__init__,,project\moirai-agent\ctx_forecast\src\ctx_forecast\mcp_client.py,config
+Agent & Tools,Method,MCPClient.stop_criteria,Stop criteria for the LLM interactions.,project\moirai-agent\ctx_forecast\src\ctx_forecast\mcp_client.py,"reply_content, count"
+Agent & Tools,Function,stats_between_percentile,,project\moirai-agent\ctx_forecast\src\ctx_forecast\metrics_gather.py,"all_values, p_low, p_high"
+Agent & Tools,Function,calculate_metrics,,project\moirai-agent\ctx_forecast\src\ctx_forecast\metrics_gather.py,"historical, future, prediction, id, roi_args"
+Agent & Tools,Function,set_random_seeds,,project\moirai-agent\ctx_forecast\src\ctx_forecast\utils.py,seed
+Agent & Tools,Function,encode_image,,project\moirai-agent\ctx_forecast\src\ctx_forecast\utils.py,image_path
+Agent & Tools,Function,parse_values_from_string,,project\moirai-agent\ctx_forecast\src\ctx_forecast\utils.py,"content, start_tag, end_tag, entry_sep"
+Agent & Tools,Function,plot_ts_and_save,Args:,project\moirai-agent\ctx_forecast\src\ctx_forecast\utils.py,"x, y, xlabel, xaxis_format, ylabel, title, figsize, grid, img_path, x_rotation"
+Agent & Tools,Function,plot_historical_and_save,,project\moirai-agent\ctx_forecast\src\ctx_forecast\utils.py,"historical, img_path, y_pixels, dpi"
+Agent & Tools,Function,plot_predictions_and_save,,project\moirai-agent\ctx_forecast\src\ctx_forecast\utils.py,"df_history, df_preds, df_crossval_preds, img_path, grid, x_rotation"
+Agent & Tools,Function,set_random_seeds,,project\moirai-agent\ctx_forecast\src\tools\tsf_models.py,seed
+Agent & Tools,Function,pad_to_left,,project\moirai-agent\ctx_forecast\src\tools\tsf_models.py,"series_list, value"
+Agent & Tools,Function,get_chronos_forecast_fn,,project\moirai-agent\ctx_forecast\src\tools\tsf_models.py,device
+Agent & Tools,Function,get_timesfm_forecast_fn,,project\moirai-agent\ctx_forecast\src\tools\tsf_models.py,device
+Agent & Tools,Function,get_tirex_forecast_fn,,project\moirai-agent\ctx_forecast\src\tools\tsf_models.py,device
+Agent & Tools,Function,get_moirai_forecast_fn,,project\moirai-agent\ctx_forecast\src\tools\tsf_models.py,device
+Agent & Tools,Function,main,usage example:,project\moirai-agent\ctx_forecast\src\tools\tsf_services.py,
+Agent & Tools,Function,pad_to_left,,project\moirai-agent\ctx_forecast\src\tools\utils.py,"series_list, value"
+Agent & Tools,Function,plot_a_time_series,Plot the given time-series sequences and return the path of the saved figure.,project\moirai-agent\ctx_forecast\src\tools\utils.py,"history_values, forecast_values, future_values, save_dir, save_name"
+Agent & Tools,Function,mean_absolute_error,"Given ground truth and prediction, calculate the mean absolute error.",project\moirai-agent\ctx_forecast\src\tools\utils.py,"ground_truth, prediction"
+Agent & Tools,Function,time_series_pattern_analysis,"Given a time series, analyze the pattern of the time series and return the results.",project\moirai-agent\ctx_forecast\src\tools\utils.py,time_series
+Agent & Tools,Function,_run_subprocess_sync,Synchronous helper function to run subprocess.,project\moirai-agent\ctx_forecast\src\tools\python_sandbox\server.py,"code_file, temp_dir, timeout"
+Agent & Tools,Function,create_app,Create the aiohttp application,project\moirai-agent\ctx_forecast\src\tools\python_sandbox\server.py,
+Agent & Tools,Function,test_health,Test the health endpoint,project\moirai-agent\ctx_forecast\src\tools\python_sandbox\test_api.py,url
+Agent & Tools,Function,test_matrix_multiplication,Test matrix multiplication via API,project\moirai-agent\ctx_forecast\src\tools\python_sandbox\test_api.py,url
+Agent & Tools,Function,main,Main function,project\moirai-agent\ctx_forecast\src\tools\python_sandbox\test_api.py,
+Agent & Tools,Function,format_time_series_forecasting_json,Format the time series prompt.,project\moirai-agent\ctx_forecast\src\utils\formatting.py,"history_values, history_start, history_end, history_frequency, context_info, pred_length, instruct_prompt, future_values, future_start, future_end, value_format, special_tags"
+Agent & Tools,Function,format_time_series_prompt,Format the time series prompt.,project\moirai-agent\ctx_forecast\src\utils\formatting.py,"history_values, history_start, history_end, history_frequency, context_info, functionality, pred_length, instruct_prompt, thinking_process, future_values, future_start, future_end, value_format, special_tags"
+Agent & Tools,Function,preprocess_values,Preprocess the values.,project\moirai-agent\ctx_forecast\src\utils\formatting.py,"value_str, value_format, missing_value"
+Agent & Tools,Function,parse_values_from_ts_prompt,Parse values from the time series prompt.,project\moirai-agent\ctx_forecast\src\utils\formatting.py,"ts_str, ts_type, special_tags"
+Agent & Tools,Function,encode_image,,project\moirai-agent\ctx_forecast\src\utils\image.py,image_path
+Agent & Tools,Function,plot_ts_and_save,Args:,project\moirai-agent\ctx_forecast\src\utils\image.py,"x, y, xlabel, xaxis_format, ylabel, title, figsize, grid, img_path, x_rotation"
+Agent & Tools,Function,plot_historical_and_save,,project\moirai-agent\ctx_forecast\src\utils\image.py,"historical, img_path, y_pixels, dpi"
+Agent & Tools,Function,import_config,,project\moirai-agent\ctx_forecast\src\utils\import_utils.py,"config_path, attr_name"
+Agent & Tools,Function,get_logger,,project\moirai-agent\ctx_forecast\src\utils\misc.py,"save_path, log_file"
+Agent & Tools,Function,compute_nrmae,,project\moirai-agent\ctx_forecast\src\utils\misc.py,"prediction, future_values, history_values"
+Agent & Tools,Function,generate_ts,,project\moirai-agent\ctx_forecast\src\utils\ts_gen.py,"length, spike_time, spike_value, trend_rate"
+Agent & Tools,Function,generate_ts,,project\moirai-agent\ctx_forecast\src\utils\ts_gen.py,"length, jump_time, jump_value"
+Agent & Tools,Class,TimeSeriesForecasters,,project\moirai-agent\gift_eval\agent.py,
+Agent & Tools,Method,TimeSeriesForecasters.__init__,,project\moirai-agent\gift_eval\agent.py,model_names
+Agent & Tools,Method,TimeSeriesForecasters.get_forecasts,,project\moirai-agent\gift_eval\agent.py,"history_values, pred_length"
+Agent & Tools,Method,TimeSeriesForecasters.get_best_pred,,project\moirai-agent\gift_eval\agent.py,"best_model, candidate_preds, model_names"
+Agent & Tools,Class,TimeSeriesProcessor,,project\moirai-agent\gift_eval\agent.py,
+Agent & Tools,Method,TimeSeriesProcessor.__init__,,project\moirai-agent\gift_eval\agent.py,"max_future_length, max_history_future_ratio"
+Agent & Tools,Method,TimeSeriesProcessor.parse_answer,,project\moirai-agent\gift_eval\agent.py,"answer, model_names"
+Agent & Tools,Method,TimeSeriesProcessor.check_preds_diversity,,project\moirai-agent\gift_eval\agent.py,"all_preds, diversity_threshold, max_forecast_length, history_values"
+Agent & Tools,Class,MoiraiAgentTimeSeriesForecast,,project\moirai-agent\gift_eval\agent.py,
+Agent & Tools,Method,MoiraiAgentTimeSeriesForecast.__init__,,project\moirai-agent\gift_eval\agent.py,"model_names, llm_repo_id"
+Agent & Tools,Function,extract_quantiles_prediction,Extract quantiles predictions and convert them into glutonts compatible format,project\moirai-agent\gift_eval\eval.py,df
+Agent & Tools,Function,eval_dataset,,project\moirai-agent\gift_eval\eval.py,"dataset, ds_config, df"
+Agent & Tools,Function,get_prediction_df,,project\moirai-agent\gift_eval\eval.py,dataset_config
+Agent & Tools,Function,reformatted_metrics_for_leaderboard,,project\moirai-agent\gift_eval\eval.py,row
+Agent & Tools,Class,Term,,project\moirai-agent\gift_eval\gift_eval.py,
+Agent & Tools,Method,Term.multiplier,,project\moirai-agent\gift_eval\gift_eval.py,
+Agent & Tools,Function,itemize_start,,project\moirai-agent\gift_eval\gift_eval.py,data_entry
+Agent & Tools,Function,maybe_reconvert_freq,"if the freq is one of the newest pandas freqs, convert it to the old freq",project\moirai-agent\gift_eval\gift_eval.py,freq
+Agent & Tools,Class,MultivariateToUnivariate,,project\moirai-agent\gift_eval\gift_eval.py,
+Agent & Tools,Method,MultivariateToUnivariate.__init__,,project\moirai-agent\gift_eval\gift_eval.py,field
+Agent & Tools,Class,Dataset,,project\moirai-agent\gift_eval\gift_eval.py,
+Agent & Tools,Method,Dataset.__init__,,project\moirai-agent\gift_eval\gift_eval.py,"name, term, to_univariate, storage_env_var"
+Agent & Tools,Method,Dataset.prediction_length,,project\moirai-agent\gift_eval\gift_eval.py,
+Agent & Tools,Method,Dataset.freq,,project\moirai-agent\gift_eval\gift_eval.py,
+Agent & Tools,Method,Dataset.target_dim,,project\moirai-agent\gift_eval\gift_eval.py,
+Agent & Tools,Method,Dataset.past_feat_dynamic_real_dim,,project\moirai-agent\gift_eval\gift_eval.py,
+Agent & Tools,Method,Dataset.windows,,project\moirai-agent\gift_eval\gift_eval.py,
+Agent & Tools,Method,Dataset.sum_series_length,,project\moirai-agent\gift_eval\gift_eval.py,
+Agent & Tools,Method,Dataset.training_dataset,,project\moirai-agent\gift_eval\gift_eval.py,
+Agent & Tools,Method,Dataset.validation_dataset,,project\moirai-agent\gift_eval\gift_eval.py,
+Agent & Tools,Method,Dataset.test_data,,project\moirai-agent\gift_eval\gift_eval.py,
+Agent & Tools,Function,set_random_seeds,,project\moirai-agent\gift_eval\tsf_models.py,seed
+Agent & Tools,Function,pad_to_left,,project\moirai-agent\gift_eval\tsf_models.py,"series_list, value"
+Agent & Tools,Function,get_chronos_forecast_fn,,project\moirai-agent\gift_eval\tsf_models.py,device
+Agent & Tools,Function,get_timesfm_forecast_fn,,project\moirai-agent\gift_eval\tsf_models.py,device
+Agent & Tools,Function,get_tirex_forecast_fn,,project\moirai-agent\gift_eval\tsf_models.py,device
+Agent & Tools,Function,get_moirai_forecast_fn,,project\moirai-agent\gift_eval\tsf_models.py,device
+Data Pipeline,Function,train_example_gen_func,,project\vn1_competition\prepare_data.py,
+Data Pipeline,Function,val_example_gen_func,,project\vn1_competition\prepare_data.py,
+Data Pipeline,Function,get_data,,project\vn1_competition\prepare_data.py,"file_path1, file_path2"
+Utils & Core,Class,SampleNLLLoss,,project\vn1_competition\src\forecast.py,
+Utils & Core,Method,SampleNLLLoss.reduce_loss,,project\vn1_competition\src\forecast.py,"loss, prediction_mask, observed_mask, sample_id, variate_id"
+Utils & Core,Class,Forecast,,project\vn1_competition\src\forecast.py,
+Utils & Core,Method,Forecast.__init__,,project\vn1_competition\src\forecast.py,"prediction_length, target_dim, feat_dynamic_real_dim, past_feat_dynamic_real_dim, context_length, module_kwargs, module, patch_size, num_samples"
+Utils & Core,Method,Forecast.hparams_context,,project\vn1_competition\src\forecast.py,"prediction_length, target_dim, feat_dynamic_real_dim, past_feat_dynamic_real_dim, context_length, patch_size, num_samples"
+Utils & Core,Method,Forecast.create_predictor,,project\vn1_competition\src\forecast.py,"batch_size, device"
+Utils & Core,Method,Forecast.describe_inputs,,project\vn1_competition\src\forecast.py,batch_size
+Utils & Core,Method,Forecast.prediction_input_names,,project\vn1_competition\src\forecast.py,
+Utils & Core,Method,Forecast.training_input_names,,project\vn1_competition\src\forecast.py,
+Utils & Core,Method,Forecast.past_length,,project\vn1_competition\src\forecast.py,
+Utils & Core,Method,Forecast.context_token_length,,project\vn1_competition\src\forecast.py,patch_size
+Utils & Core,Method,Forecast.prediction_token_length,,project\vn1_competition\src\forecast.py,patch_size
+Utils & Core,Method,Forecast.max_patch_size,,project\vn1_competition\src\forecast.py,
+Utils & Core,Method,Forecast.forward,,project\vn1_competition\src\forecast.py,"past_target, past_observed_target, past_is_pad, feat_dynamic_real, observed_feat_dynamic_real, past_feat_dynamic_real, past_observed_feat_dynamic_real, num_samples"
+Utils & Core,Method,Forecast.get_default_transform,,project\vn1_competition\src\forecast.py,
+Utils & Core,Function,load_context,,project\vn1_competition\src\main.py,"file_path1, file_path2"
+Utils & Core,Function,predict,,project\vn1_competition\src\main.py,"df_context, df_future, checkpoint_path"
+Utils & Core,Function,vn1_competition_evaluation,,project\vn1_competition\src\main.py,df
+CLI & Scripts,Function,main,,project\vn1_competition\src\main.py,
+Utils & Core,Class,HuggingFaceCheckpoint,Save the model to the Hugging Face format.,src\uni2ts\callbacks\HuggingFaceCheckpoint.py,
+Utils & Core,Method,HuggingFaceCheckpoint.__init__,,src\uni2ts\callbacks\HuggingFaceCheckpoint.py,"dirpath, filename, monitor, save_top_k, mode, every_n_epochs"
+Utils & Core,Function,abstract_class_property,,src\uni2ts\common\core.py,
+Utils & Core,Function,get_path_var,,src\uni2ts\common\env.py,var
+Utils & Core,Class,Env,,src\uni2ts\common\env.py,
+Utils & Core,Method,Env.monkey_patch_path_vars,,src\uni2ts\common\env.py,cls
+Utils & Core,Function,register_resolver,,src\uni2ts\common\hydra_util.py,name
+Utils & Core,Function,resolve_as_tuple,,src\uni2ts\common\hydra_util.py,ls
+Utils & Core,Function,resolve_cls_getattr,,src\uni2ts\common\hydra_util.py,"cls_name, attribute_name"
+Utils & Core,Function,resolve_floordiv,,src\uni2ts\common\hydra_util.py,"a, b"
+Utils & Core,Function,resolve_mul,,src\uni2ts\common\hydra_util.py,"a, b"
+Utils & Core,Function,uniform_sampler,,src\uni2ts\common\sampler.py,n
+Utils & Core,Function,binomial_sampler,,src\uni2ts\common\sampler.py,"n, p"
+Utils & Core,Function,beta_binomial_sampler,,src\uni2ts\common\sampler.py,"n, a, b"
+Utils & Core,Function,get_sampler,,src\uni2ts\common\sampler.py,distribution
+Utils & Core,Function,packed_attention_mask,,src\uni2ts\common\torch_util.py,sample_id
+Utils & Core,Function,packed_causal_attention_mask,,src\uni2ts\common\torch_util.py,"sample_id, time_id"
+Utils & Core,Function,mask_fill,,src\uni2ts\common\torch_util.py,"tensor, mask, value"
+Utils & Core,Function,safe_div,,src\uni2ts\common\torch_util.py,"numer, denom"
+Utils & Core,Function,size_to_mask,,src\uni2ts\common\torch_util.py,"max_size, sizes"
+Utils & Core,Function,fixed_size,,src\uni2ts\common\torch_util.py,value
+Utils & Core,Function,sized_mean,,src\uni2ts\common\torch_util.py,"value, sizes, dim, keepdim, size_keepdim, correction"
+Utils & Core,Function,masked_mean,,src\uni2ts\common\torch_util.py,"value, mask, dim, keepdim, correction"
+Utils & Core,Function,unsqueeze_trailing_dims,,src\uni2ts\common\torch_util.py,"x, shape"
+Utils & Core,Class,DateTime64,,src\uni2ts\common\typing.py,
+Utils & Core,Class,Character,,src\uni2ts\common\typing.py,
+Data Pipeline,Class,SampleTimeSeriesType,How to sample from the dataset.,src\uni2ts\data\dataset.py,
+Data Pipeline,Class,TimeSeriesDataset,,src\uni2ts\data\dataset.py,
+Data Pipeline,Method,TimeSeriesDataset.__init__,:param indexer: Underlying Indexer object,src\uni2ts\data\dataset.py,"indexer, transform, sample_time_series, dataset_weight"
+Data Pipeline,Method,TimeSeriesDataset.num_ts,Get the number of time series in the dataset,src\uni2ts\data\dataset.py,
+Data Pipeline,Class,MultiSampleTimeSeriesDataset,Samples multiple time series and stacks them into a single time series.,src\uni2ts\data\dataset.py,
+Data Pipeline,Method,MultiSampleTimeSeriesDataset.__init__,:param indexer: Underlying Indexer object,src\uni2ts\data\dataset.py,"indexer, transform, max_ts, combine_fields, sample_time_series, dataset_weight, sampler"
+Data Pipeline,Class,EvalDataset,Dataset class for validation.,src\uni2ts\data\dataset.py,
+Data Pipeline,Method,EvalDataset.__init__,:param windows: number of windows to perform evaluation on,src\uni2ts\data\dataset.py,"windows, indexer, transform"
+Data Pipeline,Class,FinetuneDataset,This class is identical to EvalDataset. It is created solely to avoid confusion due to naming.,src\uni2ts\data\dataset.py,
+Data Pipeline,Method,FinetuneDataset.__init__,:param windows: number of windows to perform evaluation on,src\uni2ts\data\dataset.py,"windows, indexer, transform"
+Data Pipeline,Class,Collate,A Callable abstract class for PyTorch DataLoader's collate_fn argument.,src\uni2ts\data\loader.py,
+Data Pipeline,Class,PadCollate,Pads uneven sequences with padding function defined by pad_func_map.,src\uni2ts\data\loader.py,
+Data Pipeline,Method,PadCollate.pad_samples,,src\uni2ts\data\loader.py,batch
+Data Pipeline,Method,PadCollate.get_sample_id,,src\uni2ts\data\loader.py,batch
+Data Pipeline,Class,PackCollate,Packs uneven sequences with the first fit decreasing bin packing strategy.,src\uni2ts\data\loader.py,
+Data Pipeline,Method,PackCollate.first_fit_decreasing_bin_packing,Implements the first fit decreasing bin packing strategy.,src\uni2ts\data\loader.py,batch
+Data Pipeline,Method,PackCollate.get_sample_id,Create an array of integers representing the sample id in a sequence.,src\uni2ts\data\loader.py,"batch, bin_spaces"
+Data Pipeline,Method,PackCollate.merge_batch,Combines packed samples into BatchedSample format.,src\uni2ts\data\loader.py,"batch, bin_spaces"
+Data Pipeline,Class,SliceableBatchedSample,A BatchedSample that can be sliced.,src\uni2ts\data\loader.py,
+Data Pipeline,Class,Metadata,,src\uni2ts\data\loader.py,
+Data Pipeline,Class,BatchedSampleQueue,Queue data structure storing batched samples.,src\uni2ts\data\loader.py,
+Data Pipeline,Method,BatchedSampleQueue.append,Appends a batch to the end of the queue.,src\uni2ts\data\loader.py,batch
+Data Pipeline,Method,BatchedSampleQueue.appendleft,Appends a batch to the start of the queue.,src\uni2ts\data\loader.py,batch
+Data Pipeline,Method,BatchedSampleQueue.popleft,Pops a batch from the start of the queue.,src\uni2ts\data\loader.py,size
+Data Pipeline,Method,BatchedSampleQueue.as_batched_data,Returns the queue as a BatchedSample,src\uni2ts\data\loader.py,
+Data Pipeline,Class,_BatchedSampleIterator,Iterator returning batched samples with a fixed batch size.,src\uni2ts\data\loader.py,
+Data Pipeline,Method,_BatchedSampleIterator.has_next,Check if iterator still has next.,src\uni2ts\data\loader.py,
+Data Pipeline,Class,DataLoader,Wrapper on PyTorch's DataLoader class implementing:,src\uni2ts\data\loader.py,
+Data Pipeline,Method,DataLoader.__init__,Only wrapper specific arguments are documented below.,src\uni2ts\data\loader.py,"dataset, batch_size, batch_size_factor, cycle, num_batches_per_epoch, shuffle, sampler, num_workers, collate_fn, pin_memory, drop_last, fill_last, worker_init_fn, prefetch_factor, persistent_workers"
+Data Pipeline,Method,DataLoader.worker_init_fn,Getter for worker_init_fn,src\uni2ts\data\loader.py,
+Data Pipeline,Method,DataLoader.worker_init_fn,Setter for worker_init_fn,src\uni2ts\data\loader.py,worker_init_fn
+Data Pipeline,Function,_from_long_dataframe,,src\uni2ts\data\builder\simple.py,"df, offset, date_offset, freq"
+Data Pipeline,Function,_from_wide_dataframe,,src\uni2ts\data\builder\simple.py,"df, offset, date_offset, freq"
+Data Pipeline,Function,_from_wide_dataframe_multivariate,,src\uni2ts\data\builder\simple.py,"df, offset, date_offset, freq"
+Data Pipeline,Class,SimpleDatasetBuilder,,src\uni2ts\data\builder\simple.py,
+Data Pipeline,Method,SimpleDatasetBuilder.build_dataset,,src\uni2ts\data\builder\simple.py,"file, dataset_type, offset, date_offset, freq"
+Data Pipeline,Method,SimpleDatasetBuilder.load_dataset,,src\uni2ts\data\builder\simple.py,transform_map
+Data Pipeline,Class,SimpleFinetuneDatasetBuilder,,src\uni2ts\data\builder\simple.py,
+Data Pipeline,Method,SimpleFinetuneDatasetBuilder.build_dataset,,src\uni2ts\data\builder\simple.py,"file, dataset_type, offset, date_offset, freq, normalize"
+Data Pipeline,Method,SimpleFinetuneDatasetBuilder.load_dataset,,src\uni2ts\data\builder\simple.py,transform_map
+Data Pipeline,Method,SimpleFinetuneDatasetBuilder.scale,,src\uni2ts\data\builder\simple.py,"data, start, end"
+Data Pipeline,Class,SimpleEvalDatasetBuilder,,src\uni2ts\data\builder\simple.py,
+Data Pipeline,Method,SimpleEvalDatasetBuilder.build_dataset,,src\uni2ts\data\builder\simple.py,"file, dataset_type, freq, mean, std"
+Data Pipeline,Method,SimpleEvalDatasetBuilder.load_dataset,,src\uni2ts\data\builder\simple.py,transform_map
+Data Pipeline,Function,generate_finetune_builder,"By default, 'distance' is set to 1 for sliding window. A larger value can be used to reduce computational cost.",src\uni2ts\data\builder\simple.py,"dataset, train_length, prediction_length, context_length, patch_size, mode, storage_path, distance"
+Data Pipeline,Function,generate_eval_builder,"By default, 'distance' is set to prediction length for rolling evaluation.",src\uni2ts\data\builder\simple.py,"dataset, offset, eval_length, prediction_length, context_length, patch_size, mode, storage_path, distance"
+Data Pipeline,Function,generate_eval_builders,,src\uni2ts\data\builder\simple.py,"dataset, offset, eval_length, prediction_lengths, context_lengths, patch_sizes, storage_path"
+Data Pipeline,Class,DatasetBuilder,Base class for DatasetBuilders.,src\uni2ts\data\builder\_base.py,
+Data Pipeline,Method,DatasetBuilder.build_dataset,Builds the dataset into the required file format.,src\uni2ts\data\builder\_base.py,
+Data Pipeline,Method,DatasetBuilder.load_dataset,Load the dataset.,src\uni2ts\data\builder\_base.py,transform_map
+Data Pipeline,Class,ConcatDatasetBuilder,Concatenates DatasetBuilders such that they can be loaded together.,src\uni2ts\data\builder\_base.py,
+Data Pipeline,Method,ConcatDatasetBuilder.__init__,:param builders: DatasetBuilders to be concatenated together.,src\uni2ts\data\builder\_base.py,
+Data Pipeline,Method,ConcatDatasetBuilder.build_dataset,,src\uni2ts\data\builder\_base.py,
+Data Pipeline,Method,ConcatDatasetBuilder.load_dataset,Loads all builders with ConcatDataset.,src\uni2ts\data\builder\_base.py,transform_map
+Data Pipeline,Class,BuildingsBenchDatasetBuilder,,src\uni2ts\data\builder\lotsa_v1\buildings_bench.py,
+Data Pipeline,Method,BuildingsBenchDatasetBuilder.build_dataset,,src\uni2ts\data\builder\lotsa_v1\buildings_bench.py,dataset
+Data Pipeline,Class,Buildings900KDatasetBuilder,,src\uni2ts\data\builder\lotsa_v1\buildings_bench.py,
+Data Pipeline,Method,Buildings900KDatasetBuilder.build_dataset,,src\uni2ts\data\builder\lotsa_v1\buildings_bench.py,"dataset, num_proc"
+Data Pipeline,Class,CloudOpsTSFDatasetBuilder,,src\uni2ts\data\builder\lotsa_v1\cloudops_tsf.py,
+Data Pipeline,Method,CloudOpsTSFDatasetBuilder.build_dataset,,src\uni2ts\data\builder\lotsa_v1\cloudops_tsf.py,"dataset, num_proc"
+Data Pipeline,Class,CMIP6DatasetBuilder,,src\uni2ts\data\builder\lotsa_v1\cmip6.py,
+Data Pipeline,Method,CMIP6DatasetBuilder.build_dataset,,src\uni2ts\data\builder\lotsa_v1\cmip6.py,"dataset, num_proc"
+Data Pipeline,Class,ERA5DatasetBuilder,,src\uni2ts\data\builder\lotsa_v1\era5.py,
+Data Pipeline,Method,ERA5DatasetBuilder.build_dataset,,src\uni2ts\data\builder\lotsa_v1\era5.py,"dataset, num_proc"
+Data Pipeline,Function,default_prediction_length_from_frequency,,src\uni2ts\data\builder\lotsa_v1\gluonts.py,freq
+Data Pipeline,Function,generate_forecasting_dataset,,src\uni2ts\data\builder\lotsa_v1\gluonts.py,"dataset_path, dataset_name, dataset_writer, prediction_length"
+Data Pipeline,Class,GluonTSDatasetBuilder,,src\uni2ts\data\builder\lotsa_v1\gluonts.py,
+Data Pipeline,Method,GluonTSDatasetBuilder.build_dataset,,src\uni2ts\data\builder\lotsa_v1\gluonts.py,dataset
+Data Pipeline,Class,LargeSTDatasetBuilder,,src\uni2ts\data\builder\lotsa_v1\largest.py,
+Data Pipeline,Method,LargeSTDatasetBuilder.build_dataset,,src\uni2ts\data\builder\lotsa_v1\largest.py,"dataset, num_proc"
+Data Pipeline,Class,LibCityDatasetBuilder,,src\uni2ts\data\builder\lotsa_v1\lib_city.py,
+Data Pipeline,Method,LibCityDatasetBuilder.build_dataset,,src\uni2ts\data\builder\lotsa_v1\lib_city.py,"dataset, num_proc"
+Data Pipeline,Function,_get_kdd_2022_gen_func,,src\uni2ts\data\builder\lotsa_v1\others.py,data_path
+Data Pipeline,Function,_get_godaddy_gen_func,,src\uni2ts\data\builder\lotsa_v1\others.py,data_path
+Data Pipeline,Function,_get_favorita_sales_gen_func,,src\uni2ts\data\builder\lotsa_v1\others.py,"data_path, length_threshold, missing_threshold"
+Data Pipeline,Function,_get_favorita_transactions_gen_func,,src\uni2ts\data\builder\lotsa_v1\others.py,data_path
+Data Pipeline,Function,_get_restaurant_gen_func,,src\uni2ts\data\builder\lotsa_v1\others.py,"data_path, missing_threshold"
+Data Pipeline,Function,_get_hierarchical_sales_gen_func,,src\uni2ts\data\builder\lotsa_v1\others.py,data_path
+Data Pipeline,Function,_get_china_air_quality_gen_func,,src\uni2ts\data\builder\lotsa_v1\others.py,data_path
+Data Pipeline,Function,_get_beijing_air_quality_gen_func,,src\uni2ts\data\builder\lotsa_v1\others.py,data_path
+Data Pipeline,Function,_get_residential_load_power_gen_func,,src\uni2ts\data\builder\lotsa_v1\others.py,data_path
+Data Pipeline,Function,_get_residential_pv_power_gen_func,,src\uni2ts\data\builder\lotsa_v1\others.py,data_path
+Data Pipeline,Function,_get_cdc_fluview_ilinet_gen_func,,src\uni2ts\data\builder\lotsa_v1\others.py,data_path
+Data Pipeline,Function,_get_cdc_fluview_who_nrevss_gen_func,,src\uni2ts\data\builder\lotsa_v1\others.py,data_path
+Data Pipeline,Function,_get_project_tycho_gen_func,,src\uni2ts\data\builder\lotsa_v1\others.py,"data_path, length_threshold, missing_threshold"
+Data Pipeline,Class,OthersLOTSADatasetBuilder,,src\uni2ts\data\builder\lotsa_v1\others.py,
+Data Pipeline,Method,OthersLOTSADatasetBuilder.build_dataset,,src\uni2ts\data\builder\lotsa_v1\others.py,dataset
+Data Pipeline,Function,_get_gfc12_load_gen_func,,src\uni2ts\data\builder\lotsa_v1\proenfo.py,proenfo_path
+Data Pipeline,Function,_get_gfc14_load_gen_func,,src\uni2ts\data\builder\lotsa_v1\proenfo.py,proenfo_path
+Data Pipeline,Function,_get_gfc17_load_gen_func,,src\uni2ts\data\builder\lotsa_v1\proenfo.py,proenfo_path
+Data Pipeline,Function,_get_spain_gen_func,,src\uni2ts\data\builder\lotsa_v1\proenfo.py,proenfo_path
+Data Pipeline,Function,_get_pdb_gen_func,,src\uni2ts\data\builder\lotsa_v1\proenfo.py,proenfo_path
+Data Pipeline,Function,_get_elf_gen_func,,src\uni2ts\data\builder\lotsa_v1\proenfo.py,proenfo_path
+Data Pipeline,Function,_get_bull_gen_func,,src\uni2ts\data\builder\lotsa_v1\proenfo.py,proenfo_path
+Data Pipeline,Function,_get_cockatoo_gen_func,,src\uni2ts\data\builder\lotsa_v1\proenfo.py,proenfo_path
+Data Pipeline,Function,_get_hog_gen_func,,src\uni2ts\data\builder\lotsa_v1\proenfo.py,proenfo_path
+Data Pipeline,Function,_get_covid19_energy_gen_func,,src\uni2ts\data\builder\lotsa_v1\proenfo.py,proenfo_path
+Data Pipeline,Class,ProEnFoDatasetBuilder,,src\uni2ts\data\builder\lotsa_v1\proenfo.py,
+Data Pipeline,Method,ProEnFoDatasetBuilder.build_dataset,,src\uni2ts\data\builder\lotsa_v1\proenfo.py,dataset
+Data Pipeline,Function,_get_subseasonal_precip_gen_func,,src\uni2ts\data\builder\lotsa_v1\subseasonal.py,
+Data Pipeline,Function,_get_subseasonal_gen_func,,src\uni2ts\data\builder\lotsa_v1\subseasonal.py,
+Data Pipeline,Class,SubseasonalDatasetBuilder,,src\uni2ts\data\builder\lotsa_v1\subseasonal.py,
+Data Pipeline,Method,SubseasonalDatasetBuilder.build_dataset,,src\uni2ts\data\builder\lotsa_v1\subseasonal.py,dataset
+Data Pipeline,Class,LOTSADatasetBuilder,Base class for LOTSA dataset builders.,src\uni2ts\data\builder\lotsa_v1\_base.py,
+Data Pipeline,Method,LOTSADatasetBuilder.__init__,:param datasets: list of datasets to load,src\uni2ts\data\builder\lotsa_v1\_base.py,"datasets, weight_map, sample_time_series, storage_path"
+Data Pipeline,Method,LOTSADatasetBuilder.load_dataset,Loads all datasets in dataset_list,src\uni2ts\data\builder\lotsa_v1\_base.py,transform_map
+Data Pipeline,Class,HuggingFaceDatasetIndexer,Indexer for Hugging Face Datasets,src\uni2ts\data\indexer\hf_dataset_indexer.py,
+Data Pipeline,Method,HuggingFaceDatasetIndexer.__init__,:param dataset: underlying Hugging Face Dataset,src\uni2ts\data\indexer\hf_dataset_indexer.py,"dataset, uniform"
+Data Pipeline,Method,HuggingFaceDatasetIndexer.get_proportional_probabilities,Obtain proportion of each time series based on number of time steps.,src\uni2ts\data\indexer\hf_dataset_indexer.py,field
+Data Pipeline,Class,Indexer,Base class for all Indexers.,src\uni2ts\data\indexer\_base.py,
+Data Pipeline,Method,Indexer.__init__,:param uniform: whether the underlying data has uniform length,src\uni2ts\data\indexer\_base.py,uniform
+Data Pipeline,Method,Indexer.check_index,Check the validity of a given index.,src\uni2ts\data\indexer\_base.py,idx
+Data Pipeline,Method,Indexer.get_uniform_probabilities,Obtains uniform probability distribution over all time series.,src\uni2ts\data\indexer\_base.py,
+Data Pipeline,Method,Indexer.get_proportional_probabilities,Obtain proportion of each time series based on number of time steps.,src\uni2ts\data\indexer\_base.py,field
+Distribution,Class,LaplaceOutput,,src\uni2ts\distribution\laplace.py,
+CLI & Scripts,Method,LaplaceOutput.domain_map,,src\uni2ts\distribution\laplace.py,
+Distribution,Class,LaplaceFixedScaleOutput,,src\uni2ts\distribution\laplace.py,
+Distribution,Method,LaplaceFixedScaleOutput.__init__,,src\uni2ts\distribution\laplace.py,scale
+CLI & Scripts,Method,LaplaceFixedScaleOutput.domain_map,,src\uni2ts\distribution\laplace.py,
+Distribution,Class,LogNormalOutput,,src\uni2ts\distribution\log_normal.py,
+CLI & Scripts,Method,LogNormalOutput.domain_map,,src\uni2ts\distribution\log_normal.py,
+Distribution,Class,Mixture,,src\uni2ts\distribution\mixture.py,
+Distribution,Method,Mixture.__init__,,src\uni2ts\distribution\mixture.py,"weights, components, validate_args"
+Distribution,Method,Mixture.expand,,src\uni2ts\distribution\mixture.py,"batch_shape, _instance"
+Distribution,Method,Mixture.log_prob,,src\uni2ts\distribution\mixture.py,value
+Distribution,Method,Mixture.sample,,src\uni2ts\distribution\mixture.py,sample_shape
+Distribution,Method,Mixture.support,,src\uni2ts\distribution\mixture.py,
+Distribution,Method,Mixture.mean,,src\uni2ts\distribution\mixture.py,
+Distribution,Method,Mixture.variance,,src\uni2ts\distribution\mixture.py,
+Distribution,Method,Mixture.cdf,,src\uni2ts\distribution\mixture.py,value
+Distribution,Class,MixtureOutput,,src\uni2ts\distribution\mixture.py,
+Distribution,Method,MixtureOutput.__init__,,src\uni2ts\distribution\mixture.py,components
+Distribution,Method,MixtureOutput.args_dim,,src\uni2ts\distribution\mixture.py,
+CLI & Scripts,Method,MixtureOutput.domain_map,,src\uni2ts\distribution\mixture.py,
+Distribution,Class,NegativeBinomial,,src\uni2ts\distribution\negative_binomial.py,
+Distribution,Method,NegativeBinomial.__init__,,src\uni2ts\distribution\negative_binomial.py,"total_count, logits, validate_args"
+Distribution,Method,NegativeBinomial.expand,,src\uni2ts\distribution\negative_binomial.py,"batch_shape, _instance"
+Distribution,Method,NegativeBinomial.probs,,src\uni2ts\distribution\negative_binomial.py,
+Distribution,Method,NegativeBinomial.sample,,src\uni2ts\distribution\negative_binomial.py,sample_shape
+Distribution,Method,NegativeBinomial.log_prob,,src\uni2ts\distribution\negative_binomial.py,value
+Distribution,Method,NegativeBinomial.mean,,src\uni2ts\distribution\negative_binomial.py,
+Distribution,Method,NegativeBinomial.variance,,src\uni2ts\distribution\negative_binomial.py,
+Distribution,Class,NegativeBinomialOutput,,src\uni2ts\distribution\negative_binomial.py,
+CLI & Scripts,Method,NegativeBinomialOutput.domain_map,,src\uni2ts\distribution\negative_binomial.py,
+Distribution,Class,NormalOutput,,src\uni2ts\distribution\normal.py,
+CLI & Scripts,Method,NormalOutput.domain_map,,src\uni2ts\distribution\normal.py,
+Distribution,Class,NormalFixedScaleOutput,,src\uni2ts\distribution\normal.py,
+Distribution,Method,NormalFixedScaleOutput.__init__,,src\uni2ts\distribution\normal.py,scale
+CLI & Scripts,Method,NormalFixedScaleOutput.domain_map,,src\uni2ts\distribution\normal.py,
+Distribution,Class,ParetoOutput,,src\uni2ts\distribution\pareto.py,
+CLI & Scripts,Method,ParetoOutput.domain_map,,src\uni2ts\distribution\pareto.py,
+Distribution,Class,ParetoFixedAlphaOutput,,src\uni2ts\distribution\pareto.py,
+Distribution,Method,ParetoFixedAlphaOutput.__init__,,src\uni2ts\distribution\pareto.py,alpha
+CLI & Scripts,Method,ParetoFixedAlphaOutput.domain_map,,src\uni2ts\distribution\pareto.py,
+Distribution,Class,StudentTOutput,,src\uni2ts\distribution\student_t.py,
+CLI & Scripts,Method,StudentTOutput.domain_map,,src\uni2ts\distribution\student_t.py,
+Distribution,Function,tree_map_multi,"Tree map with function requiring multiple inputs, where other inputs are from a PyTree too.",src\uni2ts\distribution\_base.py,"func, tree"
+Distribution,Function,convert_to_module,Convert a simple container PyTree into an nn.Module PyTree,src\uni2ts\distribution\_base.py,tree
+Distribution,Function,convert_to_container,Convert an nn.Module PyTree into a simple container PyTree,src\uni2ts\distribution\_base.py,tree
+Distribution,Class,DistrParamProj,Projection layer from representations to distribution parameters.,src\uni2ts\distribution\_base.py,
+Distribution,Method,DistrParamProj.__init__,:param in_features: size of representation,src\uni2ts\distribution\_base.py,"in_features, out_features, args_dim, domain_map, proj_layer"
+Distribution,Method,DistrParamProj.forward,,src\uni2ts\distribution\_base.py,
+Distribution,Class,AffineTransformed,,src\uni2ts\distribution\_base.py,
+Distribution,Method,AffineTransformed.__init__,,src\uni2ts\distribution\_base.py,"base_dist, loc, scale, validate_args"
+Distribution,Method,AffineTransformed.mean,,src\uni2ts\distribution\_base.py,
+Distribution,Method,AffineTransformed.variance,,src\uni2ts\distribution\_base.py,
+Distribution,Class,DistributionOutput,Base class for distribution outputs.,src\uni2ts\distribution\_base.py,
+Distribution,Method,DistributionOutput.distribution,,src\uni2ts\distribution\_base.py,"distr_params, loc, scale, validate_args"
+Distribution,Method,DistributionOutput.args_dim,Returns the dimensionality of the distribution parameters in the form of a pytree.,src\uni2ts\distribution\_base.py,
+CLI & Scripts,Method,DistributionOutput.domain_map,Returns a pytree of callables that maps the unconstrained distribution parameters,src\uni2ts\distribution\_base.py,
+Distribution,Method,DistributionOutput.get_param_proj,Get a projection layer mapping representations to distribution parameters.,src\uni2ts\distribution\_base.py,"in_features, out_features, proj_layer"
+Training & Eval,Class,MetaData,,src\uni2ts\eval_util\data.py,
+Training & Eval,Function,get_gluonts_val_dataset,,src\uni2ts\eval_util\data.py,"dataset_name, prediction_length, mode, regenerate"
+Training & Eval,Function,get_gluonts_test_dataset,,src\uni2ts\eval_util\data.py,"dataset_name, prediction_length, mode, regenerate"
+Training & Eval,Function,get_lsf_val_dataset,,src\uni2ts\eval_util\data.py,"dataset_name, prediction_length, mode"
+Training & Eval,Function,get_lsf_test_dataset,,src\uni2ts\eval_util\data.py,"dataset_name, prediction_length, mode"
+Training & Eval,Function,get_custom_eval_dataset,,src\uni2ts\eval_util\data.py,"dataset_name, offset, windows, distance, prediction_length, mode"
+Training & Eval,Class,BatchForecast,"Wrapper around ``Forecast`` objects, that adds a batch dimension",src\uni2ts\eval_util\evaluation.py,
+Training & Eval,Function,_get_data_batch,,src\uni2ts\eval_util\evaluation.py,"input_batch, label_batch, forecast_batch, seasonality, mask_invalid_label, allow_nan_forecast"
+Training & Eval,Function,evaluate_forecasts_raw,"Evaluate ``forecasts`` by comparing them with ``test_data``, according",src\uni2ts\eval_util\evaluation.py,forecasts
+Training & Eval,Function,evaluate_forecasts,"Evaluate ``forecasts`` by comparing them with ``test_data``, according",src\uni2ts\eval_util\evaluation.py,forecasts
+Training & Eval,Function,evaluate_model,"Evaluate ``model`` when applied to ``test_data``, according",src\uni2ts\eval_util\evaluation.py,model
+Training & Eval,Class,MedianMSE,Mean Squared Error,src\uni2ts\eval_util\metrics.py,
+Training & Eval,Function,plot_single,,src\uni2ts\eval_util\plot.py,"inp, label, forecast, context_length, intervals, ax, dim, name, show_label"
+Training & Eval,Function,plot_next_multi,,src\uni2ts\eval_util\plot.py,"axes, input_it, label_it, forecast_it, context_length, intervals, dim, name, show_label"
+Training & Eval,Class,HFDataset,,src\uni2ts\eval_util\_hf_dataset.py,
+Training & Eval,Method,HFDataset.__init__,,src\uni2ts\eval_util\_hf_dataset.py,"dataset_name, storage_path"
+Training & Eval,Class,LSFDataset,,src\uni2ts\eval_util\_lsf_dataset.py,
+Training & Eval,Method,LSFDataset.__init__,,src\uni2ts\eval_util\_lsf_dataset.py,"dataset_name, mode, split"
+Training & Eval,Method,LSFDataset.scale,,src\uni2ts\eval_util\_lsf_dataset.py,"data, start, end"
+Training & Eval,Function,_load_etth,,src\uni2ts\eval_util\_pf_dataset.py,"dataset_name, prediction_length"
+Training & Eval,Function,_load_ettm,,src\uni2ts\eval_util\_pf_dataset.py,"dataset_name, prediction_length"
+Training & Eval,Function,_load_metr_la,,src\uni2ts\eval_util\_pf_dataset.py,"dataset_name, prediction_length"
+Training & Eval,Function,_load_walmart,,src\uni2ts\eval_util\_pf_dataset.py,"dataset_name, prediction_length"
+Training & Eval,Function,_load_jena_weather,,src\uni2ts\eval_util\_pf_dataset.py,"dataset_name, prediction_length"
+Training & Eval,Function,_load_istanbul_traffic,,src\uni2ts\eval_util\_pf_dataset.py,"dataset_name, prediction_length"
+Training & Eval,Function,_load_turkey_power,,src\uni2ts\eval_util\_pf_dataset.py,"dataset_name, prediction_length"
+Training & Eval,Function,generate_pf_dataset,,src\uni2ts\eval_util\_pf_dataset.py,"dataset_path, dataset_name, dataset_writer, prediction_length"
+Training & Eval,Class,PackedNLLLoss,,src\uni2ts\loss\packed\distribution.py,
+Training & Eval,Class,PointNormType,,src\uni2ts\loss\packed\normalized.py,
+Training & Eval,Class,PackedPointNormalizedLoss,,src\uni2ts\loss\packed\normalized.py,
+Training & Eval,Method,PackedPointNormalizedLoss.__init__,,src\uni2ts\loss\packed\normalized.py,"normalize, correction, epsilon"
+Training & Eval,Method,PackedPointNormalizedLoss.denominator_func,,src\uni2ts\loss\packed\normalized.py,
+Training & Eval,Method,PackedPointNormalizedLoss.none_denominator,,src\uni2ts\loss\packed\normalized.py,"target, observed_mask, sample_id, variate_id"
+Training & Eval,Method,PackedPointNormalizedLoss.reduce_denominator,,src\uni2ts\loss\packed\normalized.py,"value, observed_mask, sample_id, variate_id"
+Training & Eval,Method,PackedPointNormalizedLoss.abs_target_denominator,,src\uni2ts\loss\packed\normalized.py,"target, observed_mask, sample_id, variate_id"
+Training & Eval,Method,PackedPointNormalizedLoss.abs_target_sq_denominator,,src\uni2ts\loss\packed\normalized.py,"target, observed_mask, sample_id, variate_id"
+Training & Eval,Method,PackedPointNormalizedLoss.target_denominator,,src\uni2ts\loss\packed\normalized.py,"target, observed_mask, sample_id, variate_id"
+Training & Eval,Method,PackedPointNormalizedLoss.target_sq_denominator,,src\uni2ts\loss\packed\normalized.py,"target, observed_mask, sample_id, variate_id"
+Training & Eval,Method,PackedPointNormalizedLoss.std_dev_denominator,,src\uni2ts\loss\packed\normalized.py,"target, observed_mask, sample_id, variate_id"
+Training & Eval,Method,PackedPointNormalizedLoss.var_denominator,,src\uni2ts\loss\packed\normalized.py,"target, observed_mask, sample_id, variate_id"
+Training & Eval,Class,PackedNMAELoss,,src\uni2ts\loss\packed\normalized.py,
+Training & Eval,Class,PackedNMSELoss,,src\uni2ts\loss\packed\normalized.py,
+Training & Eval,Class,PackedNRMSELoss,,src\uni2ts\loss\packed\normalized.py,
+Training & Eval,Method,PackedNRMSELoss.reduce_loss,,src\uni2ts\loss\packed\normalized.py,"loss, prediction_mask, observed_mask, sample_id, variate_id"
+Training & Eval,Class,PackedNMLSELoss,,src\uni2ts\loss\packed\normalized.py,
+Training & Eval,Method,PackedNMLSELoss.__init__,,src\uni2ts\loss\packed\normalized.py,df
+Training & Eval,Class,PackedMAPELoss,,src\uni2ts\loss\packed\percentage_error.py,
+Training & Eval,Class,PackedSMAPELoss,,src\uni2ts\loss\packed\percentage_error.py,
+Training & Eval,Class,PackedMAELoss,,src\uni2ts\loss\packed\point.py,
+Training & Eval,Method,PackedMAELoss.__init__,,src\uni2ts\loss\packed\point.py,
+Training & Eval,Class,PackedMSELoss,,src\uni2ts\loss\packed\point.py,
+Training & Eval,Method,PackedMSELoss.__init__,,src\uni2ts\loss\packed\point.py,
+Training & Eval,Class,PackedRMSELoss,,src\uni2ts\loss\packed\point.py,
+Training & Eval,Method,PackedRMSELoss.__init__,,src\uni2ts\loss\packed\point.py,
+Training & Eval,Class,PackedQuantileLoss,,src\uni2ts\loss\packed\quantile.py,
+Training & Eval,Method,PackedQuantileLoss.__init__,,src\uni2ts\loss\packed\quantile.py,quantile_levels
+Training & Eval,Class,PackedQuantileMAELoss,,src\uni2ts\loss\packed\quantile.py,
+Training & Eval,Class,PackedLoss,Abstract base class for loss functions supporting packed inputs.,src\uni2ts\loss\packed\_base.py,
+Training & Eval,Method,PackedLoss.reduce_loss,,src\uni2ts\loss\packed\_base.py,"loss, prediction_mask, observed_mask, sample_id, variate_id"
+Training & Eval,Class,PackedPointLoss,Abstract base class for loss functions on point forecasts.,src\uni2ts\loss\packed\_base.py,
+Training & Eval,Class,PackedQuantileLoss,Abstract base class for loss functions on quantile forecasts.,src\uni2ts\loss\packed\_base.py,
+Training & Eval,Class,PackedDistributionLoss,Abstract base class for loss functions on probabilistic (distribution) forecasts.,src\uni2ts\loss\packed\_base.py,
+Forecasting Models,Class,SetTrainableParamsMixin,A basic version of Mixin class for setting trainable parameters. Haven't applied it in the current model.,src\uni2ts\model\moirai\finetune.py,
+Forecasting Models,Method,SetTrainableParamsMixin.set_trainable_params,,src\uni2ts\model\moirai\finetune.py,"finetune_pattern, named_parameters"
+Forecasting Models,Class,MoiraiFinetune,,src\uni2ts\model\moirai\finetune.py,
+Forecasting Models,Method,MoiraiFinetune.__init__,,src\uni2ts\model\moirai\finetune.py,"min_patches, min_mask_ratio, max_mask_ratio, max_dim, num_training_steps, num_warmup_steps, module_kwargs, module, num_samples, beta1, beta2, loss_func, val_metric, lr, weight_decay, log_on_step, context_length, prediction_length, patch_size, finetune_pattern"
+Forecasting Models,Method,MoiraiFinetune.forward,,src\uni2ts\model\moirai\finetune.py,"target, observed_mask, sample_id, time_id, variate_id, prediction_mask, patch_size"
+Forecasting Models,Method,MoiraiFinetune.training_step,,src\uni2ts\model\moirai\finetune.py,"batch, batch_idx"
+Forecasting Models,Method,MoiraiFinetune.validation_step,,src\uni2ts\model\moirai\finetune.py,"batch, batch_idx, dataloader_idx"
+Forecasting Models,Method,MoiraiFinetune.configure_optimizers,,src\uni2ts\model\moirai\finetune.py,
+Forecasting Models,Method,MoiraiFinetune.train_transform_map,,src\uni2ts\model\moirai\finetune.py,
+Forecasting Models,Method,MoiraiFinetune.val_transform_map,,src\uni2ts\model\moirai\finetune.py,
+Forecasting Models,Class,MoiraiLinearProbe,,src\uni2ts\model\moirai\finetune.py,
+Forecasting Models,Class,SampleNLLLoss,,src\uni2ts\model\moirai\forecast.py,
+Forecasting Models,Method,SampleNLLLoss.reduce_loss,,src\uni2ts\model\moirai\forecast.py,"loss, prediction_mask, observed_mask, sample_id, variate_id"
+Forecasting Models,Class,MoiraiForecast,,src\uni2ts\model\moirai\forecast.py,
+Forecasting Models,Method,MoiraiForecast.__init__,,src\uni2ts\model\moirai\forecast.py,"prediction_length, target_dim, feat_dynamic_real_dim, past_feat_dynamic_real_dim, context_length, module_kwargs, module, patch_size, num_samples"
+Forecasting Models,Method,MoiraiForecast.hparams_context,,src\uni2ts\model\moirai\forecast.py,"prediction_length, target_dim, feat_dynamic_real_dim, past_feat_dynamic_real_dim, context_length, patch_size, num_samples"
+Forecasting Models,Method,MoiraiForecast.create_predictor,,src\uni2ts\model\moirai\forecast.py,"batch_size, device"
+Forecasting Models,Method,MoiraiForecast.describe_inputs,,src\uni2ts\model\moirai\forecast.py,batch_size
+Forecasting Models,Method,MoiraiForecast.prediction_input_names,,src\uni2ts\model\moirai\forecast.py,
+Forecasting Models,Method,MoiraiForecast.training_input_names,,src\uni2ts\model\moirai\forecast.py,
+Forecasting Models,Method,MoiraiForecast.past_length,,src\uni2ts\model\moirai\forecast.py,
+Forecasting Models,Method,MoiraiForecast.context_token_length,,src\uni2ts\model\moirai\forecast.py,patch_size
+Forecasting Models,Method,MoiraiForecast.prediction_token_length,,src\uni2ts\model\moirai\forecast.py,patch_size
+Forecasting Models,Method,MoiraiForecast.max_patch_size,,src\uni2ts\model\moirai\forecast.py,
+Forecasting Models,Method,MoiraiForecast.forward,,src\uni2ts\model\moirai\forecast.py,"past_target, past_observed_target, past_is_pad, feat_dynamic_real, observed_feat_dynamic_real, past_feat_dynamic_real, past_observed_feat_dynamic_real, num_samples"
+Forecasting Models,Method,MoiraiForecast.get_default_transform,,src\uni2ts\model\moirai\forecast.py,
+Distribution,Function,encode_distr_output,Serialization function for DistributionOutput,src\uni2ts\model\moirai\module.py,distr_output
+Forecasting Models,Function,safe_target_check,,src\uni2ts\model\moirai\module.py,obj
+Distribution,Function,decode_distr_output,,src\uni2ts\model\moirai\module.py,config
+Forecasting Models,Class,MoiraiModule,"Contains components of Moirai, to ensure implementation is identical across models.",src\uni2ts\model\moirai\module.py,
+Forecasting Models,Method,MoiraiModule.__init__,:param distr_output: distribution output object,src\uni2ts\model\moirai\module.py,"distr_output, d_model, num_layers, patch_sizes, max_seq_len, attn_dropout_p, dropout_p, scaling"
+Forecasting Models,Method,MoiraiModule.forward,Defines the forward pass of MoiraiModule.,src\uni2ts\model\moirai\module.py,"target, observed_mask, sample_id, time_id, variate_id, prediction_mask, patch_size"
+Training & Eval,Class,MoiraiPretrain,,src\uni2ts\model\moirai\pretrain.py,
+Training & Eval,Method,MoiraiPretrain.__init__,,src\uni2ts\model\moirai\pretrain.py,"min_patches, min_mask_ratio, max_mask_ratio, max_dim, num_training_steps, num_warmup_steps, module_kwargs, module, num_samples, beta1, beta2, loss_func, val_metric, lr, weight_decay, log_on_step"
+Training & Eval,Method,MoiraiPretrain.forward,Redirects to the forward function of MoiraiModule.,src\uni2ts\model\moirai\pretrain.py,"target, observed_mask, sample_id, time_id, variate_id, prediction_mask, patch_size"
+Training & Eval,Method,MoiraiPretrain.training_step,Implements LightningModule training_step. Logs training loss.,src\uni2ts\model\moirai\pretrain.py,"batch, batch_idx"
+Training & Eval,Method,MoiraiPretrain.validation_step,Implements LightningModule validation_step. Logs validation loss and additional metrics from val_metric.,src\uni2ts\model\moirai\pretrain.py,"batch, batch_idx, dataloader_idx"
+Training & Eval,Method,MoiraiPretrain.configure_optimizers,Implements LightningModule configure_optimizers which defines the configuration of optimizer and learning rate,src\uni2ts\model\moirai\pretrain.py,
+Training & Eval,Method,MoiraiPretrain.train_transform_map,"Get a dictionary of Transforms, with a default Transform as defined:",src\uni2ts\model\moirai\pretrain.py,
+Forecasting Models,Class,Moirai2Forecast,,src\uni2ts\model\moirai2\forecast.py,
+Forecasting Models,Method,Moirai2Forecast.__init__,,src\uni2ts\model\moirai2\forecast.py,"prediction_length, target_dim, feat_dynamic_real_dim, past_feat_dynamic_real_dim, context_length, module_kwargs, module"
+Forecasting Models,Method,Moirai2Forecast.hparams_context,,src\uni2ts\model\moirai2\forecast.py,"prediction_length, target_dim, feat_dynamic_real_dim, past_feat_dynamic_real_dim, context_length"
+Forecasting Models,Method,Moirai2Forecast.create_predictor,,src\uni2ts\model\moirai2\forecast.py,"batch_size, device"
+Forecasting Models,Method,Moirai2Forecast.describe_inputs,,src\uni2ts\model\moirai2\forecast.py,batch_size
+Forecasting Models,Method,Moirai2Forecast.prediction_input_names,,src\uni2ts\model\moirai2\forecast.py,
+Forecasting Models,Method,Moirai2Forecast.training_input_names,,src\uni2ts\model\moirai2\forecast.py,
+Forecasting Models,Method,Moirai2Forecast.past_length,,src\uni2ts\model\moirai2\forecast.py,
+Forecasting Models,Method,Moirai2Forecast.context_token_length,,src\uni2ts\model\moirai2\forecast.py,patch_size
+Forecasting Models,Method,Moirai2Forecast.prediction_token_length,,src\uni2ts\model\moirai2\forecast.py,patch_size
+Forecasting Models,Method,Moirai2Forecast.max_patch_size,,src\uni2ts\model\moirai2\forecast.py,
+Forecasting Models,Method,Moirai2Forecast.forward,,src\uni2ts\model\moirai2\forecast.py,"past_target, past_observed_target, past_is_pad, feat_dynamic_real, observed_feat_dynamic_real, past_feat_dynamic_real, past_observed_feat_dynamic_real"
+Forecasting Models,Method,Moirai2Forecast.predict,,src\uni2ts\model\moirai2\forecast.py,"past_target, feat_dynamic_real, past_feat_dynamic_real"
+Forecasting Models,Method,Moirai2Forecast.get_default_transform,,src\uni2ts\model\moirai2\forecast.py,
+Forecasting Models,Class,Moirai2Module,"Contains components of Moirai, to ensure implementation is identical across models.",src\uni2ts\model\moirai2\module.py,
+Forecasting Models,Method,Moirai2Module.__init__,:param d_model: model hidden dimensions,src\uni2ts\model\moirai2\module.py,"d_model, d_ff, num_layers, patch_size, max_seq_len, attn_dropout_p, dropout_p, scaling, num_predict_token, quantile_levels"
+Forecasting Models,Method,Moirai2Module.forward,Defines the forward pass of MoiraiDecoderModule.,src\uni2ts\model\moirai2\module.py,"target, observed_mask, sample_id, time_id, variate_id, prediction_mask, training_mode"
+Forecasting Models,Class,SampleNLLLoss,,src\uni2ts\model\moirai_moe\forecast.py,
+Forecasting Models,Method,SampleNLLLoss.reduce_loss,,src\uni2ts\model\moirai_moe\forecast.py,"loss, prediction_mask, observed_mask, sample_id, variate_id"
+Forecasting Models,Class,MoiraiMoEForecast,,src\uni2ts\model\moirai_moe\forecast.py,
+Forecasting Models,Method,MoiraiMoEForecast.__init__,,src\uni2ts\model\moirai_moe\forecast.py,"prediction_length, target_dim, feat_dynamic_real_dim, past_feat_dynamic_real_dim, context_length, module_kwargs, module, patch_size, num_samples"
+Forecasting Models,Method,MoiraiMoEForecast.hparams_context,,src\uni2ts\model\moirai_moe\forecast.py,"prediction_length, target_dim, feat_dynamic_real_dim, past_feat_dynamic_real_dim, context_length, patch_size, num_samples"
+Forecasting Models,Method,MoiraiMoEForecast.create_predictor,,src\uni2ts\model\moirai_moe\forecast.py,"batch_size, device"
+Forecasting Models,Method,MoiraiMoEForecast.describe_inputs,,src\uni2ts\model\moirai_moe\forecast.py,batch_size
+Forecasting Models,Method,MoiraiMoEForecast.prediction_input_names,,src\uni2ts\model\moirai_moe\forecast.py,
+Forecasting Models,Method,MoiraiMoEForecast.training_input_names,,src\uni2ts\model\moirai_moe\forecast.py,
+Forecasting Models,Method,MoiraiMoEForecast.past_length,,src\uni2ts\model\moirai_moe\forecast.py,
+Forecasting Models,Method,MoiraiMoEForecast.context_token_length,,src\uni2ts\model\moirai_moe\forecast.py,patch_size
+Forecasting Models,Method,MoiraiMoEForecast.prediction_token_length,,src\uni2ts\model\moirai_moe\forecast.py,patch_size
+Forecasting Models,Method,MoiraiMoEForecast.max_patch_size,,src\uni2ts\model\moirai_moe\forecast.py,
+Forecasting Models,Method,MoiraiMoEForecast.forward,,src\uni2ts\model\moirai_moe\forecast.py,"past_target, past_observed_target, past_is_pad, feat_dynamic_real, observed_feat_dynamic_real, past_feat_dynamic_real, past_observed_feat_dynamic_real, num_samples"
+Forecasting Models,Method,MoiraiMoEForecast.get_default_transform,,src\uni2ts\model\moirai_moe\forecast.py,
+Distribution,Function,encode_distr_output,Serialization function for DistributionOutput,src\uni2ts\model\moirai_moe\module.py,distr_output
+Forecasting Models,Function,safe_target_check,,src\uni2ts\model\moirai_moe\module.py,obj
+Distribution,Function,decode_distr_output,,src\uni2ts\model\moirai_moe\module.py,config
+Forecasting Models,Class,MoiraiMoEModule,"Contains components of Moirai, to ensure implementation is identical across models.",src\uni2ts\model\moirai_moe\module.py,
+Forecasting Models,Method,MoiraiMoEModule.__init__,:param distr_output: distribution output object,src\uni2ts\model\moirai_moe\module.py,"distr_output, d_model, d_ff, num_layers, patch_sizes, max_seq_len, attn_dropout_p, dropout_p, scaling"
+Forecasting Models,Method,MoiraiMoEModule.forward,Defines the forward pass of MoiraiMoEModule.,src\uni2ts\model\moirai_moe\module.py,"target, observed_mask, sample_id, time_id, variate_id, prediction_mask, patch_size"
+Forecasting Models,Function,native_scaled_dot_product_attention,,src\uni2ts\module\attention.py,"query, key, value, attn_mask, dropout_p, scale"
+Forecasting Models,Class,GroupedQueryAttention,,src\uni2ts\module\attention.py,
+Forecasting Models,Method,GroupedQueryAttention.__init__,,src\uni2ts\module\attention.py,"dim, num_heads, num_groups, bias, norm_layer, softmax_scale, attn_dropout_p, var_attn_bias, time_attn_bias, var_qk_proj, time_qk_proj"
+Forecasting Models,Method,GroupedQueryAttention.forward,,src\uni2ts\module\attention.py,"query, key, value, attn_mask, query_var_id, kv_var_id, query_time_id, kv_time_id"
+Forecasting Models,Class,MultiQueryAttention,,src\uni2ts\module\attention.py,
+Forecasting Models,Method,MultiQueryAttention.__init__,,src\uni2ts\module\attention.py,"dim, num_heads, bias, norm_layer, softmax_scale, attn_dropout_p, var_attn_bias, time_attn_bias, var_qk_proj, time_qk_proj"
+Forecasting Models,Class,MultiHeadAttention,,src\uni2ts\module\attention.py,
+Forecasting Models,Method,MultiHeadAttention.__init__,,src\uni2ts\module\attention.py,"dim, num_heads, bias, norm_layer, softmax_scale, attn_dropout_p, var_attn_bias, time_attn_bias, var_qk_proj, time_qk_proj"
+Forecasting Models,Class,FeedForward,,src\uni2ts\module\ffn.py,
+Forecasting Models,Method,FeedForward.__init__,,src\uni2ts\module\ffn.py,"in_dim, hidden_dim, out_dim, activation, bias, ffn_dropout_p"
+Forecasting Models,Method,FeedForward.forward,,src\uni2ts\module\ffn.py,"x, centroid"
+Forecasting Models,Class,GatedLinearUnitFeedForward,,src\uni2ts\module\ffn.py,
+Forecasting Models,Method,GatedLinearUnitFeedForward.__init__,,src\uni2ts\module\ffn.py,"in_dim, hidden_dim, out_dim, activation, bias, ffn_dropout_p"
+Forecasting Models,Method,GatedLinearUnitFeedForward.adjust_hidden_dim,,src\uni2ts\module\ffn.py,dim
+Forecasting Models,Class,MoEFeedForward,,src\uni2ts\module\ffn.py,
+Forecasting Models,Method,MoEFeedForward.__init__,,src\uni2ts\module\ffn.py,"num_experts, num_experts_per_token, in_dim, hidden_dim, out_dim, activation, bias, ffn_dropout_p"
+Forecasting Models,Method,MoEFeedForward.forward,,src\uni2ts\module\ffn.py,"x, centroid"
+Forecasting Models,Class,RMSNorm,,src\uni2ts\module\norm.py,
+Forecasting Models,Method,RMSNorm.__init__,,src\uni2ts\module\norm.py,"normalized_shape, eps, weight, dtype"
+Forecasting Models,Method,RMSNorm.forward,,src\uni2ts\module\norm.py,x
+Forecasting Models,Method,RMSNorm.extra_repr,,src\uni2ts\module\norm.py,
+Forecasting Models,Class,PackedScaler,,src\uni2ts\module\packed_scaler.py,
+Forecasting Models,Method,PackedScaler.forward,,src\uni2ts\module\packed_scaler.py,"target, observed_mask, sample_id, variate_id"
+Forecasting Models,Class,PackedNOPScaler,,src\uni2ts\module\packed_scaler.py,
+Forecasting Models,Class,PackedStdScaler,,src\uni2ts\module\packed_scaler.py,
+Forecasting Models,Method,PackedStdScaler.__init__,,src\uni2ts\module\packed_scaler.py,"correction, minimum_scale"
+Forecasting Models,Class,PackedAbsMeanScaler,,src\uni2ts\module\packed_scaler.py,
+Data Pipeline,Class,TransformerEncoderLayer,,src\uni2ts\module\transformer.py,
+Data Pipeline,Method,TransformerEncoderLayer.__init__,,src\uni2ts\module\transformer.py,"self_attn, ffn, norm1, norm2, post_attn_dropout_p, pre_norm"
+Data Pipeline,Method,TransformerEncoderLayer.forward,,src\uni2ts\module\transformer.py,"x, attn_mask, var_id, time_id, centroid"
+Data Pipeline,Class,TransformerEncoder,,src\uni2ts\module\transformer.py,
+Data Pipeline,Method,TransformerEncoder.__init__,,src\uni2ts\module\transformer.py,"d_model, num_layers, num_heads, num_groups, pre_norm, attn_dropout_p, dropout_p, norm_layer, activation, use_moe, use_glu, use_qk_norm, var_attn_bias_layer, time_attn_bias_layer, var_qk_proj_layer, time_qk_proj_layer, shared_var_attn_bias, shared_time_attn_bias, shared_var_qk_proj, shared_time_qk_proj, d_ff"
+Data Pipeline,Method,TransformerEncoder.get_layer,,src\uni2ts\module\transformer.py,"dim, num_heads, num_groups, layer, shared_layer"
+Data Pipeline,Method,TransformerEncoder.forward,,src\uni2ts\module\transformer.py,"x, attn_mask, var_id, time_id"
+Forecasting Models,Function,fs2idx,,src\uni2ts\module\ts_embed.py,"feat_size, feat_sizes"
+Forecasting Models,Class,MultiInSizeLinear,,src\uni2ts\module\ts_embed.py,
+Forecasting Models,Method,MultiInSizeLinear.__init__,,src\uni2ts\module\ts_embed.py,"in_features_ls, out_features, bias, dtype"
+Forecasting Models,Method,MultiInSizeLinear.reset_parameters,,src\uni2ts\module\ts_embed.py,
+Forecasting Models,Method,MultiInSizeLinear.forward,,src\uni2ts\module\ts_embed.py,"x, in_feat_size"
+Forecasting Models,Method,MultiInSizeLinear.extra_repr,,src\uni2ts\module\ts_embed.py,
+Forecasting Models,Class,FeatLinear,,src\uni2ts\module\ts_embed.py,
+Forecasting Models,Method,FeatLinear.__init__,,src\uni2ts\module\ts_embed.py,"in_features_ls, out_features, bias, dtype"
+Forecasting Models,Method,FeatLinear.reset_parameters,,src\uni2ts\module\ts_embed.py,
+Forecasting Models,Method,FeatLinear.forward,,src\uni2ts\module\ts_embed.py,"x, in_feat_size"
+Forecasting Models,Method,FeatLinear.extra_repr,,src\uni2ts\module\ts_embed.py,
+Forecasting Models,Class,MultiOutSizeLinear,,src\uni2ts\module\ts_embed.py,
+Forecasting Models,Method,MultiOutSizeLinear.__init__,,src\uni2ts\module\ts_embed.py,"in_features, out_features_ls, dim, bias, dtype"
+Forecasting Models,Method,MultiOutSizeLinear.reset_parameters,,src\uni2ts\module\ts_embed.py,
+Forecasting Models,Method,MultiOutSizeLinear.forward,,src\uni2ts\module\ts_embed.py,"x, out_feat_size"
+Forecasting Models,Method,MultiOutSizeLinear.extra_repr,,src\uni2ts\module\ts_embed.py,
+Forecasting Models,Class,ResidualBlock,,src\uni2ts\module\ts_embed.py,
+Forecasting Models,Method,ResidualBlock.__init__,,src\uni2ts\module\ts_embed.py,"input_dims, hidden_dims, output_dims"
+Forecasting Models,Method,ResidualBlock.reset_parameters,,src\uni2ts\module\ts_embed.py,
+Forecasting Models,Method,ResidualBlock.forward,,src\uni2ts\module\ts_embed.py,x
+Forecasting Models,Class,SinusoidalPositionEncoding,,src\uni2ts\module\position\additive.py,
+Forecasting Models,Method,SinusoidalPositionEncoding.__init__,Construct a sinusoidal positional embedding module.,src\uni2ts\module\position\additive.py,
+Forecasting Models,Method,SinusoidalPositionEncoding.forward,,src\uni2ts\module\position\additive.py,pos_id
+Forecasting Models,Class,LearnedEmbedding,,src\uni2ts\module\position\additive.py,
+Forecasting Models,Method,LearnedEmbedding.__init__,,src\uni2ts\module\position\additive.py,
+Forecasting Models,Method,LearnedEmbedding.forward,,src\uni2ts\module\position\additive.py,pos_id
+Forecasting Models,Class,AttentionBias,,src\uni2ts\module\position\attn_bias.py,
+Forecasting Models,Method,AttentionBias.__init__,,src\uni2ts\module\position\attn_bias.py,"dim, num_heads, num_groups"
+Forecasting Models,Method,AttentionBias.forward,,src\uni2ts\module\position\attn_bias.py,"query, key, query_id, kv_id"
+Forecasting Models,Class,RelativeAttentionBias,,src\uni2ts\module\position\attn_bias.py,
+Forecasting Models,Method,RelativeAttentionBias.__init__,,src\uni2ts\module\position\attn_bias.py,"num_buckets, dim, num_heads, num_groups"
+Forecasting Models,Method,RelativeAttentionBias.forward,,src\uni2ts\module\position\attn_bias.py,"query, key, query_id, kv_id"
+Forecasting Models,Class,BinaryAttentionBias,,src\uni2ts\module\position\attn_bias.py,
+Forecasting Models,Method,BinaryAttentionBias.__init__,,src\uni2ts\module\position\attn_bias.py,"dim, num_heads, num_groups"
+Forecasting Models,Method,BinaryAttentionBias.forward,,src\uni2ts\module\position\attn_bias.py,"query, key, query_id, kv_id"
+Forecasting Models,Class,LinearAttentionBias,,src\uni2ts\module\position\attn_bias.py,
+Forecasting Models,Method,LinearAttentionBias.__init__,,src\uni2ts\module\position\attn_bias.py,"dim, num_heads, num_groups"
+Forecasting Models,Method,LinearAttentionBias.forward,,src\uni2ts\module\position\attn_bias.py,"query, key, query_id, kv_id"
+Forecasting Models,Class,Projection,,src\uni2ts\module\position\attn_projection.py,
+Forecasting Models,Method,Projection.__init__,,src\uni2ts\module\position\attn_projection.py,"proj_width, num_heads, num_groups"
+Forecasting Models,Method,Projection.forward,,src\uni2ts\module\position\attn_projection.py,"x, seq_id"
+Forecasting Models,Class,IdentityProjection,,src\uni2ts\module\position\attn_projection.py,
+Forecasting Models,Method,IdentityProjection.__init__,,src\uni2ts\module\position\attn_projection.py,
+Forecasting Models,Method,IdentityProjection.forward,,src\uni2ts\module\position\attn_projection.py,"x, seq_id"
+Forecasting Models,Class,RotaryProjection,,src\uni2ts\module\position\attn_projection.py,
+Forecasting Models,Method,RotaryProjection.__init__,,src\uni2ts\module\position\attn_projection.py,
+Forecasting Models,Method,RotaryProjection.forward,,src\uni2ts\module\position\attn_projection.py,"x, seq_id"
+Forecasting Models,Class,LearnedProjection,,src\uni2ts\module\position\attn_projection.py,
+Forecasting Models,Method,LearnedProjection.__init__,,src\uni2ts\module\position\attn_projection.py,
+Forecasting Models,Method,LearnedProjection.reset_parameters,,src\uni2ts\module\position\attn_projection.py,
+Forecasting Models,Method,LearnedProjection.forward,,src\uni2ts\module\position\attn_projection.py,"x, seq_id"
+Forecasting Models,Class,QueryKeyProjection,,src\uni2ts\module\position\attn_projection.py,
+Forecasting Models,Method,QueryKeyProjection.__init__,,src\uni2ts\module\position\attn_projection.py,"dim, num_heads, num_groups, proj_layer, kwargs, key_proj_layer, key_kwargs, partial_factor"
+Forecasting Models,Method,QueryKeyProjection.proj_width,,src\uni2ts\module\position\attn_projection.py,
+Forecasting Models,Method,QueryKeyProjection.split_sizes,,src\uni2ts\module\position\attn_projection.py,
+Forecasting Models,Method,QueryKeyProjection.forward,,src\uni2ts\module\position\attn_projection.py,"query, key, query_id, kv_id"
+Utils & Core,Function,_get_constant_lambda,,src\uni2ts\optim\lr_scheduler.py,_
+Utils & Core,Function,get_constant_schedule,"Create a schedule with a constant learning rate, using the learning rate set in optimizer.",src\uni2ts\optim\lr_scheduler.py,"optimizer, last_epoch"
+Utils & Core,Function,get_reduce_on_plateau_schedule,Create a schedule with a constant learning rate that decreases when a metric has stopped improving.,src\uni2ts\optim\lr_scheduler.py,optimizer
+Utils & Core,Function,_get_constant_schedule_with_warmup_lr_lambda,,src\uni2ts\optim\lr_scheduler.py,current_step
+Utils & Core,Function,get_constant_schedule_with_warmup,Create a schedule with a constant learning rate preceded by a warmup period during which the learning rate,src\uni2ts\optim\lr_scheduler.py,"optimizer, num_warmup_steps, last_epoch"
+Utils & Core,Function,_get_linear_schedule_with_warmup_lr_lambda,,src\uni2ts\optim\lr_scheduler.py,current_step
+Utils & Core,Function,get_linear_schedule_with_warmup,"Create a schedule with a learning rate that decreases linearly from the initial lr set in the optimizer to 0, after",src\uni2ts\optim\lr_scheduler.py,"optimizer, num_warmup_steps, num_training_steps, last_epoch"
+Utils & Core,Function,_get_cosine_schedule_with_warmup_lr_lambda,,src\uni2ts\optim\lr_scheduler.py,current_step
+Utils & Core,Function,get_cosine_schedule_with_warmup,Create a schedule with a learning rate that decreases following the values of the cosine function between the,src\uni2ts\optim\lr_scheduler.py,"optimizer, num_warmup_steps, num_training_steps, num_cycles, last_epoch"
+Utils & Core,Function,_get_cosine_with_hard_restarts_schedule_with_warmup_lr_lambda,,src\uni2ts\optim\lr_scheduler.py,current_step
+Utils & Core,Function,get_cosine_with_hard_restarts_schedule_with_warmup,Create a schedule with a learning rate that decreases following the values of the cosine function between the,src\uni2ts\optim\lr_scheduler.py,"optimizer, num_warmup_steps, num_training_steps, num_cycles, last_epoch"
+Utils & Core,Function,_get_polynomial_decay_schedule_with_warmup_lr_lambda,,src\uni2ts\optim\lr_scheduler.py,current_step
+Utils & Core,Function,get_polynomial_decay_schedule_with_warmup,Create a schedule with a learning rate that decreases as a polynomial decay from the initial lr set in the,src\uni2ts\optim\lr_scheduler.py,"optimizer, num_warmup_steps, num_training_steps, lr_end, power, last_epoch"
+Utils & Core,Function,_get_inverse_sqrt_schedule_lr_lambda,,src\uni2ts\optim\lr_scheduler.py,current_step
+Utils & Core,Function,get_inverse_sqrt_schedule,"Create a schedule with an inverse square-root learning rate, from the initial lr set in the optimizer, after a",src\uni2ts\optim\lr_scheduler.py,"optimizer, num_warmup_steps, timescale, last_epoch"
+Utils & Core,Class,SchedulerType,,src\uni2ts\optim\lr_scheduler.py,
+Utils & Core,Function,get_scheduler,Unified API to get any scheduler from its name.,src\uni2ts\optim\lr_scheduler.py,"name, optimizer, num_warmup_steps, num_training_steps, scheduler_specific_kwargs"
+Data Pipeline,Class,PatchCrop,Crop fields in a data_entry in the temporal dimension based on a patch_size.,src\uni2ts\transform\crop.py,
+Data Pipeline,Class,EvalCrop,,src\uni2ts\transform\crop.py,
+Data Pipeline,Class,FinetunePatchCrop,"Similar to EvalCrop, crop training samples based on specific context_length and prediction_length",src\uni2ts\transform\crop.py,
+Data Pipeline,Class,AddVariateIndex,Add variate_id to data_entry,src\uni2ts\transform\feature.py,
+Data Pipeline,Class,AddTimeIndex,Add time_id to data_entry,src\uni2ts\transform\feature.py,
+Data Pipeline,Class,AddObservedMask,,src\uni2ts\transform\feature.py,
+Data Pipeline,Class,AddSampleIndex,Add sample_id when sequence packing is not used. Follow the implementation in MoiraiForecast.,src\uni2ts\transform\feature.py,
+Data Pipeline,Class,SetValue,,src\uni2ts\transform\field.py,
+Data Pipeline,Class,LambdaSetFieldIfNotPresent,,src\uni2ts\transform\field.py,
+Data Pipeline,Method,LambdaSetFieldIfNotPresent.set_field,,src\uni2ts\transform\field.py,"data_entry, field, value"
+Data Pipeline,Class,SelectFields,,src\uni2ts\transform\field.py,
+Data Pipeline,Class,RemoveFields,,src\uni2ts\transform\field.py,
+Data Pipeline,Class,ImputationMethod,,src\uni2ts\transform\imputation.py,
+Data Pipeline,Class,DummyValueImputation,,src\uni2ts\transform\imputation.py,
+Data Pipeline,Class,LastValueImputation,,src\uni2ts\transform\imputation.py,
+Data Pipeline,Class,CausalMeanImputation,This class replaces each missing value with the average of all the values,src\uni2ts\transform\imputation.py,
+Data Pipeline,Class,ImputeTimeSeries,,src\uni2ts\transform\imputation.py,
+Data Pipeline,Class,Pad,,src\uni2ts\transform\pad.py,
+Data Pipeline,Method,Pad.map,,src\uni2ts\transform\pad.py,"data_entry, field"
+Data Pipeline,Class,PadFreq,,src\uni2ts\transform\pad.py,
+Data Pipeline,Method,PadFreq.map,,src\uni2ts\transform\pad.py,"data_entry, field"
+Data Pipeline,Class,EvalPad,,src\uni2ts\transform\pad.py,
+Data Pipeline,Method,EvalPad.map,,src\uni2ts\transform\pad.py,"data_entry, field"
+Data Pipeline,Class,PatchSizeConstraints,,src\uni2ts\transform\patch.py,
+Data Pipeline,Class,FixedPatchSizeConstraints,,src\uni2ts\transform\patch.py,
+Data Pipeline,Class,DefaultPatchSizeConstraints,,src\uni2ts\transform\patch.py,
+Data Pipeline,Class,GetPatchSize,,src\uni2ts\transform\patch.py,
+Data Pipeline,Class,Patchify,,src\uni2ts\transform\patch.py,
+Data Pipeline,Class,SampleDimension,,src\uni2ts\transform\resample.py,
+Data Pipeline,Class,Subsample,,src\uni2ts\transform\resample.py,
+Data Pipeline,Class,GaussianFilterSubsample,,src\uni2ts\transform\resample.py,
+Data Pipeline,Class,Downsample,,src\uni2ts\transform\resample.py,
+Data Pipeline,Class,Upsample,,src\uni2ts\transform\resample.py,
+Data Pipeline,Class,SequencifyField,,src\uni2ts\transform\reshape.py,
+Data Pipeline,Class,PackFields,,src\uni2ts\transform\reshape.py,
+Data Pipeline,Method,PackFields.pop_field,,src\uni2ts\transform\reshape.py,"data_entry, field"
+Data Pipeline,Class,FlatPackFields,,src\uni2ts\transform\reshape.py,
+Data Pipeline,Method,FlatPackFields.pop_field,,src\uni2ts\transform\reshape.py,"data_entry, field"
+Data Pipeline,Class,PackCollection,,src\uni2ts\transform\reshape.py,
+Data Pipeline,Class,FlatPackCollection,,src\uni2ts\transform\reshape.py,
+Data Pipeline,Class,Transpose,,src\uni2ts\transform\reshape.py,
+Data Pipeline,Method,Transpose.transpose,,src\uni2ts\transform\reshape.py,"data_entry, field"
+Data Pipeline,Class,MaskedPrediction,,src\uni2ts\transform\task.py,
+Data Pipeline,Class,ExtendMask,,src\uni2ts\transform\task.py,
+Data Pipeline,Class,EvalMaskedPrediction,,src\uni2ts\transform\task.py,
+Data Pipeline,Class,Transformation,,src\uni2ts\transform\_base.py,
+Data Pipeline,Method,Transformation.chain,,src\uni2ts\transform\_base.py,other
+Data Pipeline,Class,Chain,Chain multiple transformations together.,src\uni2ts\transform\_base.py,
+Data Pipeline,Class,Identity,,src\uni2ts\transform\_base.py,
+Data Pipeline,Class,MapFuncMixin,,src\uni2ts\transform\_mixin.py,
+Data Pipeline,Method,MapFuncMixin.map_func,,src\uni2ts\transform\_mixin.py,"func, data_entry, fields, optional_fields"
+Data Pipeline,Class,ApplyFuncMixin,,src\uni2ts\transform\_mixin.py,
+Data Pipeline,Method,ApplyFuncMixin.apply_func,,src\uni2ts\transform\_mixin.py,"func, data_entry, fields, optional_fields"
+Data Pipeline,Class,CollectFuncMixin,,src\uni2ts\transform\_mixin.py,
+Data Pipeline,Method,CollectFuncMixin.collect_func_list,,src\uni2ts\transform\_mixin.py,"func, data_entry, fields, optional_fields"
+Data Pipeline,Method,CollectFuncMixin.collect_func_dict,,src\uni2ts\transform\_mixin.py,"func, data_entry, fields, optional_fields"
+Data Pipeline,Method,CollectFuncMixin.collect_func,,src\uni2ts\transform\_mixin.py,"func, data_entry, fields, optional_fields"
+Data Pipeline,Class,CheckArrNDimMixin,,src\uni2ts\transform\_mixin.py,
+Data Pipeline,Method,CheckArrNDimMixin.check_ndim,,src\uni2ts\transform\_mixin.py,"name, arr, expected_ndim"
+Utils & Core,Function,pytest_addoption,,test\conftest.py,parser
+Utils & Core,Function,pytest_configure,,test\conftest.py,config
+Utils & Core,Function,pytest_collection_modifyitems,,test\conftest.py,"config, items"
+Utils & Core,Function,test_create_data_entry,,test\test_fixture.py,"create_data_entry, length, freq, target_dim, past_feat_dynamic_real_dim"
+Utils & Core,Function,test_create_example,,test\test_fixture.py,"create_example, length, freq, target_dim, past_feat_dynamic_real_dim"
+Utils & Core,Function,test_samplers_support,,test\common\test_sampler.py,"distribution, val"
+Utils & Core,Function,check_pmf,,test\common\test_sampler.py,"sampler, pmf_fn, val, num_samples"
+Utils & Core,Function,test_uniform_pmf,,test\common\test_sampler.py,"val, p"
+Utils & Core,Function,test_binomial_pmf,,test\common\test_sampler.py,"val, p"
+Utils & Core,Function,test_beta_binomial_pmf,,test\common\test_sampler.py,"val, a, b"
+Utils & Core,Function,test_packed_attention_mask,,test\common\test_torch_util.py,"sample_id, attention_mask"
+Utils & Core,Function,test_mask_fill,,test\common\test_torch_util.py,"batch_shape, seq_len, dim, mask_ratio"
+Utils & Core,Function,test_sized_mean,,test\common\test_torch_util.py,"shape, dim, max_size, full_size, seed"
+Utils & Core,Function,test_masked_mean,,test\common\test_torch_util.py,"shape, dim, seed"
+Data Pipeline,Function,test_global_dataset,,test\data\test_dataset.py,hf_dataset_path
+Data Pipeline,Function,test_multi_dataset,,test\data\test_dataset.py,hf_dataset_path
+Data Pipeline,Function,test_weighted_dataset,,test\data\test_dataset.py,"hf_dataset_path, weight, sample_time_series, seed"
+Data Pipeline,Function,test_eval_dataset,,test\data\test_dataset.py,"hf_dataset_path, windows"
+Data Pipeline,Function,_test_item,,test\data\test_indexer.py,"item, target_dim, past_feat_dynamic_real_dim, ts_lengths"
+Data Pipeline,Function,_test_batch,,test\data\test_indexer.py,"batch, target_dim, past_feat_dynamic_real_dim, ts_lengths"
+Data Pipeline,Function,test_hf_dataset_indexer_int,,test\data\test_indexer.py,hf_dataset_path
+Data Pipeline,Function,test_hf_dataset_indexer_list,,test\data\test_indexer.py,hf_dataset_path
+Data Pipeline,Function,test_hf_dataset_indexer_slice,,test\data\test_indexer.py,hf_dataset_path
+Data Pipeline,Function,test_hf_dataset_indexer_index_error,,test\data\test_indexer.py,"hf_dataset_path, idx"
+Data Pipeline,Class,SimpleDataset,,test\data\test_loader.py,
+Data Pipeline,Class,SimpleDataset2,,test\data\test_loader.py,
+Data Pipeline,Class,TSDataset,,test\data\test_loader.py,
+Data Pipeline,Function,test_basic,,test\data\test_loader.py,"dataset_size, batch_size, batch_size_factor, drop_last, fill_last"
+Data Pipeline,Function,test_loop,,test\data\test_loader.py,"dataset_size, batch_size, num_epochs"
+Data Pipeline,Function,test_cycle_loop,,test\data\test_loader.py,"dataset_size, batch_size, batch_size_factor"
+Data Pipeline,Function,test_num_batches_per_epoch,,test\data\test_loader.py,"dataset_size, batch_size, num_batches_per_epoch, num_epochs"
+Data Pipeline,Function,test_multiple_fields,,test\data\test_loader.py,
+Data Pipeline,Function,test_shuffle,,test\data\test_loader.py,
+Data Pipeline,Function,test_input_longer_than_max_length,,test\data\test_loader.py,
+Data Pipeline,Function,test_non_ts_input,,test\data\test_loader.py,create_example
+Data Pipeline,Function,test_dtype,,test\data\test_loader.py,dtype
+Data Pipeline,Function,test_packing_single_dim,,test\data\test_loader.py,"create_example, batch_size, batch_size_factor"
+Data Pipeline,Function,test_packing_multi_dim,,test\data\test_loader.py,"create_example, target_dim, past_feat_dynamic_real_dim"
+Data Pipeline,Function,test_dataset_builder,,test\data\builder\test_base.py,airpassengers_dataset_builder
+Data Pipeline,Function,test_simple_dataset_builder_wide,,test\data\builder\test_simple.py,"tmp_path_factory, get_wide_df, multivariate, offset, date_offset"
+Data Pipeline,Function,test_simple_dataset_builder_long,,test\data\builder\test_simple.py,"tmp_path_factory, get_long_df, offset, date_offset"
+Distribution,Function,test_multi_out_size_linear_proj,,test\distribution\test_base.py,"out_features, args_dim, batch_shape, in_features"
+Distribution,Function,histogram,,test\distribution\test_mixture.py,samples
+Distribution,Function,diff,,test\distribution\test_mixture.py,"x, y"
+Distribution,Function,get_normal_distribution,,test\distribution\test_mixture.py,"shape, loc, scale"
+Distribution,Function,get_student_t_distribution,,test\distribution\test_mixture.py,"shape, loc, scale, df"
+Distribution,Function,test_mixture_sample_stats,,test\distribution\test_mixture.py,"distr1_func, distr2_func, logits, batch_shape"
+Distribution,Function,test_mixture_log_prob,,test\distribution\test_mixture.py,"distribution, values_outside_support, p"
+Distribution,Function,test_mixture_grads,,test\distribution\test_mixture.py,
+Distribution,Function,test_mixture_output,,test\distribution\test_mixture.py,"batch_shape, hidden_dim, patch_sizes, sample_shape"
+Distribution,Function,test_neg_binom,,test\distribution\test_negative_binomial.py,"total_count, logits, sample_shape"
+Distribution,Function,test_neg_binom_log_prob,,test\distribution\test_negative_binomial.py,"total_count, logits, value"
+Distribution,Function,test_continuous_neg_binom_log_prob,,test\distribution\test_negative_binomial.py,"total_count, logits, value"
+Distribution,Function,test_student_t_output_shape,,test\distribution\test_student_t.py,"batch_shape, in_features, out_features_ls, sample_shape"
+Utils & Core,Function,create_data_entry,,test\fixture\fixture.py,
+Utils & Core,Function,create_example,,test\fixture\fixture.py,
+Utils & Core,Function,parquet_files,,test\fixture\fixture.py,"tmp_path_factory, create_data_entry, request"
+Utils & Core,Function,hf_dataset_path,,test\fixture\fixture.py,"tmp_path_factory, create_example, request"
+Utils & Core,Class,AirPassengersDatasetBuilder,,test\fixture\fixture.py,
+Utils & Core,Method,AirPassengersDatasetBuilder.build_dataset,,test\fixture\fixture.py,
+Utils & Core,Function,airpassengers_dataset_builder,,test\fixture\fixture.py,"tmp_path_factory, request"
+Utils & Core,Function,get_wide_df,,test\fixture\fixture.py,"tmp_path_factory, request"
+Utils & Core,Function,get_long_df,,test\fixture\fixture.py,"tmp_path_factory, request"
+Training & Eval,Function,pack_seq,,test\loss\test_packed_loss.py,"xs, max_seq_len"
+Training & Eval,Function,_test_packed_loss,,test\loss\test_packed_loss.py,"loss_accum_func, packed_loss_func, samples, max_seq_len, max_patch_size, observed_pct, possible_nan"
+Training & Eval,Function,test_packed_rmse_loss,,test\loss\test_packed_loss.py,"max_seq_len, max_patch_size, samples, observed_pct, seed"
+Training & Eval,Function,test_packed_mae_loss,,test\loss\test_packed_loss.py,"max_seq_len, max_patch_size, samples, observed_pct, seed"
+Training & Eval,Function,test_packed_mape_loss,,test\loss\test_packed_loss.py,"max_seq_len, max_patch_size, samples, observed_pct, seed"
+Training & Eval,Function,test_packed_smape_loss,,test\loss\test_packed_loss.py,"max_seq_len, max_patch_size, samples, observed_pct, seed"
+Training & Eval,Function,test_packed_nmae_loss,,test\loss\test_packed_loss.py,"max_seq_len, max_patch_size, samples, observed_pct, seed, normalize"
+Training & Eval,Function,test_packed_nrmse_loss,,test\loss\test_packed_loss.py,"max_seq_len, max_patch_size, samples, observed_pct, seed, normalize"
+Training & Eval,Function,test_packed_nmlse_loss,,test\loss\test_packed_loss.py,"max_seq_len, max_patch_size, samples, observed_pct, seed"
+Forecasting Models,Function,test_moirai_pretrain,,test\model\test_moirai.py,"batch_size, d_model, num_layers, max_seq_len, max_dim, patch_sizes, scaling, loss_func"
+Forecasting Models,Function,test_moirai_transform_map,,test\model\test_moirai.py,"create_data_entry, target_dim, past_feat_dynamic_real_dim, length, max_seq_len, max_dim, patch_sizes, d_model, num_layers, scaling, loss_func"
+Forecasting Models,Function,test_moirai_forecast,,test\model\test_moirai.py,"batch_size, context_length, prediction_length, target_dim, feat_dynamic_real_dim, past_feat_dynamic_real_dim, patch_size, num_samples"
+Forecasting Models,Function,test_moirai_forecast_auto,,test\model\test_moirai.py,"batch_size, context_length, prediction_length, target_dim, feat_dynamic_real_dim, past_feat_dynamic_real_dim, num_samples"
+Forecasting Models,Function,test_moirai_forecast_hparams_context,,test\model\test_moirai.py,"batch_size, context_length, prediction_length, target_dim, feat_dynamic_real_dim, past_feat_dynamic_real_dim, patch_size, num_samples"
+Forecasting Models,Function,test_gqa,,test\module\test_attention.py,"batch_shape, dim, kv_len, q_len, use_attn_mask, num_heads, num_groups, norm_layer, softmax_scale, attn_dropout_p"
+Forecasting Models,Function,test_all_masked,,test\module\test_attention.py,"batch_shape, dim, q_len, kv_len"
+Forecasting Models,Function,test_mqa,,test\module\test_attention.py,"batch_shape, dim, q_len, kv_len"
+Forecasting Models,Function,test_mha,,test\module\test_attention.py,"batch_shape, dim, q_len, kv_len"
+Forecasting Models,Function,test_feedforward,,test\module\test_ffn.py,"use_glu, batch_shape, in_dim, hidden_dim, out_dim, activation, bias, ffn_dropout_p"
+Forecasting Models,Function,test_rms_norm,,test\module\test_norm.py,"batch_shape, normalized_shape, weight"
+Forecasting Models,Function,pack_seq,,test\module\test_packed_scaler.py,"xs, max_seq_len, pad_fn"
+Forecasting Models,Function,_test_packed_scaler,,test\module\test_packed_scaler.py,"get_loc_scale_func, packed_scaler, samples, max_seq_len, max_patch_size, observed_pct"
+Forecasting Models,Function,test_packed_nop_scaler,,test\module\test_packed_scaler.py,"max_seq_len, max_patch_size, samples, observed_pct, seed"
+Forecasting Models,Function,test_packed_std_scaler,,test\module\test_packed_scaler.py,"max_seq_len, max_patch_size, samples, observed_pct, seed"
+Forecasting Models,Function,test_packed_abs_mean_scaler,,test\module\test_packed_scaler.py,"max_seq_len, max_patch_size, samples, observed_pct, seed"
+Data Pipeline,Function,test_transformer_encoder_layer,,test\module\test_transformer.py,"post_attn_dropout_p, pre_norm, dim, norm_layer"
+Data Pipeline,Function,test_transformer_encoder,,test\module\test_transformer.py,"batch_shape, d_model, num_layers, num_heads, pre_norm, use_glu, num_groups, d_ff, expectation, dropout_p"
+Data Pipeline,Function,test_transformer_encoder_position_init,,test\module\test_transformer.py,"var_attn_bias_layer, time_attn_bias_layer, var_qk_proj_layer, time_qk_proj_layer, shared_layers, d_model, num_layers"
+Data Pipeline,Function,test_transformer_encoder_position_forward,,test\module\test_transformer.py,"var_attn_bias_layer, time_attn_bias_layer, var_qk_proj_layer, time_qk_proj_layer, batch_shape, use_attn_mask, use_var_id, use_time_id, time_len, d_model, num_layers, shared_layers"
+Forecasting Models,Function,test_multi_in_size_linear,,test\module\test_ts_embed.py,"batch_shape, in_features_ls, out_features, bias, seed"
+Forecasting Models,Function,test_multi_out_size_linear,,test\module\test_ts_embed.py,"batch_shape, in_features, out_features_ls, dim, bias, seed"
+Forecasting Models,Function,test_sinusoidal_position_encoding,,test\module\position\test_additive.py,"batch_shape, seq_len, expectation, width, normalize, max_len"
+Forecasting Models,Function,test_learned_embedding,,test\module\position\test_additive.py,"batch_shape, seq_len, expectation, width, normalize, max_len"
+Forecasting Models,Function,test_binary_attention_bias,,test\module\position\test_attn_bias.py,"batch_shape, num_heads, num_groups, q_len, kv_len, dim"
+Forecasting Models,Function,test_linear_attention_bias,,test\module\position\test_attn_bias.py,"batch_shape, num_heads, num_groups, q_len, kv_len, dim"
+Forecasting Models,Function,test_rotary_projection,,test\module\position\test_attn_projection.py,"batch_shape, seq_len, dim, num_heads, num_groups, max_len, seed"
+Data Pipeline,Function,test_min_max,,test\transform\test_crop.py,
+Data Pipeline,Function,array_in,,test\transform\test_crop.py,"arr, test_arr"
+Data Pipeline,Function,test_not_in_array,,test\transform\test_crop.py,"arr, test_arr"
+Data Pipeline,Function,test_patch_crop,,test\transform\test_crop.py,"create_data_entry, min_time_patches, max_patches, flatten, offset, length, dim, patch_size, expectation, seed"
+Data Pipeline,Function,test_patch_crop_transform_pipeline,,test\transform\test_crop.py,"create_data_entry, length, freq, target_dim, past_feat_dynamic_real_dim, flatten, seed"
+Data Pipeline,Function,test_eval_crop,,test\transform\test_crop.py,"create_data_entry, length, dim, prediction_length, context_length, windows, distance, offset, expectation"
+Data Pipeline,Function,test_add_variate_index,,test\transform\test_feature.py,"field_map, optional_map, max_dim, patch_size, randomize, collection_type"
+Data Pipeline,Function,test_add_time_index,,test\transform\test_feature.py,"field_map, optional_map, patch_size, collection_type"
+Data Pipeline,Function,test_add_observed_mask,,test\transform\test_feature.py,"field_map, optional_map, collection_type"
+Data Pipeline,Function,test_dummy_value_imputation,,test\transform\test_imputation.py,"x, y, value, fields"
+Data Pipeline,Function,test_last_value_imputation,,test\transform\test_imputation.py,"x, y, value, fields"
+Data Pipeline,Function,test_pad,,test\transform\test_pad.py,"min_length, target_length, dim"
+Data Pipeline,Function,test_pad_freq,,test\transform\test_pad.py,"min_length, target_length, dim"
+Data Pipeline,Function,test_patch_eval_pad,,test\transform\test_pad.py,"prediction_length, context_length, patch_size, dim"
+Data Pipeline,Function,fixed_patch_size_constraints,,test\transform\test_patch.py,"start, stop"
+Data Pipeline,Function,test_default_patch_size_constraints,,test\transform\test_patch.py,freq
+Data Pipeline,Function,test_get_patch_size,,test\transform\test_patch.py,"create_data_entry, freq, patch_sizes, patch_size_constraints, expectation"
+Data Pipeline,Function,test_patchify,,test\transform\test_patch.py,"create_data_entry, target_dim"
+Data Pipeline,Function,test_sample_dimension_shape,,test\transform\test_resample.py,"create_data_entry, target_dim, past_feat_dynamic_real_dim, seed"
+Data Pipeline,Function,test_pack_fields,,test\transform\test_reshape.py,"length, output_field, field_dim_mapping, optional_field_dim_mapping, patch_size"
+Data Pipeline,Function,test_flat_pack_fields,,test\transform\test_reshape.py,"length, output_field, field_dim_mapping, optional_field_dim_mapping, patch_size"
+Data Pipeline,Function,test_pack_collection,,test\transform\test_reshape.py,"length, dims, patch_size"
+Data Pipeline,Function,test_flat_pack_collection,,test\transform\test_reshape.py,"lengths, dims, patch_size"
+Data Pipeline,Function,test_patch_size_sequence,,test\transform\test_reshape.py,"create_data_entry, length, target_dim"
+Data Pipeline,Function,test_masked_prediction,,test\transform\test_task.py,"length, target_dim, min_mask_ratio, max_mask_ratio, truncate_map, optional_truncate_map, patch_size, truncate_list"
+Data Pipeline,Function,test_extend_mask,,test\transform\test_task.py,"field_map, optional_map, patch_size, target_mask_shape"
+Data Pipeline,Function,test_eval_masked_prediction,,test\transform\test_task.py,"length, target_dim, mask_length, truncate_map, optional_truncate_map, patch_size, truncate_list"
